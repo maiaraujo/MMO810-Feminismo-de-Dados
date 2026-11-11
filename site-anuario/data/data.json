@@ -1,0 +1,4348 @@
+{
+ "meta": {
+  "titulo": "Mulheres na Unicamp",
+  "ano_base": 2025,
+  "fonte": "Dados_dos_Relatórios - Preencher.xlsx",
+  "obs": "Gênero de alunos: 2022-2025. Docentes: 2020-2025 (carreira MS). Raça/cor de alunos: 2013-2025 (só UNICAMP geral, sem recorte por instituto). Raça/cor de docentes: 2023-2025, por instituto (todos os docentes ativos)."
+ },
+ "unidades": {
+  "FCA": {
+   "nome": "Ciências Aplicadas",
+   "grupo": "logica"
+  },
+  "FCF": {
+   "nome": "Ciências Farmacêuticas",
+   "grupo": "cuidado"
+  },
+  "FCM": {
+   "nome": "Ciências Médicas",
+   "grupo": "cuidado"
+  },
+  "FE": {
+   "nome": "Educação",
+   "grupo": "cuidado"
+  },
+  "FEA": {
+   "nome": "Engenharia de Alimentos",
+   "grupo": "cuidado"
+  },
+  "FEAGRI": {
+   "nome": "Engenharia Agrícola",
+   "grupo": "logica"
+  },
+  "FECFAU": {
+   "nome": "Arquitetura e Urbanismo, Engenharia Civil",
+   "grupo": "logica"
+  },
+  "FEEC": {
+   "nome": "Engenharia Elétrica",
+   "grupo": "logica"
+  },
+  "FEF": {
+   "nome": "Educação Física",
+   "grupo": "logica"
+  },
+  "FEM": {
+   "nome": "Engenharia Mecânica",
+   "grupo": "logica"
+  },
+  "FENF": {
+   "nome": "Enfermagem",
+   "grupo": "cuidado"
+  },
+  "FEQ": {
+   "nome": "Engenharia Química",
+   "grupo": "logica"
+  },
+  "FOP": {
+   "nome": "Odontologia",
+   "grupo": "cuidado"
+  },
+  "FT": {
+   "nome": "Tecnologia",
+   "grupo": "logica"
+  },
+  "IA": {
+   "nome": "Artes",
+   "grupo": "cuidado"
+  },
+  "IB": {
+   "nome": "Biologia",
+   "grupo": "cuidado"
+  },
+  "IC": {
+   "nome": "Computação",
+   "grupo": "logica"
+  },
+  "IE": {
+   "nome": "Economia",
+   "grupo": "logica"
+  },
+  "IEL": {
+   "nome": "Estudos da Linguagem",
+   "grupo": "cuidado"
+  },
+  "IFCH": {
+   "nome": "Filosofia e Ciências Humanas",
+   "grupo": "cuidado"
+  },
+  "IFGW": {
+   "nome": "Física",
+   "grupo": "logica"
+  },
+  "IG": {
+   "nome": "Geociências",
+   "grupo": "logica"
+  },
+  "IMECC": {
+   "nome": "Matemática, Estatística e Computação Científica",
+   "grupo": "logica"
+  },
+  "IQ": {
+   "nome": "Química",
+   "grupo": "logica"
+  }
+ },
+ "paginas": {
+  "barras": {
+   "titulo": "% de alunas em 2025 por gênero",
+   "ano": 2025,
+   "caixa_cuidado": "Áreas de cuidado",
+   "caixa_logica": "Áreas de lógica"
+  },
+  "genero": {
+   "titulo": "Alunos por instituto – Gênero – 2025 (Se fosse uma sala de 50 pessoas)",
+   "ano": 2025,
+   "slides": [
+    {
+     "unidade": "IC",
+     "nota": [
+      "O IC é o instituto com menor número de alunas matriculadas: somente 16,4%, equivalente a 211 de 1.289 estudantes.",
+      "Vale ressaltar que, em 2025, na primeira chamada de aprovados no vestibular pela Convest, dos 103 alunos listados havia a mesma quantidade de mulheres, Gabrieis e Joãos: exatamente 6 de cada."
+     ]
+    },
+    {
+     "unidade": "FEM",
+     "nota": [
+      "A engenharia mecânica é a segunda com menor presença feminina: somente 17,1%, ou 309 dos 1.807 alunos.",
+      "Aqui começa-se a notar um padrão: áreas de exatas são vinculadas a maior presença masculina, enquanto áreas de saúde e humanas têm maior presença feminina."
+     ]
+    },
+    {
+     "unidade": "FEEC",
+     "nota": [
+      "Com quase nenhuma diferença percentual para a mecânica, a engenharia elétrica tem 17,2% de mulheres matriculadas: 249 de 1.451.",
+      "Mantém-se o padrão: as engenharias estão entre as áreas com mais presença masculina."
+     ]
+    },
+    {
+     "unidade": "FCA",
+     "nota": [
+      "A FCA é a unidade com minoria de mulheres que mais se aproxima da igualdade: 48,8% (1.509 de 3.091).",
+      "Das 14 unidades com minoria de mulheres, a grande maioria é de exatas, tecnologia e engenharias, áreas vinculadas a profissões tidas como masculinas. As exceções mais claras são a Educação Física (FEF, 40,4%) e a Economia (IE, 36,1%)."
+     ]
+    },
+    {
+     "unidade": "IFCH",
+     "nota": [
+      "Ordenando do menor para o maior percentual, o IFCH é o primeiro em que as mulheres ultrapassam a metade dos matriculados: 52,2% (1.150 de 2.203).",
+      "Acima do IFCH estão, em sua maioria, unidades de humanas, artes e saúde, com poucas exceções, como a Engenharia de Alimentos (FEA), onde 63,1% são mulheres."
+     ]
+    },
+    {
+     "unidade": "FE",
+     "nota": [
+      "Mantendo-se também o padrão de que cursos de humanas têm mais presença feminina, a educação tem 70,8% de mulheres matriculadas (1.082 de 1.528)."
+     ]
+    },
+    {
+     "unidade": "FCF",
+     "nota": [
+      "O curso de farmácia também está vinculado a maior presença feminina, com 75,4% de mulheres, equivalente a 301 dos 399 alunos, logo atrás da enfermagem.",
+      "Pelo padrão identificado, continuam-se reforçando as diferenças por gênero em cada área do conhecimento."
+     ]
+    },
+    {
+     "unidade": "FENF",
+     "nota": [
+      "No extremo oposto, a enfermagem tem 85,6% de alunas: 309 de 361 alunos.",
+      "É notável a relação: mulheres concentradas em áreas ligadas ao cuidado (saúde e educação) e homens em áreas de lógica e construção (engenharias e exatas). Os dados mostram essa relação na grande maioria das unidades."
+     ]
+    }
+   ]
+  },
+  "raca": {
+   "titulo": "Alunos por raça/cor (Se a Unicamp fosse uma sala de 50 pessoas)",
+   "slides": [
+    {
+     "rotulo": "Antes da greve",
+     "ano": 2013,
+     "nota": [
+      "Em 2013, três anos antes da greve de 2016 (de junho a agosto), que resultou na conquista de cotas étnico-raciais e de escola pública nos cursos da Unicamp, pretos e pardos eram 8,1% dos alunos e 46,0% não tinham raça/cor declarada.",
+      "Não há dados da Unicamp sobre a divisão étnico-racial por instituto, somente para a universidade como um todo."
+     ]
+    },
+    {
+     "rotulo": "Cotas aprovadas",
+     "ano": 2017,
+     "nota": [
+      "Ano seguinte à greve. Só em novembro os órgãos deliberativos da Unicamp aprovaram a implementação das cotas, a valer a partir do vestibular do ano seguinte. Pretos e pardos eram 14,3% dos alunos.",
+      "Foi também o ano em que se aprovou o vestibular indígena, processo próprio de ingresso na universidade."
+     ]
+    },
+    {
+     "rotulo": "1ª turma com cotas",
+     "ano": 2019,
+     "nota": [
+      "Primeiro ano com ingressantes pelo vestibular indígena e também com cotas de escola pública e étnico-raciais. Pretos e pardos chegam a 19,2% dos alunos; indígenas, a 0,4%.",
+      "Não há informação sobre a porcentagem de alunos de escola pública que ingressaram na universidade."
+     ]
+    },
+    {
+     "rotulo": "Ano passado",
+     "ano": 2025,
+     "nota": [
+      "Com o último dado disponível, 9 anos após a greve e 6 após a primeira turma com cotas, o perfil da sala de aula é outro: pretos e pardos somam 27,0%, indígenas 1,3%, e os não declarados caíram para 9,2% (eram 46,0% em 2013).",
+      "Em setembro de 2024 foram aprovadas as cotas PCD, implementadas a partir de 2025. Nos institutos, o número de alunos com deficiência matriculados passou de 84 em 2024 para 299 em 2025.",
+      "Em abril de 2025 também foram aprovadas as cotas trans, com alunes entrando por esse meio a partir de 2026, mas nenhum dado da Unicamp trata de pessoas trans. Espera-se que os dados de 2026, ainda não disponíveis, tragam essa representação."
+     ]
+    }
+   ]
+  },
+  "barras-prof": {
+   "titulo": "% de docentes mulheres em 2025 por instituto",
+   "ano": 2025,
+   "caixa_cuidado": "Áreas de cuidado",
+   "caixa_logica": "Áreas de lógica",
+   "sub": "Docentes ativos da carreira MS, todos os regimes de trabalho, ordenados da maior para a menor % de mulheres."
+  },
+  "lousa": {
+   "titulo": "Docentes por instituto – Gênero – 2025",
+   "ano": 2025,
+   "slides": [
+    {
+     "unidade": "FEEC",
+     "nota": [
+      "Com apenas 10,3% do corpo docente composto por mulheres, a FEEC é o instituto com menos professoras: 7 entre 68 docentes.",
+      "FEEC: as mulheres são 17,2% dos alunos e 10,3% dos docentes (6,9 pontos percentuais a menos entre os docentes)."
+     ]
+    },
+    {
+     "unidade": "FEM",
+     "nota": [
+      "Em segundo lugar de menos mulheres docentes, a engenharia mecânica está com 12,7%, referente a 9 mulheres entre 71 docentes.",
+      "FEM: as mulheres são 17,1% dos alunos e 12,7% dos docentes (4,4 pontos percentuais a menos entre os docentes).",
+      "Nota-se, assim como entre os discentes, um padrão: engenharias e exatas ainda são dominadas e entendidas como espaços masculinos."
+     ]
+    },
+    {
+     "unidade": "IC",
+     "nota": [
+      "Em terceiro lugar de menos mulheres docentes, o IC tem 13,6% de professoras: 6 mulheres entre 44 docentes.",
+      "IC: as mulheres são 16,4% dos alunos e 13,6% dos docentes (2,7 pontos percentuais a menos entre os docentes).",
+      "O IC, que já é o instituto com menos alunas, também está entre os três com menor presença feminina na docência: nas áreas de computação, a ausência de mulheres se repete de quem estuda para quem ensina."
+     ]
+    },
+    {
+     "unidade": "FCM",
+     "nota": [
+      "A FCM está no limiar: ainda tem maioria masculina, mas é a que mais se aproxima do equilíbrio, com 47,2% de mulheres no corpo docente (128 de 271).",
+      "FCM: as mulheres são 60,6% dos alunos e 47,2% dos docentes (13,4 pontos percentuais a menos entre os docentes).",
+      "Mesmo com quase equilíbrio entre docentes homens e mulheres, abaixo dela há outros 18 institutos e faculdades com mais homens que mulheres na docência."
+     ]
+    },
+    {
+     "unidade": "IEL",
+     "nota": [
+      "O IEL é o primeiro instituto, do menor para o maior percentual, em que as mulheres passam de 50%: 55,0% de docentes mulheres, 33 dos 60 docentes.",
+      "IEL: as mulheres são 63,5% dos alunos e 55,0% dos docentes (8,5 pontos percentuais a menos entre os docentes).",
+      "Diferente da medicina, que ainda tem outros 18 institutos abaixo com minoria de mulheres docentes, acima do IEL há somente outros 4 (FENF, FE, FCF, FEA) com mais da metade do corpo docente composto por mulheres.",
+      "Entre as docentes fica claro que há a questão de área, mas ela é reforçada por uma questão de poder: a queda do percentual de mulheres da graduação para a docência sugere que a docência ainda dá preferência a homens, mesmo em ambientes entendidos como femininos."
+     ]
+    },
+    {
+     "unidade": "FE",
+     "nota": [
+      "A educação, entre os docentes, também tem maioria feminina: 64,0% (55 de 86).",
+      "FE: as mulheres são 70,8% dos alunos e 64,0% dos docentes (6,9 pontos percentuais a menos entre os docentes).",
+      "Seguindo o mesmo padrão, as áreas de saúde, cuidado e educação são vinculadas à atuação feminina, com maior presença de mulheres."
+     ]
+    },
+    {
+     "unidade": "FENF",
+     "nota": [
+      "No caminho oposto, a enfermagem tem 93,3% de professoras mulheres: 42 entre 45.",
+      "FENF: as mulheres são 85,6% dos alunos e 93,3% dos docentes (7,7 pontos percentuais a mais entre os docentes)."
+     ]
+    }
+   ]
+  },
+  "raca-prof": {
+   "titulo": "Docentes por instituto – Raça/cor – 2025",
+   "ano": 2025,
+   "sub": "Docentes ativos.",
+   "slides": [
+    {
+     "unidade": "IC",
+     "rotulo": "Nosso instituto",
+     "nota": [
+      "IC: entre os 44 docentes, 3 são pretos ou pardos (6,8%); na Unicamp como um todo, são 6,8%. 36 de 44 (81,8%) são brancos.",
+      "Nenhum docente do IC é amarelo ou indígena."
+     ]
+    },
+    {
+     "unidade": "IMECC",
+     "rotulo": "Mais pretos e pardos",
+     "nota": [
+      "O IMECC é a unidade com mais docentes pretos e pardos em número de pessoas: 11 de 96 (11,5%). FCA e IFCH vêm logo atrás, com 10 cada, quase empatados.",
+      "Mesmo no IMECC, pretos e pardos são pouco mais de 1 em cada 10 docentes. Já a FCM, a maior unidade (273 docentes), tem só 8 pretos e pardos (2,9%)."
+     ]
+    },
+    {
+     "unidade": "FEF",
+     "rotulo": "Menos pretos e pardos",
+     "nota": [
+      "A FEF é a única unidade sem nenhum docente preto ou pardo, tanto em número quanto em proporção: os 34 docentes são todos brancos, sem amarelos nem indígenas."
+     ]
+    },
+    {
+     "unidade": "FCM",
+     "rotulo": "Mais amarelos",
+     "nota": [
+      "A FCM é a unidade com mais docentes amarelos em número de pessoas: 9 de 273."
+     ],
+     "destaque": [
+      "Amarela"
+     ],
+     "destaque_rotulo": "de amarelos entre os docentes"
+    },
+    {
+     "unidade": "FCM",
+     "rotulo": "Indígenas",
+     "nota": [
+      "A FCM é a que mais tem em número absoluto: 2 de 273 docentes.",
+      "Segundo os relatórios, apenas 4 dos 1.796 docentes ativos se declaram indígenas: 2 na FCM, 1 na FCA e 1 no IFCH."
+     ],
+     "destaque": [
+      "Indígena"
+     ],
+     "destaque_rotulo": "de indígenas entre os docentes"
+    }
+   ]
+  }
+ },
+ "cores_raca": {
+  "Branca": "#8b97ad",
+  "Parda": "#b5651d",
+  "Preta": "#272b40",
+  "Amarela": "#f2b705",
+  "Indígena": "#F38686",
+  "Não Declarado": "#2F80ED"
+ },
+ "dados": {
+  "alunos_genero": {
+   "FCA": {
+    "2025": {
+     "M": 1582,
+     "F": 1509
+    },
+    "2024": {
+     "M": 1580,
+     "F": 1458
+    },
+    "2023": {
+     "M": 1515,
+     "F": 1365
+    },
+    "2022": {
+     "M": 1694,
+     "F": 1396
+    }
+   },
+   "FCF": {
+    "2025": {
+     "M": 98,
+     "F": 301
+    },
+    "2024": {
+     "M": 100,
+     "F": 296
+    },
+    "2023": {
+     "M": 100,
+     "F": 292
+    },
+    "2022": {
+     "M": 97,
+     "F": 289
+    }
+   },
+   "FCM": {
+    "2025": {
+     "M": 1291,
+     "F": 1985
+    },
+    "2024": {
+     "M": 1254,
+     "F": 2062
+    },
+    "2023": {
+     "M": 1233,
+     "F": 2039
+    },
+    "2022": {
+     "M": 1267,
+     "F": 2050
+    }
+   },
+   "FE": {
+    "2025": {
+     "M": 446,
+     "F": 1082
+    },
+    "2024": {
+     "M": 378,
+     "F": 1024
+    },
+    "2023": {
+     "M": 394,
+     "F": 1057
+    },
+    "2022": {
+     "M": 422,
+     "F": 1077
+    }
+   },
+   "FEA": {
+    "2025": {
+     "M": 489,
+     "F": 835
+    },
+    "2024": {
+     "M": 496,
+     "F": 837
+    },
+    "2023": {
+     "M": 499,
+     "F": 865
+    },
+    "2022": {
+     "M": 491,
+     "F": 878
+    }
+   },
+   "FEAGRI": {
+    "2025": {
+     "M": 405,
+     "F": 191
+    },
+    "2024": {
+     "M": 386,
+     "F": 191
+    },
+    "2023": {
+     "M": 383,
+     "F": 185
+    },
+    "2022": {
+     "M": 397,
+     "F": 200
+    }
+   },
+   "FECFAU": {
+    "2025": {
+     "M": 573,
+     "F": 506
+    },
+    "2024": {
+     "M": 594,
+     "F": 501
+    },
+    "2023": {
+     "M": 591,
+     "F": 489
+    },
+    "2022": {
+     "M": 649,
+     "F": 508
+    }
+   },
+   "FEEC": {
+    "2025": {
+     "M": 1202,
+     "F": 249
+    },
+    "2024": {
+     "M": 1198,
+     "F": 283
+    },
+    "2023": {
+     "M": 1177,
+     "F": 310
+    },
+    "2022": {
+     "M": 1308,
+     "F": 318
+    }
+   },
+   "FEF": {
+    "2025": {
+     "M": 531,
+     "F": 360
+    },
+    "2024": {
+     "M": 507,
+     "F": 357
+    },
+    "2023": {
+     "M": 524,
+     "F": 335
+    },
+    "2022": {
+     "M": 565,
+     "F": 344
+    }
+   },
+   "FEM": {
+    "2025": {
+     "M": 1498,
+     "F": 309
+    },
+    "2024": {
+     "M": 1521,
+     "F": 296
+    },
+    "2023": {
+     "M": 1519,
+     "F": 297
+    },
+    "2022": {
+     "M": 1593,
+     "F": 308
+    }
+   },
+   "FENF": {
+    "2025": {
+     "M": 52,
+     "F": 309
+    },
+    "2024": {
+     "M": 46,
+     "F": 311
+    },
+    "2023": {
+     "M": 53,
+     "F": 321
+    },
+    "2022": {
+     "M": 50,
+     "F": 321
+    }
+   },
+   "FEQ": {
+    "2025": {
+     "M": 578,
+     "F": 401
+    },
+    "2024": {
+     "M": 571,
+     "F": 417
+    },
+    "2023": {
+     "M": 561,
+     "F": 439
+    },
+    "2022": {
+     "M": 604,
+     "F": 471
+    }
+   },
+   "FOP": {
+    "2025": {
+     "M": 324,
+     "F": 689
+    },
+    "2024": {
+     "M": 306,
+     "F": 674
+    },
+    "2023": {
+     "M": 352,
+     "F": 706
+    },
+    "2022": {
+     "M": 377,
+     "F": 722
+    }
+   },
+   "FT": {
+    "2025": {
+     "M": 1021,
+     "F": 601
+    },
+    "2024": {
+     "M": 1054,
+     "F": 642
+    },
+    "2023": {
+     "M": 1111,
+     "F": 643
+    },
+    "2022": {
+     "M": 1198,
+     "F": 678
+    }
+   },
+   "IA": {
+    "2025": {
+     "M": 672,
+     "F": 894
+    },
+    "2024": {
+     "M": 719,
+     "F": 882
+    },
+    "2023": {
+     "M": 728,
+     "F": 876
+    },
+    "2022": {
+     "M": 744,
+     "F": 867
+    }
+   },
+   "IB": {
+    "2025": {
+     "M": 552,
+     "F": 813
+    },
+    "2024": {
+     "M": 528,
+     "F": 819
+    },
+    "2023": {
+     "M": 525,
+     "F": 817
+    },
+    "2022": {
+     "M": 572,
+     "F": 944
+    }
+   },
+   "IC": {
+    "2025": {
+     "M": 1078,
+     "F": 211
+    },
+    "2024": {
+     "M": 1051,
+     "F": 203
+    },
+    "2023": {
+     "M": 1026,
+     "F": 192
+    },
+    "2022": {
+     "M": 1044,
+     "F": 182
+    }
+   },
+   "IE": {
+    "2025": {
+     "M": 668,
+     "F": 377
+    },
+    "2024": {
+     "M": 672,
+     "F": 388
+    },
+    "2023": {
+     "M": 659,
+     "F": 386
+    },
+    "2022": {
+     "M": 676,
+     "F": 404
+    }
+   },
+   "IEL": {
+    "2025": {
+     "M": 452,
+     "F": 787
+    },
+    "2024": {
+     "M": 453,
+     "F": 824
+    },
+    "2023": {
+     "M": 449,
+     "F": 880
+    },
+    "2022": {
+     "M": 449,
+     "F": 906
+    }
+   },
+   "IFCH": {
+    "2025": {
+     "M": 1053,
+     "F": 1150
+    },
+    "2024": {
+     "M": 1050,
+     "F": 1146
+    },
+    "2023": {
+     "M": 1001,
+     "F": 1124
+    },
+    "2022": {
+     "M": 1067,
+     "F": 1158
+    }
+   },
+   "IFGW": {
+    "2025": {
+     "M": 692,
+     "F": 240
+    },
+    "2024": {
+     "M": 765,
+     "F": 298
+    },
+    "2023": {
+     "M": 758,
+     "F": 276
+    },
+    "2022": {
+     "M": 768,
+     "F": 279
+    }
+   },
+   "IG": {
+    "2025": {
+     "M": 596,
+     "F": 503
+    },
+    "2024": {
+     "M": 605,
+     "F": 488
+    },
+    "2023": {
+     "M": 632,
+     "F": 465
+    },
+    "2022": {
+     "M": 627,
+     "F": 485
+    }
+   },
+   "IMECC": {
+    "2025": {
+     "M": 1158,
+     "F": 428
+    },
+    "2024": {
+     "M": 1177,
+     "F": 466
+    },
+    "2023": {
+     "M": 1135,
+     "F": 454
+    },
+    "2022": {
+     "M": 1191,
+     "F": 467
+    }
+   },
+   "IQ": {
+    "2025": {
+     "M": 577,
+     "F": 540
+    },
+    "2024": {
+     "M": 611,
+     "F": 571
+    },
+    "2023": {
+     "M": 627,
+     "F": 571
+    },
+    "2022": {
+     "M": 640,
+     "F": 619
+    }
+   }
+  },
+  "docentes_genero": {
+   "FCA": {
+    "2025": {
+     "RTP": {
+      "M": 1,
+      "F": 0
+     },
+     "RTC": {
+      "M": 2,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 72,
+      "F": 46
+     },
+     "TOTAL": {
+      "M": 75,
+      "F": 46
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 0,
+      "F": 2
+     },
+     "RTC": {
+      "M": 2,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 66,
+      "F": 40
+     },
+     "TOTAL": {
+      "M": 68,
+      "F": 42
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 0,
+      "F": 3
+     },
+     "RTC": {
+      "M": 2,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 65,
+      "F": 39
+     },
+     "TOTAL": {
+      "M": 67,
+      "F": 42
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 0,
+      "F": 1
+     },
+     "RTC": {
+      "M": 2,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 66,
+      "F": 35
+     },
+     "TOTAL": {
+      "M": 68,
+      "F": 36
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 0,
+      "F": 1
+     },
+     "RTC": {
+      "M": 2,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 65,
+      "F": 35
+     },
+     "TOTAL": {
+      "M": 67,
+      "F": 36
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 0,
+      "F": 1
+     },
+     "RTC": {
+      "M": 2,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 65,
+      "F": 36
+     },
+     "TOTAL": {
+      "M": 67,
+      "F": 37
+     }
+    }
+   },
+   "FCF": {
+    "2025": {
+     "RTP": {
+      "M": 0,
+      "F": 1
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 8,
+      "F": 13
+     },
+     "TOTAL": {
+      "M": 8,
+      "F": 14
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 1,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 6,
+      "F": 11
+     },
+     "TOTAL": {
+      "M": 7,
+      "F": 11
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 1,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 6,
+      "F": 11
+     },
+     "TOTAL": {
+      "M": 7,
+      "F": 11
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 1,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 6,
+      "F": 10
+     },
+     "TOTAL": {
+      "M": 7,
+      "F": 10
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 1,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 6,
+      "F": 10
+     },
+     "TOTAL": {
+      "M": 7,
+      "F": 10
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 7,
+      "F": 10
+     },
+     "TOTAL": {
+      "M": 7,
+      "F": 10
+     }
+    }
+   },
+   "FCM": {
+    "2025": {
+     "RTP": {
+      "M": 5,
+      "F": 1
+     },
+     "RTC": {
+      "M": 46,
+      "F": 14
+     },
+     "RDIDP": {
+      "M": 92,
+      "F": 113
+     },
+     "TOTAL": {
+      "M": 143,
+      "F": 128
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 6,
+      "F": 2
+     },
+     "RTC": {
+      "M": 45,
+      "F": 13
+     },
+     "RDIDP": {
+      "M": 96,
+      "F": 112
+     },
+     "TOTAL": {
+      "M": 147,
+      "F": 127
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 3,
+      "F": 0
+     },
+     "RTC": {
+      "M": 45,
+      "F": 13
+     },
+     "RDIDP": {
+      "M": 96,
+      "F": 113
+     },
+     "TOTAL": {
+      "M": 144,
+      "F": 126
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 3,
+      "F": 2
+     },
+     "RTC": {
+      "M": 46,
+      "F": 11
+     },
+     "RDIDP": {
+      "M": 100,
+      "F": 116
+     },
+     "TOTAL": {
+      "M": 149,
+      "F": 129
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 4,
+      "F": 2
+     },
+     "RTC": {
+      "M": 49,
+      "F": 9
+     },
+     "RDIDP": {
+      "M": 100,
+      "F": 119
+     },
+     "TOTAL": {
+      "M": 153,
+      "F": 130
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 4,
+      "F": 2
+     },
+     "RTC": {
+      "M": 52,
+      "F": 8
+     },
+     "RDIDP": {
+      "M": 101,
+      "F": 124
+     },
+     "TOTAL": {
+      "M": 157,
+      "F": 134
+     }
+    }
+   },
+   "FE": {
+    "2025": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 3,
+      "F": 4
+     },
+     "RDIDP": {
+      "M": 28,
+      "F": 51
+     },
+     "TOTAL": {
+      "M": 31,
+      "F": 55
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 3,
+      "F": 7
+     },
+     "RDIDP": {
+      "M": 28,
+      "F": 47
+     },
+     "TOTAL": {
+      "M": 31,
+      "F": 54
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 2,
+      "F": 3
+     },
+     "RTC": {
+      "M": 1,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 27,
+      "F": 47
+     },
+     "TOTAL": {
+      "M": 30,
+      "F": 51
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 2,
+      "F": 4
+     },
+     "RTC": {
+      "M": 0,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 24,
+      "F": 47
+     },
+     "TOTAL": {
+      "M": 26,
+      "F": 52
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 29,
+      "F": 48
+     },
+     "TOTAL": {
+      "M": 29,
+      "F": 49
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 31,
+      "F": 50
+     },
+     "TOTAL": {
+      "M": 31,
+      "F": 51
+     }
+    }
+   },
+   "FEA": {
+    "2025": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 21,
+      "F": 32
+     },
+     "TOTAL": {
+      "M": 21,
+      "F": 32
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 22,
+      "F": 31
+     },
+     "TOTAL": {
+      "M": 22,
+      "F": 31
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 20,
+      "F": 29
+     },
+     "TOTAL": {
+      "M": 20,
+      "F": 29
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 21,
+      "F": 31
+     },
+     "TOTAL": {
+      "M": 21,
+      "F": 31
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 20,
+      "F": 31
+     },
+     "TOTAL": {
+      "M": 20,
+      "F": 31
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 20,
+      "F": 31
+     },
+     "TOTAL": {
+      "M": 20,
+      "F": 31
+     }
+    }
+   },
+   "FEAGRI": {
+    "2025": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 17,
+      "F": 12
+     },
+     "TOTAL": {
+      "M": 17,
+      "F": 12
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 18,
+      "F": 13
+     },
+     "TOTAL": {
+      "M": 18,
+      "F": 13
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 17,
+      "F": 11
+     },
+     "TOTAL": {
+      "M": 17,
+      "F": 11
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 18,
+      "F": 11
+     },
+     "TOTAL": {
+      "M": 18,
+      "F": 11
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 18,
+      "F": 11
+     },
+     "TOTAL": {
+      "M": 18,
+      "F": 11
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 19,
+      "F": 11
+     },
+     "TOTAL": {
+      "M": 19,
+      "F": 11
+     }
+    }
+   },
+   "FECFAU": {
+    "2025": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 3,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 44,
+      "F": 20
+     },
+     "TOTAL": {
+      "M": 47,
+      "F": 20
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 2,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 42,
+      "F": 19
+     },
+     "TOTAL": {
+      "M": 44,
+      "F": 20
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 2,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 41,
+      "F": 21
+     },
+     "TOTAL": {
+      "M": 43,
+      "F": 22
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 3,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 36,
+      "F": 19
+     },
+     "TOTAL": {
+      "M": 39,
+      "F": 19
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 3,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 36,
+      "F": 18
+     },
+     "TOTAL": {
+      "M": 39,
+      "F": 18
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 2,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 38,
+      "F": 21
+     },
+     "TOTAL": {
+      "M": 40,
+      "F": 21
+     }
+    }
+   },
+   "FEEC": {
+    "2025": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 61,
+      "F": 7
+     },
+     "TOTAL": {
+      "M": 61,
+      "F": 7
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 60,
+      "F": 7
+     },
+     "TOTAL": {
+      "M": 60,
+      "F": 7
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 60,
+      "F": 6
+     },
+     "TOTAL": {
+      "M": 60,
+      "F": 6
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 1,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 68,
+      "F": 5
+     },
+     "TOTAL": {
+      "M": 69,
+      "F": 5
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 68,
+      "F": 5
+     },
+     "TOTAL": {
+      "M": 68,
+      "F": 5
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 68,
+      "F": 5
+     },
+     "TOTAL": {
+      "M": 68,
+      "F": 5
+     }
+    }
+   },
+   "FEF": {
+    "2025": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 18,
+      "F": 16
+     },
+     "TOTAL": {
+      "M": 18,
+      "F": 16
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 18,
+      "F": 16
+     },
+     "TOTAL": {
+      "M": 18,
+      "F": 16
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 20,
+      "F": 16
+     },
+     "TOTAL": {
+      "M": 20,
+      "F": 16
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 18,
+      "F": 12
+     },
+     "TOTAL": {
+      "M": 18,
+      "F": 12
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 18,
+      "F": 12
+     },
+     "TOTAL": {
+      "M": 18,
+      "F": 12
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 19,
+      "F": 12
+     },
+     "TOTAL": {
+      "M": 19,
+      "F": 12
+     }
+    }
+   },
+   "FEM": {
+    "2025": {
+     "RTP": {
+      "M": 1,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 61,
+      "F": 9
+     },
+     "TOTAL": {
+      "M": 62,
+      "F": 9
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 1,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 55,
+      "F": 9
+     },
+     "TOTAL": {
+      "M": 56,
+      "F": 9
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 1,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 56,
+      "F": 9
+     },
+     "TOTAL": {
+      "M": 57,
+      "F": 9
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 1,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 52,
+      "F": 6
+     },
+     "TOTAL": {
+      "M": 53,
+      "F": 6
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 2,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 54,
+      "F": 6
+     },
+     "TOTAL": {
+      "M": 56,
+      "F": 6
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 1,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 58,
+      "F": 6
+     },
+     "TOTAL": {
+      "M": 59,
+      "F": 6
+     }
+    }
+   },
+   "FENF": {
+    "2025": {
+     "RTP": {
+      "M": 0,
+      "F": 1
+     },
+     "RTC": {
+      "M": 0,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 3,
+      "F": 40
+     },
+     "TOTAL": {
+      "M": 3,
+      "F": 42
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 3,
+      "F": 40
+     },
+     "TOTAL": {
+      "M": 3,
+      "F": 41
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 2,
+      "F": 36
+     },
+     "TOTAL": {
+      "M": 2,
+      "F": 37
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 2
+     },
+     "RDIDP": {
+      "M": 1,
+      "F": 37
+     },
+     "TOTAL": {
+      "M": 1,
+      "F": 39
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 0,
+      "F": 32
+     },
+     "TOTAL": {
+      "M": 0,
+      "F": 33
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 0,
+      "F": 33
+     },
+     "TOTAL": {
+      "M": 0,
+      "F": 34
+     }
+    }
+   },
+   "FEQ": {
+    "2025": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 2,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 21,
+      "F": 19
+     },
+     "TOTAL": {
+      "M": 23,
+      "F": 20
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 1,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 22,
+      "F": 18
+     },
+     "TOTAL": {
+      "M": 23,
+      "F": 18
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 1,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 22,
+      "F": 19
+     },
+     "TOTAL": {
+      "M": 23,
+      "F": 19
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 1,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 23,
+      "F": 18
+     },
+     "TOTAL": {
+      "M": 24,
+      "F": 18
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 1,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 23,
+      "F": 18
+     },
+     "TOTAL": {
+      "M": 24,
+      "F": 18
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 1,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 23,
+      "F": 19
+     },
+     "TOTAL": {
+      "M": 24,
+      "F": 19
+     }
+    }
+   },
+   "FOP": {
+    "2025": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 3,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 45,
+      "F": 34
+     },
+     "TOTAL": {
+      "M": 48,
+      "F": 35
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 3,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 43,
+      "F": 32
+     },
+     "TOTAL": {
+      "M": 46,
+      "F": 33
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 1,
+      "F": 0
+     },
+     "RTC": {
+      "M": 3,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 42,
+      "F": 30
+     },
+     "TOTAL": {
+      "M": 46,
+      "F": 31
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 4,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 42,
+      "F": 28
+     },
+     "TOTAL": {
+      "M": 46,
+      "F": 29
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 1,
+      "F": 0
+     },
+     "RTC": {
+      "M": 4,
+      "F": 2
+     },
+     "RDIDP": {
+      "M": 44,
+      "F": 26
+     },
+     "TOTAL": {
+      "M": 49,
+      "F": 28
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 3,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 46,
+      "F": 27
+     },
+     "TOTAL": {
+      "M": 49,
+      "F": 28
+     }
+    }
+   },
+   "FT": {
+    "2025": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 2
+     },
+     "RDIDP": {
+      "M": 41,
+      "F": 20
+     },
+     "TOTAL": {
+      "M": 41,
+      "F": 22
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 1,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 37,
+      "F": 23
+     },
+     "TOTAL": {
+      "M": 38,
+      "F": 24
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 2,
+      "F": 1
+     },
+     "RTC": {
+      "M": 0,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 35,
+      "F": 21
+     },
+     "TOTAL": {
+      "M": 37,
+      "F": 23
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 2,
+      "F": 1
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 34,
+      "F": 21
+     },
+     "TOTAL": {
+      "M": 36,
+      "F": 22
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 2,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 35,
+      "F": 21
+     },
+     "TOTAL": {
+      "M": 37,
+      "F": 21
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 1,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 35,
+      "F": 20
+     },
+     "TOTAL": {
+      "M": 36,
+      "F": 20
+     }
+    }
+   },
+   "IA": {
+    "2025": {
+     "RTP": {
+      "M": 2,
+      "F": 1
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 46,
+      "F": 31
+     },
+     "TOTAL": {
+      "M": 48,
+      "F": 32
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 0,
+      "F": 1
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 46,
+      "F": 33
+     },
+     "TOTAL": {
+      "M": 46,
+      "F": 34
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 1,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 43,
+      "F": 32
+     },
+     "TOTAL": {
+      "M": 44,
+      "F": 32
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 2,
+      "F": 1
+     },
+     "RTC": {
+      "M": 2,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 41,
+      "F": 31
+     },
+     "TOTAL": {
+      "M": 45,
+      "F": 32
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 2,
+      "F": 2
+     },
+     "RTC": {
+      "M": 2,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 40,
+      "F": 32
+     },
+     "TOTAL": {
+      "M": 44,
+      "F": 34
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 2,
+      "F": 2
+     },
+     "RTC": {
+      "M": 2,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 40,
+      "F": 35
+     },
+     "TOTAL": {
+      "M": 44,
+      "F": 37
+     }
+    }
+   },
+   "IB": {
+    "2025": {
+     "RTP": {
+      "M": 1,
+      "F": 0
+     },
+     "RTC": {
+      "M": 1,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 58,
+      "F": 42
+     },
+     "TOTAL": {
+      "M": 60,
+      "F": 42
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 1,
+      "F": 0
+     },
+     "RTC": {
+      "M": 1,
+      "F": 1
+     },
+     "RDIDP": {
+      "M": 59,
+      "F": 44
+     },
+     "TOTAL": {
+      "M": 61,
+      "F": 45
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 1,
+      "F": 0
+     },
+     "RTC": {
+      "M": 1,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 57,
+      "F": 42
+     },
+     "TOTAL": {
+      "M": 59,
+      "F": 42
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 1,
+      "F": 0
+     },
+     "RTC": {
+      "M": 1,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 57,
+      "F": 39
+     },
+     "TOTAL": {
+      "M": 59,
+      "F": 39
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 1,
+      "F": 1
+     },
+     "RTC": {
+      "M": 2,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 57,
+      "F": 41
+     },
+     "TOTAL": {
+      "M": 60,
+      "F": 42
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 2,
+      "F": 1
+     },
+     "RTC": {
+      "M": 2,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 59,
+      "F": 43
+     },
+     "TOTAL": {
+      "M": 63,
+      "F": 44
+     }
+    }
+   },
+   "IC": {
+    "2025": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 1,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 37,
+      "F": 6
+     },
+     "TOTAL": {
+      "M": 38,
+      "F": 6
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 1,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 39,
+      "F": 7
+     },
+     "TOTAL": {
+      "M": 40,
+      "F": 7
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 2,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 39,
+      "F": 7
+     },
+     "TOTAL": {
+      "M": 41,
+      "F": 7
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 2,
+      "F": 0
+     },
+     "RTC": {
+      "M": 2,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 34,
+      "F": 7
+     },
+     "TOTAL": {
+      "M": 38,
+      "F": 7
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 2,
+      "F": 0
+     },
+     "RTC": {
+      "M": 2,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 33,
+      "F": 7
+     },
+     "TOTAL": {
+      "M": 37,
+      "F": 7
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 1,
+      "F": 0
+     },
+     "RTC": {
+      "M": 2,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 37,
+      "F": 8
+     },
+     "TOTAL": {
+      "M": 40,
+      "F": 8
+     }
+    }
+   },
+   "IE": {
+    "2025": {
+     "RTP": {
+      "M": 1,
+      "F": 1
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 45,
+      "F": 15
+     },
+     "TOTAL": {
+      "M": 46,
+      "F": 16
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 3,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 45,
+      "F": 15
+     },
+     "TOTAL": {
+      "M": 48,
+      "F": 15
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 2,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 44,
+      "F": 13
+     },
+     "TOTAL": {
+      "M": 46,
+      "F": 13
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 2,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 44,
+      "F": 8
+     },
+     "TOTAL": {
+      "M": 46,
+      "F": 8
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 2,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 44,
+      "F": 9
+     },
+     "TOTAL": {
+      "M": 46,
+      "F": 9
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 2,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 45,
+      "F": 9
+     },
+     "TOTAL": {
+      "M": 47,
+      "F": 9
+     }
+    }
+   },
+   "IEL": {
+    "2025": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 27,
+      "F": 33
+     },
+     "TOTAL": {
+      "M": 27,
+      "F": 33
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 27,
+      "F": 32
+     },
+     "TOTAL": {
+      "M": 27,
+      "F": 32
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 28,
+      "F": 33
+     },
+     "TOTAL": {
+      "M": 28,
+      "F": 33
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 26,
+      "F": 30
+     },
+     "TOTAL": {
+      "M": 26,
+      "F": 30
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 1,
+      "F": 1
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 27,
+      "F": 31
+     },
+     "TOTAL": {
+      "M": 28,
+      "F": 32
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 27,
+      "F": 32
+     },
+     "TOTAL": {
+      "M": 27,
+      "F": 32
+     }
+    }
+   },
+   "IFCH": {
+    "2025": {
+     "RTP": {
+      "M": 1,
+      "F": 0
+     },
+     "RTC": {
+      "M": 1,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 48,
+      "F": 33
+     },
+     "TOTAL": {
+      "M": 50,
+      "F": 33
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 1,
+      "F": 1
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 49,
+      "F": 32
+     },
+     "TOTAL": {
+      "M": 50,
+      "F": 33
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 0,
+      "F": 1
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 49,
+      "F": 31
+     },
+     "TOTAL": {
+      "M": 49,
+      "F": 32
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 0,
+      "F": 1
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 49,
+      "F": 30
+     },
+     "TOTAL": {
+      "M": 49,
+      "F": 31
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 50,
+      "F": 31
+     },
+     "TOTAL": {
+      "M": 50,
+      "F": 31
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 50,
+      "F": 32
+     },
+     "TOTAL": {
+      "M": 50,
+      "F": 32
+     }
+    }
+   },
+   "IFGW": {
+    "2025": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 59,
+      "F": 10
+     },
+     "TOTAL": {
+      "M": 59,
+      "F": 10
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 2,
+      "F": 1
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 64,
+      "F": 11
+     },
+     "TOTAL": {
+      "M": 66,
+      "F": 12
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 2,
+      "F": 1
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 63,
+      "F": 10
+     },
+     "TOTAL": {
+      "M": 65,
+      "F": 11
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 1,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 66,
+      "F": 8
+     },
+     "TOTAL": {
+      "M": 67,
+      "F": 8
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 68,
+      "F": 8
+     },
+     "TOTAL": {
+      "M": 68,
+      "F": 8
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 71,
+      "F": 8
+     },
+     "TOTAL": {
+      "M": 71,
+      "F": 8
+     }
+    }
+   },
+   "IG": {
+    "2025": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 37,
+      "F": 17
+     },
+     "TOTAL": {
+      "M": 37,
+      "F": 17
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 37,
+      "F": 17
+     },
+     "TOTAL": {
+      "M": 37,
+      "F": 17
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 36,
+      "F": 18
+     },
+     "TOTAL": {
+      "M": 36,
+      "F": 18
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 34,
+      "F": 18
+     },
+     "TOTAL": {
+      "M": 34,
+      "F": 18
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 35,
+      "F": 18
+     },
+     "TOTAL": {
+      "M": 35,
+      "F": 18
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 35,
+      "F": 18
+     },
+     "TOTAL": {
+      "M": 35,
+      "F": 18
+     }
+    }
+   },
+   "IMECC": {
+    "2025": {
+     "RTP": {
+      "M": 2,
+      "F": 2
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 74,
+      "F": 18
+     },
+     "TOTAL": {
+      "M": 76,
+      "F": 20
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 4,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 74,
+      "F": 17
+     },
+     "TOTAL": {
+      "M": 78,
+      "F": 17
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 1,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 77,
+      "F": 18
+     },
+     "TOTAL": {
+      "M": 78,
+      "F": 18
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 1,
+      "F": 0
+     },
+     "RTC": {
+      "M": 4,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 76,
+      "F": 18
+     },
+     "TOTAL": {
+      "M": 81,
+      "F": 18
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 2,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 74,
+      "F": 18
+     },
+     "TOTAL": {
+      "M": 76,
+      "F": 18
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 3,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 75,
+      "F": 18
+     },
+     "TOTAL": {
+      "M": 78,
+      "F": 18
+     }
+    }
+   },
+   "IQ": {
+    "2025": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 48,
+      "F": 16
+     },
+     "TOTAL": {
+      "M": 48,
+      "F": 16
+     }
+    },
+    "2024": {
+     "RTP": {
+      "M": 2,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 49,
+      "F": 14
+     },
+     "TOTAL": {
+      "M": 51,
+      "F": 14
+     }
+    },
+    "2023": {
+     "RTP": {
+      "M": 3,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 48,
+      "F": 15
+     },
+     "TOTAL": {
+      "M": 51,
+      "F": 15
+     }
+    },
+    "2022": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 49,
+      "F": 18
+     },
+     "TOTAL": {
+      "M": 49,
+      "F": 18
+     }
+    },
+    "2021": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 49,
+      "F": 23
+     },
+     "TOTAL": {
+      "M": 49,
+      "F": 23
+     }
+    },
+    "2020": {
+     "RTP": {
+      "M": 0,
+      "F": 0
+     },
+     "RTC": {
+      "M": 0,
+      "F": 0
+     },
+     "RDIDP": {
+      "M": 49,
+      "F": 24
+     },
+     "TOTAL": {
+      "M": 49,
+      "F": 24
+     }
+    }
+   }
+  },
+  "alunos_raca_unicamp": {
+   "2025": {
+    "Amarela": 0.0294,
+    "Branca": 0.5947,
+    "Indígena": 0.0133,
+    "Não Declarado": 0.0921,
+    "Preta": 0.0656,
+    "Parda": 0.2048
+   },
+   "2024": {
+    "Amarela": 0.0293,
+    "Branca": 0.593,
+    "Indígena": 0.0131,
+    "Não Declarado": 0.098,
+    "Preta": 0.063,
+    "Parda": 0.2036
+   },
+   "2023": {
+    "Amarela": 0.0296,
+    "Branca": 0.5971,
+    "Indígena": 0.0126,
+    "Não Declarado": 0.104,
+    "Preta": 0.0599,
+    "Parda": 0.1968
+   },
+   "2022": {
+    "Amarela": 0.0306,
+    "Branca": 0.6027,
+    "Indígena": 0.011,
+    "Não Declarado": 0.1111,
+    "Preta": 0.0554,
+    "Parda": 0.1892
+   },
+   "2021": {
+    "Amarela": 0.0313,
+    "Branca": 0.605,
+    "Indígena": 0.0079,
+    "Não Declarado": 0.118,
+    "Preta": 0.053,
+    "Parda": 0.1848
+   },
+   "2020": {
+    "Amarela": 0.0321,
+    "Branca": 0.5996,
+    "Indígena": 0.0061,
+    "Não Declarado": 0.1445,
+    "Preta": 0.0472,
+    "Parda": 0.1705
+   },
+   "2019": {
+    "Amarela": 0.0336,
+    "Branca": 0.5981,
+    "Indígena": 0.0043,
+    "Não Declarado": 0.1724,
+    "Preta": 0.0394,
+    "Parda": 0.1522
+   },
+   "2018": {
+    "Amarela": 0.0352,
+    "Branca": 0.5989,
+    "Indígena": 0.0026,
+    "Não Declarado": 0.2009,
+    "Preta": 0.0322,
+    "Parda": 0.1302
+   },
+   "2017": {
+    "Amarela": 0.0352,
+    "Branca": 0.5792,
+    "Indígena": 0.0023,
+    "Não Declarado": 0.2408,
+    "Preta": 0.0276,
+    "Parda": 0.1149
+   },
+   "2016": {
+    "Amarela": 0.0348,
+    "Branca": 0.5462,
+    "Indígena": 0.002,
+    "Não Declarado": 0.2954,
+    "Preta": 0.0228,
+    "Parda": 0.0988
+   },
+   "2015": {
+    "Amarela": 0.0339,
+    "Branca": 0.509,
+    "Indígena": 0.0018,
+    "Não Declarado": 0.3513,
+    "Preta": 0.0195,
+    "Parda": 0.0845
+   },
+   "2014": {
+    "Amarela": 0.032,
+    "Branca": 0.4553,
+    "Indígena": 0.0016,
+    "Não Declarado": 0.4221,
+    "Preta": 0.0157,
+    "Parda": 0.0733
+   },
+   "2013": {
+    "Amarela": 0.0314,
+    "Branca": 0.4257,
+    "Indígena": 0.0018,
+    "Não Declarado": 0.4604,
+    "Preta": 0.0131,
+    "Parda": 0.0676
+   }
+  },
+  "alunos_pcd": {
+   "FCA": {
+    "2025": 6,
+    "2024": 2,
+    "2023": 3,
+    "2022": 3
+   },
+   "FCF": {
+    "2025": 6,
+    "2024": 1,
+    "2023": 2,
+    "2022": 1
+   },
+   "FCM": {
+    "2025": 10,
+    "2024": 4,
+    "2023": 6,
+    "2022": 4
+   },
+   "FE": {
+    "2025": 33,
+    "2024": 8,
+    "2023": 7,
+    "2022": 7
+   },
+   "FEA": {
+    "2025": 6,
+    "2024": 3,
+    "2023": 2,
+    "2022": 2
+   },
+   "FEAGRI": {
+    "2025": 7,
+    "2024": 3,
+    "2023": 2,
+    "2022": 2
+   },
+   "FECFAU": {
+    "2025": 4,
+    "2024": 1,
+    "2023": 1,
+    "2022": 1
+   },
+   "FEEC": {
+    "2025": 8,
+    "2024": 3,
+    "2023": 3,
+    "2022": 3
+   },
+   "FEF": {
+    "2025": 4,
+    "2024": 1,
+    "2023": 0,
+    "2022": 0
+   },
+   "FEM": {
+    "2025": 12,
+    "2024": 4,
+    "2023": 4,
+    "2022": 4
+   },
+   "FENF": {
+    "2025": 1,
+    "2024": 1,
+    "2023": 2,
+    "2022": 2
+   },
+   "FEQ": {
+    "2025": 3,
+    "2024": 1,
+    "2023": 1,
+    "2022": 2
+   },
+   "FOP": {
+    "2025": 0,
+    "2024": 1,
+    "2023": 1,
+    "2022": 1
+   },
+   "FT": {
+    "2025": 8,
+    "2024": 3,
+    "2023": 4,
+    "2022": 4
+   },
+   "IA": {
+    "2025": 21,
+    "2024": 7,
+    "2023": 9,
+    "2022": 5
+   },
+   "IB": {
+    "2025": 20,
+    "2024": 7,
+    "2023": 5,
+    "2022": 5
+   },
+   "IC": {
+    "2025": 13,
+    "2024": 5,
+    "2023": 3,
+    "2022": 2
+   },
+   "IE": {
+    "2025": 10,
+    "2024": 3,
+    "2023": 3,
+    "2022": 1
+   },
+   "IEL": {
+    "2025": 16,
+    "2024": 3,
+    "2023": 5,
+    "2022": 4
+   },
+   "IFCH": {
+    "2025": 39,
+    "2024": 7,
+    "2023": 10,
+    "2022": 9
+   },
+   "IFGW": {
+    "2025": 25,
+    "2024": 7,
+    "2023": 6,
+    "2022": 4
+   },
+   "IG": {
+    "2025": 13,
+    "2024": 3,
+    "2023": 3,
+    "2022": 5
+   },
+   "IMECC": {
+    "2025": 16,
+    "2024": 2,
+    "2023": 1,
+    "2022": 2
+   },
+   "IQ": {
+    "2025": 10,
+    "2024": 1,
+    "2023": 1,
+    "2022": 1
+   },
+   "Subtotal Institutos": {
+    "2025": 299,
+    "2024": 84,
+    "2023": 86,
+    "2022": 77
+   },
+   "Alunos Especiais Graduação": {
+    "2025": 2,
+    "2024": 1,
+    "2023": 1,
+    "2022": 0
+   },
+   "Alunos Especiais Pós-Graduação": {
+    "2025": 14,
+    "2024": 7,
+    "2023": 4,
+    "2022": 7
+   },
+   "UNICAMP (Total Geral)": {
+    "2025": 315,
+    "2024": 92,
+    "2023": 91,
+    "2022": 84
+   }
+  },
+  "docentes_raca": {
+   "FCA": {
+    "2025": {
+     "Amarela": 4,
+     "Branca": 104,
+     "Indígena": 1,
+     "Preta": 3,
+     "Parda": 7,
+     "Não Declarado": 2
+    },
+    "2024": {
+     "Amarela": 4,
+     "Branca": 94,
+     "Indígena": 0,
+     "Preta": 3,
+     "Parda": 5,
+     "Não Declarado": 4
+    },
+    "2023": {
+     "Amarela": 4,
+     "Branca": 94,
+     "Indígena": 0,
+     "Preta": 2,
+     "Parda": 5,
+     "Não Declarado": 4
+    }
+   },
+   "FCF": {
+    "2025": {
+     "Amarela": 0,
+     "Branca": 18,
+     "Indígena": 0,
+     "Preta": 2,
+     "Parda": 2,
+     "Não Declarado": 0
+    },
+    "2024": {
+     "Amarela": 0,
+     "Branca": 16,
+     "Indígena": 0,
+     "Preta": 1,
+     "Parda": 1,
+     "Não Declarado": 0
+    },
+    "2023": {
+     "Amarela": 0,
+     "Branca": 16,
+     "Indígena": 0,
+     "Preta": 1,
+     "Parda": 1,
+     "Não Declarado": 0
+    }
+   },
+   "FCM": {
+    "2025": {
+     "Amarela": 9,
+     "Branca": 251,
+     "Indígena": 2,
+     "Preta": 1,
+     "Parda": 7,
+     "Não Declarado": 3
+    },
+    "2024": {
+     "Amarela": 7,
+     "Branca": 251,
+     "Indígena": 2,
+     "Preta": 1,
+     "Parda": 9,
+     "Não Declarado": 6
+    },
+    "2023": {
+     "Amarela": 7,
+     "Branca": 248,
+     "Indígena": 2,
+     "Preta": 1,
+     "Parda": 6,
+     "Não Declarado": 8
+    }
+   },
+   "FE": {
+    "2025": {
+     "Amarela": 1,
+     "Branca": 75,
+     "Indígena": 0,
+     "Preta": 3,
+     "Parda": 2,
+     "Não Declarado": 5
+    },
+    "2024": {
+     "Amarela": 0,
+     "Branca": 73,
+     "Indígena": 0,
+     "Preta": 2,
+     "Parda": 3,
+     "Não Declarado": 7
+    },
+    "2023": {
+     "Amarela": 0,
+     "Branca": 70,
+     "Indígena": 0,
+     "Preta": 2,
+     "Parda": 2,
+     "Não Declarado": 7
+    }
+   },
+   "FEA": {
+    "2025": {
+     "Amarela": 3,
+     "Branca": 42,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 2,
+     "Não Declarado": 6
+    },
+    "2024": {
+     "Amarela": 3,
+     "Branca": 41,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 2,
+     "Não Declarado": 7
+    },
+    "2023": {
+     "Amarela": 3,
+     "Branca": 36,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 1,
+     "Não Declarado": 9
+    }
+   },
+   "FEAGRI": {
+    "2025": {
+     "Amarela": 0,
+     "Branca": 27,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 2,
+     "Não Declarado": 0
+    },
+    "2024": {
+     "Amarela": 0,
+     "Branca": 29,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 2,
+     "Não Declarado": 0
+    },
+    "2023": {
+     "Amarela": 1,
+     "Branca": 25,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 1,
+     "Não Declarado": 1
+    }
+   },
+   "FECFAU": {
+    "2025": {
+     "Amarela": 1,
+     "Branca": 58,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 4,
+     "Não Declarado": 4
+    },
+    "2024": {
+     "Amarela": 0,
+     "Branca": 57,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 3,
+     "Não Declarado": 4
+    },
+    "2023": {
+     "Amarela": 0,
+     "Branca": 56,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 3,
+     "Não Declarado": 6
+    }
+   },
+   "FEEC": {
+    "2025": {
+     "Amarela": 1,
+     "Branca": 61,
+     "Indígena": 0,
+     "Preta": 1,
+     "Parda": 4,
+     "Não Declarado": 1
+    },
+    "2024": {
+     "Amarela": 2,
+     "Branca": 60,
+     "Indígena": 0,
+     "Preta": 1,
+     "Parda": 3,
+     "Não Declarado": 1
+    },
+    "2023": {
+     "Amarela": 2,
+     "Branca": 57,
+     "Indígena": 0,
+     "Preta": 1,
+     "Parda": 3,
+     "Não Declarado": 3
+    }
+   },
+   "FEF": {
+    "2025": {
+     "Amarela": 0,
+     "Branca": 34,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 0,
+     "Não Declarado": 0
+    },
+    "2024": {
+     "Amarela": 0,
+     "Branca": 33,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 0,
+     "Não Declarado": 1
+    },
+    "2023": {
+     "Amarela": 0,
+     "Branca": 34,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 0,
+     "Não Declarado": 2
+    }
+   },
+   "FEM": {
+    "2025": {
+     "Amarela": 6,
+     "Branca": 56,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 5,
+     "Não Declarado": 4
+    },
+    "2024": {
+     "Amarela": 6,
+     "Branca": 50,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 5,
+     "Não Declarado": 4
+    },
+    "2023": {
+     "Amarela": 6,
+     "Branca": 50,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 5,
+     "Não Declarado": 5
+    }
+   },
+   "FENF": {
+    "2025": {
+     "Amarela": 0,
+     "Branca": 37,
+     "Indígena": 0,
+     "Preta": 2,
+     "Parda": 5,
+     "Não Declarado": 1
+    },
+    "2024": {
+     "Amarela": 0,
+     "Branca": 36,
+     "Indígena": 0,
+     "Preta": 1,
+     "Parda": 5,
+     "Não Declarado": 2
+    },
+    "2023": {
+     "Amarela": 0,
+     "Branca": 31,
+     "Indígena": 0,
+     "Preta": 1,
+     "Parda": 4,
+     "Não Declarado": 3
+    }
+   },
+   "FEQ": {
+    "2025": {
+     "Amarela": 1,
+     "Branca": 40,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 1,
+     "Não Declarado": 1
+    },
+    "2024": {
+     "Amarela": 1,
+     "Branca": 38,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 1,
+     "Não Declarado": 1
+    },
+    "2023": {
+     "Amarela": 1,
+     "Branca": 39,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 1,
+     "Não Declarado": 1
+    }
+   },
+   "FOP": {
+    "2025": {
+     "Amarela": 0,
+     "Branca": 78,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 4,
+     "Não Declarado": 1
+    },
+    "2024": {
+     "Amarela": 0,
+     "Branca": 74,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 4,
+     "Não Declarado": 1
+    },
+    "2023": {
+     "Amarela": 0,
+     "Branca": 72,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 3,
+     "Não Declarado": 2
+    }
+   },
+   "FT": {
+    "2025": {
+     "Amarela": 1,
+     "Branca": 71,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 1,
+     "Não Declarado": 2
+    },
+    "2024": {
+     "Amarela": 1,
+     "Branca": 73,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 1,
+     "Não Declarado": 2
+    },
+    "2023": {
+     "Amarela": 1,
+     "Branca": 73,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 0,
+     "Não Declarado": 2
+    }
+   },
+   "IA": {
+    "2025": {
+     "Amarela": 2,
+     "Branca": 77,
+     "Indígena": 0,
+     "Preta": 3,
+     "Parda": 5,
+     "Não Declarado": 5
+    },
+    "2024": {
+     "Amarela": 1,
+     "Branca": 75,
+     "Indígena": 0,
+     "Preta": 3,
+     "Parda": 4,
+     "Não Declarado": 7
+    },
+    "2023": {
+     "Amarela": 1,
+     "Branca": 71,
+     "Indígena": 0,
+     "Preta": 2,
+     "Parda": 5,
+     "Não Declarado": 8
+    }
+   },
+   "IB": {
+    "2025": {
+     "Amarela": 0,
+     "Branca": 91,
+     "Indígena": 0,
+     "Preta": 4,
+     "Parda": 2,
+     "Não Declarado": 5
+    },
+    "2024": {
+     "Amarela": 0,
+     "Branca": 90,
+     "Indígena": 0,
+     "Preta": 4,
+     "Parda": 4,
+     "Não Declarado": 8
+    },
+    "2023": {
+     "Amarela": 0,
+     "Branca": 83,
+     "Indígena": 0,
+     "Preta": 3,
+     "Parda": 4,
+     "Não Declarado": 11
+    }
+   },
+   "IC": {
+    "2025": {
+     "Amarela": 0,
+     "Branca": 36,
+     "Indígena": 0,
+     "Preta": 1,
+     "Parda": 2,
+     "Não Declarado": 5
+    },
+    "2024": {
+     "Amarela": 0,
+     "Branca": 37,
+     "Indígena": 0,
+     "Preta": 1,
+     "Parda": 3,
+     "Não Declarado": 6
+    },
+    "2023": {
+     "Amarela": 0,
+     "Branca": 37,
+     "Indígena": 0,
+     "Preta": 1,
+     "Parda": 3,
+     "Não Declarado": 7
+    }
+   },
+   "IE": {
+    "2025": {
+     "Amarela": 0,
+     "Branca": 57,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 4,
+     "Não Declarado": 1
+    },
+    "2024": {
+     "Amarela": 0,
+     "Branca": 59,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 3,
+     "Não Declarado": 1
+    },
+    "2023": {
+     "Amarela": 0,
+     "Branca": 56,
+     "Indígena": 0,
+     "Preta": 0,
+     "Parda": 2,
+     "Não Declarado": 1
+    }
+   },
+   "IEL": {
+    "2025": {
+     "Amarela": 2,
+     "Branca": 50,
+     "Indígena": 0,
+     "Preta": 2,
+     "Parda": 6,
+     "Não Declarado": 0
+    },
+    "2024": {
+     "Amarela": 2,
+     "Branca": 49,
+     "Indígena": 0,
+     "Preta": 2,
+     "Parda": 5,
+     "Não Declarado": 1
+    },
+    "2023": {
+     "Amarela": 2,
+     "Branca": 51,
+     "Indígena": 0,
+     "Preta": 2,
+     "Parda": 5,
+     "Não Declarado": 1
+    }
+   },
+   "IFCH": {
+    "2025": {
+     "Amarela": 1,
+     "Branca": 67,
+     "Indígena": 1,
+     "Preta": 3,
+     "Parda": 7,
+     "Não Declarado": 4
+    },
+    "2024": {
+     "Amarela": 1,
+     "Branca": 67,
+     "Indígena": 1,
+     "Preta": 3,
+     "Parda": 5,
+     "Não Declarado": 6
+    },
+    "2023": {
+     "Amarela": 0,
+     "Branca": 63,
+     "Indígena": 1,
+     "Preta": 3,
+     "Parda": 5,
+     "Não Declarado": 9
+    }
+   },
+   "IFGW": {
+    "2025": {
+     "Amarela": 3,
+     "Branca": 61,
+     "Indígena": 0,
+     "Preta": 1,
+     "Parda": 1,
+     "Não Declarado": 3
+    },
+    "2024": {
+     "Amarela": 3,
+     "Branca": 67,
+     "Indígena": 0,
+     "Preta": 1,
+     "Parda": 1,
+     "Não Declarado": 6
+    },
+    "2023": {
+     "Amarela": 3,
+     "Branca": 64,
+     "Indígena": 0,
+     "Preta": 1,
+     "Parda": 1,
+     "Não Declarado": 7
+    }
+   },
+   "IG": {
+    "2025": {
+     "Amarela": 0,
+     "Branca": 45,
+     "Indígena": 0,
+     "Preta": 2,
+     "Parda": 5,
+     "Não Declarado": 2
+    },
+    "2024": {
+     "Amarela": 0,
+     "Branca": 45,
+     "Indígena": 0,
+     "Preta": 2,
+     "Parda": 5,
+     "Não Declarado": 2
+    },
+    "2023": {
+     "Amarela": 0,
+     "Branca": 46,
+     "Indígena": 0,
+     "Preta": 2,
+     "Parda": 4,
+     "Não Declarado": 2
+    }
+   },
+   "IMECC": {
+    "2025": {
+     "Amarela": 0,
+     "Branca": 78,
+     "Indígena": 0,
+     "Preta": 4,
+     "Parda": 7,
+     "Não Declarado": 7
+    },
+    "2024": {
+     "Amarela": 0,
+     "Branca": 72,
+     "Indígena": 0,
+     "Preta": 2,
+     "Parda": 9,
+     "Não Declarado": 12
+    },
+    "2023": {
+     "Amarela": 1,
+     "Branca": 73,
+     "Indígena": 0,
+     "Preta": 2,
+     "Parda": 7,
+     "Não Declarado": 13
+    }
+   },
+   "IQ": {
+    "2025": {
+     "Amarela": 1,
+     "Branca": 57,
+     "Indígena": 0,
+     "Preta": 2,
+     "Parda": 4,
+     "Não Declarado": 0
+    },
+    "2024": {
+     "Amarela": 1,
+     "Branca": 57,
+     "Indígena": 0,
+     "Preta": 2,
+     "Parda": 4,
+     "Não Declarado": 1
+    },
+    "2023": {
+     "Amarela": 2,
+     "Branca": 55,
+     "Indígena": 0,
+     "Preta": 3,
+     "Parda": 4,
+     "Não Declarado": 2
+    }
+   },
+   "UNICAMP": {
+    "2025": {
+     "Amarela": 36,
+     "Branca": 1571,
+     "Indígena": 4,
+     "Preta": 34,
+     "Parda": 89,
+     "Não Declarado": 62
+    },
+    "2024": {
+     "Amarela": 32,
+     "Branca": 1543,
+     "Indígena": 3,
+     "Preta": 29,
+     "Parda": 87,
+     "Não Declarado": 90
+    },
+    "2023": {
+     "Amarela": 34,
+     "Branca": 1500,
+     "Indígena": 3,
+     "Preta": 27,
+     "Parda": 75,
+     "Não Declarado": 114
+    }
+   }
+  }
+ }
+}

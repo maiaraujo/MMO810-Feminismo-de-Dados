@@ -1,0 +1,476 @@
+:root{
+    --ink:#1b1b1b;
+    --bg:#efefef;
+    --f:#7B3294;      /* roxo escuro */
+    --m:#E69F00;      /* âmbar claro */
+    --line:#d3d3d3;
+    --board:#2f4b3d;
+    --chalk:#f4f1e6;
+    --surface:#fff;
+    --nav-active:#c00000;      /* 6,5:1 sobre branco (o #ff0000 antigo dava só 4:1) */
+    --legend-ring:rgba(0,0,0,.35);
+}
+html.dark{
+    color-scheme:dark;
+    --bg:#1A1A1A;
+    --ink:#ececec;
+    --line:#3a3e47;
+    --surface:#1e2127;
+    --nav-active:#ff8080;
+    --legend-ring:rgba(255,255,255,.75);
+}
+html.hc{
+    --bg:#000;
+    --ink:#fff;
+    --line:#fff;
+    --surface:#000;
+    --nav-active:#ff0;
+    --legend-ring:#fff;
+}
+.hvr-underline-from-left:before {
+    background: var(--nav-active);
+}
+
+body{background:var(--bg);color:var(--ink);font-family:'Source Sans 3',system-ui,sans-serif}
+h1,h2,h3,.navbar-brand{font-family:'Bricolage Grotesque',sans-serif}
+.app-nav{background:var(--surface);border-bottom:1px solid var(--line)}
+.app-nav .navbar-brand{color:var(--ink);font-weight:700}
+.app-nav .nav-link{color:var(--ink);font-weight:600;padding:.9rem 1rem}
+.app-nav .nav-link.active{color:var(--nav-active);}
+.page-title{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;margin-bottom:1.25rem}
+.page-sub{
+    width:100%;
+    margin:-.5rem 0 1.25rem;
+    font-size:.95rem;
+    opacity:.85}
+.app-nav .nav-link{padding:.9rem .75rem;font-size:.95rem}
+html{scroll-behavior:smooth}
+.page{scroll-margin-top:64px;padding:2.5rem 0 3rem;border-bottom:1px solid var(--line)}
+.page:last-child{border-bottom:0}
+
+/* ---------- barras ---------- */
+.bars-wrap{position:relative;padding:.5rem 0 0}
+.bar-row{display:grid;grid-template-columns:minmax(120px,300px) 1fr;align-items:center;gap:.75rem;height:30px}
+.bar-label{text-align:right;font-size:.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar-track{position:relative;height:22px}
+.bar-fill{height:100%;
+    width:0;
+    border-radius:2px;
+    transition:width 1.1s cubic-bezier(.22,.8,.3,1);
+    background:repeating-linear-gradient(135deg,rgba(0,0,0,.5) 0 1.5px,transparent 1.5px var(--s)),var(--c);
+}
+.bar-val{position:absolute;top:50%;transform:translateY(-50%);font-size:.8rem;white-space:nowrap;opacity:0;transition:opacity .4s}
+.play .bar-fill{width:var(--w)}
+.play .bar-val{opacity:1;transition-delay:calc(var(--d) + .9s)}
+.bar-track .mid{position:absolute;left:calc(50%/1.2);top:-4px;bottom:-4px;border-left:2px dashed #aab;pointer-events:none}
+.bars-grid{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:1rem}
+.bars-axis{display:grid;grid-template-columns:minmax(120px,300px) 1fr;gap:.75rem;margin-top:.5rem}
+.ticks{position:relative;height:1.2rem;font-size:.8rem;opacity:.7}
+.ticks span{position:absolute;transform:translateX(-50%)}
+.arrow-col{position:relative}
+.arrow{position:absolute;left:0;right:0;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;font-family:'Bricolage Grotesque';font-weight:700;font-size:1.25rem;line-height:1.15;padding:0 .5rem;animation:floaty 6s ease-in-out infinite;filter:drop-shadow(0 8px 14px rgba(42,53,86,.25))}
+.arrow span{position:relative;z-index:1;max-width:50%}
+.arrow::before{content:"";position:absolute;inset:0;background:var(--c)}
+.arrow-care{--c:var(--f);--h:56px}
+.arrow-care::before{clip-path:polygon(50% 0,100% var(--h),78% var(--h),78% 100%,22% 100%,22% var(--h),0 var(--h))}
+.arrow-care span{padding-top:var(--h)}
+.arrow-logic{--c:var(--m);--h:56px;animation-delay:-3s}
+.arrow-logic::before{clip-path:polygon(22% 0,78% 0,78% calc(100% - var(--h)),100% calc(100% - var(--h)),50% 100%,0 calc(100% - var(--h)),22% calc(100% - var(--h)))}
+.arrow-logic span{padding-bottom:var(--h)}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media(max-width:767px){.bars-grid{grid-template-columns:minmax(0,1fr) 84px}.bar-row{grid-template-columns:78px 1fr}.bar-label{font-size:.62rem}.bar-val{font-size:.62rem}.bars-axis{grid-template-columns:78px 1fr;gap:.75rem}.arrow{font-size:.8rem;padding:0 .2rem;--h:36px!important}}
+.bar-label, .bar-val {
+    font-size: 100%;
+}
+
+
+/* ---------- slider ---------- */
+.slider-tabs{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:.5rem;
+    margin-bottom:1rem;
+}
+.slider-tabs button{
+    border: 2px solid var(--ink);
+    background:transparent;
+    color:var(--ink);
+    border-radius: 999px;
+    padding:.35rem 1.1rem;
+    font-weight: 600;
+    font-size: 100%;
+}
+.slider-tabs button.active{background:var(--ink);color:var(--bg)}
+.slide-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:1.5rem;align-items:center}
+@media(max-width:991px){.slide-grid{grid-template-columns:1fr}}
+/*.room-box{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:1rem;
+}*/
+.room-box.two{display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:.5rem;
+}
+.room-cap{text-align:center;font-weight:600;margin:0}
+.room-svg{width:100%;height:auto;display:block}
+
+
+.note-box{
+    background: #0D0D0D;
+    color: #E5E5E5;
+    border-radius: 2px;
+    padding: 1.3rem 1.5rem;
+    box-shadow: 0 14px 30px rgba(42,53,86,.35);
+    animation: bob 4.5s ease-in-out infinite;
+    transform-origin: 50% 100%;
+}
+.note-box .big{
+    font-family:'Bricolage Grotesque';
+    font-size:clamp(2.4rem,6vw,3.2rem);font-weight:700;line-height:1;
+    color:#B2B2B2;
+    margin-bottom:.4rem;
+}
+.note-box:hover{animation-play-state:paused;box-shadow:0 18px 38px rgba(42,53,86,.5)}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-.7deg)}50%{transform:translateY(-14px) rotate(.7deg);box-shadow:0 26px 34px rgba(42,53,86,.28)}}
+
+
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1rem;margin:.6rem 0;font-size:.9rem}
+.legend i b{position:absolute;inset:0;margin:auto;width:46%;height:46%;background:var(--ink,#fff)}
+.legend i b.c{border-radius:50%}
+.legend i b.t{width:54%;height:48%;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.hc .legend i b{background:#000}
+.hc .chair-pop .sym{fill:#000;stroke:none!important}   /* símbolo preto sobre amarelo/branco/verde... */
+.legend i{position:relative;display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:.35rem;vertical-align:-1px;box-shadow:0 0 0 1.5px var(--legend-ring)}
+.page .chair-pop{opacity:0;animation:none}
+.page.in .chair-pop{animation:pop .45s ease forwards;animation-delay:calc(var(--i)*14ms);transform-box:fill-box;transform-origin:50% 100%}
+.page.in .chair-pop.popped{animation:none;opacity:1}
+@keyframes pop{from{opacity:0;transform:translateY(-14px) scale(.7)}to{opacity:1;transform:none}}
+.carousel-item{transition:opacity .4s}
+/* ---------- setas do slider ----------
+   Desktop: setas vermelhas, sólidas e grandes, em colunas laterais (não cobrem mais o conteúdo) e com pulso até o 1º uso.
+   Celular/tablet: as setas laterais somem (ficavam no meio do conteúdo, invisíveis) e entra uma barra fixa no rodapé da tela. */
+.slider .carousel{padding:0 76px}
+.carousel-control-prev,.carousel-control-next{width:76px;opacity:1}
+.carousel-control-next-icon,.carousel-control-prev-icon{
+    background-color:#d62828;
+    border-radius: 20px;
+    opacity: 1;
+    width:58px;
+    height:200px;
+    background-size:50%;
+    box-shadow:0 0 0 2px #7a0f0f,0 6px 16px rgba(0,0,0,.4);
+    animation:arrow-pulse 2.2s ease-out infinite;
+    transition:transform .2s,background-color .2s;
+}
+.carousel-control-prev:hover .carousel-control-prev-icon,.carousel-control-next:hover .carousel-control-next-icon,
+.carousel-control-prev:focus-visible .carousel-control-prev-icon,.carousel-control-next:focus-visible .carousel-control-next-icon{
+    background-color:#a81818;transform:scale(1.1)
+}
+.carousel-control-next, .carousel-control-prev{
+    align-items: initial !important;
+}
+@keyframes arrow-pulse{
+    0%{box-shadow:0 0 0 2px #7a0f0f,0 6px 16px rgba(0,0,0,.4),0 0 0 2px rgba(214,40,40,.75)}
+    70%,100%{box-shadow:0 0 0 2px #7a0f0f,0 6px 16px rgba(0,0,0,.4),0 0 0 20px rgba(214,40,40,0)}}
+.slider.used .carousel-control-prev-icon,.slider.used .carousel-control-next-icon,.slider.used .sb-btn{animation:none}
+
+/* barra de navegação (só celular/tablet) */
+.slider-bar{display:none}
+.sb-btn{display:inline-flex;align-items:center;justify-content:center;gap:.35rem;min-height:48px;padding:.5rem 1.1rem;
+    background:#d62828;color:#fff;border:0;border-radius:999px;font-weight:700;font-size:1rem;line-height:1;cursor:pointer;
+    animation:btn-pulse 2.2s ease-out infinite}
+.sb-btn:active{background:#a81818;transform:scale(.97)}
+.sb-count{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+@keyframes btn-pulse{0%{box-shadow:0 0 0 0 rgba(214,40,40,.7)}70%,100%{box-shadow:0 0 0 14px rgba(214,40,40,0)}}
+@media(max-width:991px){
+    .slider .carousel{padding:0}
+    .carousel-control-prev,.carousel-control-next{display:none}
+    .slider-bar{display:flex;align-items:center;justify-content:space-between;gap:.5rem;
+        position:sticky;bottom:.75rem;z-index:20;max-width:460px;margin:1.25rem auto 0;padding:.4rem;
+        background:var(--surface);color:var(--ink);border:2px solid var(--ink);border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+}
+@media(max-width:380px){.sb-btn{padding:.5rem .8rem;font-size:.92rem}}
+
+/* ---------- legenda no canto superior esquerdo da sala (alunos) ---------- */
+.room-box.has-corner{position:relative;container-type:inline-size}
+.legend-corner{position:absolute;top:0;left:0;z-index:2;margin:0;padding:.4rem .6rem;
+    display:flex;flex-direction:column;flex-wrap:nowrap;gap:.3rem;
+    font-size:clamp(.68rem,2.5cqw,.95rem);line-height:1.15;
+    background:color-mix(in srgb,var(--bg) 80%,transparent);border-radius:10px}
+.legend-corner span{display:flex;align-items:center;white-space:nowrap}
+.legend-corner i{width:.85em;height:.85em;flex:none}
+/* telas estreitas + legenda grande (raça/cor): empurra a sala um pouco para baixo para a legenda não cobrir a parede */
+@container (max-width:520px){.legend-corner.many ~ .room-svg{margin-top:2.6rem}}
+
+/* ---------- lousa ---------- */
+.chalk .room-box{border:12px solid #8a5a2b;border-radius:6px;box-shadow:inset 0 0 50px rgba(0,0,0,.45),0 6px 16px rgba(0,0,0,.2);
+ background:radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.10),transparent 55%),radial-gradient(ellipse at 75% 80%,rgba(255,255,255,.06),transparent 50%),
+ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .13 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E"),var(--board)}
+.chalk .room-cap{font-family:'Gochi Hand',cursive;font-size:1.25rem;color:var(--chalk)}
+.chalk .room-box{position:relative}
+.chalk .room-box::after{content:"";position:absolute;left:12px;right:12px;bottom:-12px;height:6px;background:#6e4520}
+
+
+/* legenda na lousa */
+.chalk .legend{
+    justify-content:center;
+    color:var(--chalk)
+}
+
+/* botão de contraste + rodapé */
+
+.site-footer{background:var(--surface);border-top:1px solid var(--line);text-align:center;font-size:.9rem}
+.site-footer a{color:var(--ink);font-weight:600}
+
+/* lousa */
+.board-wide{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:1.5rem;align-items:center;padding:1rem 1.5rem}
+.board-wide .room-svg{max-height:calc(100vh - 330px);margin:0 auto}
+@media(max-width:991px){.board-wide{grid-template-columns:1fr}.board-wide .room-svg{max-height:none}}
+/* na lousa, a caixa vira "papel de giz" claro sobre o verde */
+.chalk .note-box{
+    background:var(--chalk);
+    color:#1d2433;
+}
+.chalk .note-box .big{
+    color:#c0392b
+}
+
+/* ---------- caixinhas empilhadas (uma ou mais por slide) ---------- */
+.notes{display:flex;flex-direction:column;gap:1.4rem;min-width:0}
+.note-box .big-cap{display:block;font-family:'Source Sans 3',sans-serif;font-size:1rem;font-weight:600;line-height:1.25;margin-top:.45rem;color:#fff}
+.note-box p{line-height:1.5}
+.notes .note-box.sub{padding:1.1rem 1.35rem;font-size:.98rem}
+.notes .note-box:nth-child(2){animation-delay:-1.4s}
+.notes .note-box:nth-child(3){animation-delay:-2.8s}
+.notes .note-box:nth-child(4){animation-delay:-4.2s}
+.chalk .note-box .big-cap{color:#1d2433}
+.hc .note-box .big-cap,.hc .chalk .note-box .big-cap{color:#fff}
+
+/* botões dos slides: "Computação (IC)" – nomes longos quebram linha */
+.slider-tabs button{white-space:normal;line-height:1.2;text-align:center}
+@media(max-width:575px){.slider-tabs button{font-size:.85rem;padding:.35rem .8rem}}
+
+/* linha pequena acima do nome nos botões dos slides de destaque */
+.slider-tabs button .kick{display:block;font-size:.7em;font-weight:600;letter-spacing:.05em;text-transform:uppercase;opacity:.85;margin-bottom:.1rem}
+
+/* aviso sobre binarização dos dados */
+.data-warning{background:var(--surface);border:2px dashed var(--ink);border-radius:12px;padding:.9rem 1.1rem;margin-bottom:1.5rem;font-size:.95rem}
+.bin-note{display:block;font-size:.85rem;margin-top:.4rem;opacity:.9}
+.chalk .bin-note{color:var(--chalk);text-align:center}
+
+/* ---------- linha do tempo (raça/cor: pré-cota, ano da cota, após cota) ---------- */
+.slider-tabs.timeline{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0;max-width:760px;margin:0 auto 1.75rem}
+.slider-tabs.timeline button{position:relative;display:flex;flex-direction:column;align-items:center;gap:.15rem;
+  border:0;border-radius:0;background:transparent;color:var(--ink);padding:0 .25rem;font-weight:600;cursor:pointer}
+.slider-tabs.timeline button.active{background:transparent;color:var(--ink)}
+.timeline button::before{content:"";position:absolute;top:13px;right:50%;width:100%;height:4px;background:var(--line);transition:background .3s}
+.timeline button:first-child::before{display:none}
+.timeline button.done::before{background:var(--ink)}
+.timeline .dot{position:relative;z-index:1;width:30px;height:30px;border-radius:50%;border:4px solid var(--ink);background:var(--bg);transition:transform .25s,background .25s,box-shadow .25s}
+.timeline button.done .dot{background:var(--ink)}
+.timeline button.active .dot{
+    background: #c81a1a; 
+    border-color:var(--ink); 
+    transform:scale(1.2);
+    box-shadow:0 0 0 6px rgba(200,26,26,.22)
+}
+.timeline button:hover .dot{transform:scale(1.15)}
+.timeline .tl-year{font-family:'Bricolage Grotesque',sans-serif;font-size:1.35rem;font-weight:700;line-height:1.1;margin-top:.35rem}
+.timeline .tl-label{font-size:.9rem;opacity:.8}
+.timeline button.active .tl-label{opacity:1}
+.timeline button:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+@media(max-width:575px){.timeline .tl-year{font-size:1.05rem}.timeline .tl-label{font-size:.75rem}}
+
+/* ---------- páginas de abertura (parallax) ----------
+   Troque as imagens aqui. Caminhos relativos a este arquivo (css/). */
+.hero-capa{--hero-img:url('../images/bg001.png');--tint:19,161,0}
+.hero-alunos{--hero-img:url('../images/bg002.png');--tint:19,161,0}
+.hero-prof{--hero-img:url('../images/bg002.png');--tint:241,142,4}
+
+.hero{position:relative;isolation:isolate;overflow:hidden;clip-path:inset(0);
+  min-height:calc(100svh - 60px);display:grid;place-items:center;text-align:center;color:#fff;background:#1b1b1b}
+/* fundo "fixed": fica parado na tela enquanto a seção rola (também funciona no iOS) */
+.hero::before{content:"";position:fixed;inset:0;z-index:-2;background:var(--hero-img) center/cover no-repeat,#1b1b1b}
+/* efeito: escurece o topo/base e dá um tom de cor suave (verde p/ alunos, laranja p/ professores) */
+.hero::after{content:""; position:absolute; inset:0; z-index:-1;
+  background:radial-gradient(ellipse at 50% 55%,rgba(255,255,255,.28),transparent 65%),
+             linear-gradient(180deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.38) 45%,rgba(0,0,0,.72) 100%)}
+.hero-inner{max-width:900px;padding:4rem 1.5rem;will-change:transform,opacity}
+.hero-title{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:700;
+    font-size:clamp(2.4rem,8vw,5.5rem);
+    line-height:1.02;margin:0 0 1.25rem;
+    text-shadow:0 4px 30px rgba(0,0,0,.55);
+    background: black;
+}
+.hero-text{font-size:clamp(1.05rem,2.2vw,1.5rem);max-width:52ch;line-height:1.45;margin:0 auto;text-shadow:0 2px 14px rgba(0,0,0,.6)}
+
+.hero-scroll{
+    display:inline-flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1rem;
+    margin-top:10px;
+    color:#fff;
+    text-decoration:none;
+    width: 100%;
+}
+.hs-label{font-weight:600;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;text-shadow:0 2px 12px rgba(0,0,0,.7);animation:hs-blink 2.2s ease-in-out infinite}
+.hs-btn{position:relative;display:grid;place-items:center;width:78px;height:78px;border-radius:50%;background:#fff;color:#111;
+  box-shadow:0 10px 30px rgba(0,0,0,.5);animation:hero-bounce 1.7s ease-in-out infinite;transition:transform .2s}
+.hs-btn svg{width:36px;height:36px}
+.hs-btn::before,.hs-btn::after{content:"";position:absolute;inset:0;border-radius:50%;border:3px solid #fff;animation:hs-ring 2.2s ease-out infinite;pointer-events:none}
+.hs-btn::after{animation-delay:1.1s}
+.hero-scroll:hover .hs-btn{transform:scale(1.1)}
+.hero-scroll:focus-visible{outline:3px solid #ff0;outline-offset:8px;border-radius:12px}
+@keyframes hero-bounce{0%,100%{translate:0 0}50%{translate:0 14px}}
+@keyframes hs-ring{0%{transform:scale(1);opacity:.9}100%{transform:scale(2);opacity:0}}
+@keyframes hs-blink{0%,100%{opacity:.75}50%{opacity:1}}
+
+/* ---------- capa ---------- */
+.hero-capa::after{background:
+  radial-gradient(ellipse at 15% 85%,rgba(255, 255, 255, 0.38),transparent 55%),
+  radial-gradient(ellipse at 85% 15%,rgba(255, 255, 255, 0.32),transparent 55%),
+  linear-gradient(180deg,rgba(0,0,0,.70) 0%,rgba(0,0,0,.40) 45%,rgba(0,0,0,.75) 100%)}
+.hero-capa .hero-title{
+    font-size: 500%;
+    margin-bottom:1rem;
+    background: black;
+    display: inline;
+}
+.hero-eyebrow{display:inline-block;
+    margin-bottom:1.5rem;
+    padding:.4rem 1rem;
+    border:1px solid rgba(255,255,255,.7);
+    border-radius:999px;
+    font-weight:600;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;}
+.hero-rule{width:140px;height:6px;border-radius:3px;margin:0 auto 1.5rem;background: white;}
+.hero-sub{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:500;
+    font-size:clamp(1.3rem,3.5vw,2.2rem);
+    margin:0 0 1rem;
+    display: inline;
+    margin: 0 auto;
+    background: black;
+}
+
+/* ---------- seletor de tema ---------- */
+.theme-switch{display:flex;align-items:center;gap:.5rem}
+.theme-seg{display:inline-flex;border:2px solid var(--ink);border-radius:999px;overflow:hidden}
+.theme-seg .theme-btn+.theme-btn{border-left:2px solid var(--ink)}
+.theme-btn{display:inline-flex;align-items:center;gap:.35rem;background:transparent;color:var(--ink);border:0;padding:.3rem .8rem;font-weight:600;font-size:.9rem;cursor:pointer;line-height:1.4}
+.theme-hc{border:2px solid var(--ink);border-radius:999px}
+.theme-btn:hover{background:rgba(127,127,127,.22)}
+.theme-btn[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.theme-btn:focus-visible{outline:3px solid var(--nav-active);outline-offset:2px}
+@media(max-width:575px){.theme-btn .lbl{display:none}.theme-btn{padding:.3rem .6rem;font-size:1rem}}
+
+/* ---------- acessibilidade geral ---------- */
+.skip-link{position:absolute;left:.5rem;top:-100px;z-index:2000;background:var(--ink);color:var(--bg);padding:.5rem 1rem;border-radius:8px;font-weight:600}
+.skip-link:focus{top:.5rem}
+:focus-visible{outline:3px solid var(--nav-active);outline-offset:3px}
+.data-warning,.hero{scroll-margin-top:60px}
+.navbar-brand{text-decoration:none}
+
+/* ---------- tema escuro ---------- */
+.dark .navbar-toggler{filter:invert(1)}
+.dark .slider:not(.chalk) .note-box{
+    background:#0D0D0D;
+    border: 1px solid var(--line);
+    box-shadow:0 14px 30px rgba(0,0,0,.5);
+}
+.dark .site-footer a{text-decoration-color:var(--nav-active)}
+.room-svg polygon[fill="#fff"]{fill:var(--surface)} 
+.dark .room-svg polygon[fill="#fff"]{fill:#fff} 
+
+/* pessoas escuras (ex.: Preta #272b40) sumiam sobre fundo escuro e sobre a lousa */
+/*.dark .slider:not(.chalk) .lo path,.dark .slider:not(.chalk) .lo circle,
+.hc .slider:not(.chalk) .lo path,.hc .slider:not(.chalk) .lo circle{stroke:#fff;stroke-width:1.5}
+.chalk .lo path,.chalk .lo circle,.chalk .mid path,.chalk .mid circle{fill:var(--c);stroke:var(--chalk);stroke-width:1.6}*/
+
+/* ---------- ALTO CONTRASTE ---------- */
+/* alto contraste: sem imagem de fundo, sem efeito, sem parallax */
+.hc .hero{background:#000;color:#fff;clip-path:none;border-block:2px solid #fff}
+.hc .hero::before,.hc .hero::after{display:none}
+.hc .hero-inner{transform:none!important;opacity:1!important}
+.hc .hero-title,.hc .hero-text{text-shadow:none}
+.hc .hero-scroll{animation:none}
+.hc .app-nav,.hc .site-footer,.hc .room-box,.hc .note-box{background:#000;color:#fff;border-color:#fff}
+.hc .room-box{border:2px solid #fff}
+.hc .note-box{border:2px solid #fff;box-shadow:none}
+.hc .chalk .room-box{border:4px solid #fff;box-shadow:none}
+.hc .chalk .room-box::after{display:none}
+.hc .chalk .room-cap,.hc .chalk .legend{color:#fff}
+.hc .slider-tabs button{border-color:#fff;color:#fff}
+.hc .slider-tabs button.active,.hc .theme-btn[aria-pressed="true"]{background:#ff0;color:#000;border-color:#ff0}
+.hc .app-nav .nav-link.active{color:#ff0;text-decoration:underline;text-underline-offset:6px}
+.hc .page-sub,.hc .ticks,.hc .timeline .tl-label{opacity:1}   /* opacity < 1 reduzia o contraste do texto */
+.hc .app-nav .nav-link,.hc .navbar-brand{color:#fff}
+.hc .theme-btn:hover{background:#333}
+.hc .hs-btn{background:#ff0;color:#000;border:3px solid #fff;box-shadow:none;animation:none}
+.hc .hs-btn::before,.hc .hs-btn::after{display:none}
+.hc .hs-label{animation:none;text-shadow:none}
+.hc .hero-eyebrow{background:#000;border-color:#fff}
+.hc .hero-rule{background:#fff}
+.hc .carousel-control-prev-icon,.hc .carousel-control-next-icon{background-color:#000;border-color:#ff0;box-shadow:none;opacity:1}
+.hc .legend{color:#fff}
+.hc .carousel-control-prev-icon,.hc .carousel-control-next-icon{animation:none}
+.hc .sb-btn{background:#ff0;color:#000;border:2px solid #fff;animation:none}
+.hc .slider-bar{background:#000;color:#fff;border-color:#fff;box-shadow:none}
+.hc .legend-corner{background:#000}
+.hc :focus-visible{outline-color:#ff0}
+.hc .slider-tabs.timeline button,.hc .slider-tabs.timeline button.active{background:transparent;color:#fff;border:0}
+.hc .timeline button::before{background:#555}
+.hc .timeline button.done::before{background:#fff}
+.hc .timeline button.active .dot{background:#ff0;border-color:#fff;box-shadow:0 0 0 6px rgba(255,255,0,.3)}
+.hc .timeline button.active .tl-year{color:#ff0}
+.hc .site-footer a,.hc .nav-link:hover{color:#ff0}
+.hc .bar-fill{outline:2px solid #fff}
+.hc .bar-track .mid{border-left-color:#fff}
+.hc .arrow{filter:none;}
+.hc .navbar-toggler{filter:invert(1)}
+.hc .note-box .big{color:#ff0}
+.hc .chalk .note-box{background:#000;color:#fff}
+.hc .chalk .note-box .big{color:#ff0}
+.hc .data-warning{background:#000;color:#fff;border-color:#fff}
+.hc .chalk .bin-note{color:#fff}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.page .chair-pop{opacity:1}.play .bar-fill{width:var(--w)}.bar-val{opacity:1}}
+
+
+/* ---------- ajustes para celulares ---------- */
+@media(max-width:575px){
+    .hero-capa .hero-title{
+        font-size: 350% !important;
+    }
+}
+
+/* ---------- ALTO CONTRASTE: paleta (fundo preto) ----------
+   Gênero: mulheres = amarelo, homens = branco.  Barras: >= 50% de mulheres = amarelo; < 50% = branco; mesmas listras do tema normal
+   (forma + cor, nunca só cor).  Raça/cor: 6 cores bem separadas em luminância e matiz. Todas têm mais de 6:1 sobre preto. */
+.hc [data-k=f]{--hc:#ffff00}
+.hc [data-k=m]{--hc:#ffffff}
+.hc [data-k=branca]{--hc:#ffffff}
+.hc [data-k=parda]{--hc:#8c8c8c}
+.hc [data-k=preta]{--hc:#00c853}
+.hc [data-k=amarela]{--hc:#ffff00}
+.hc [data-k=indigena]{--hc:#ff7ac8}
+.hc [data-k=naodeclarado]{--hc:#3d8bff}
+.hc .chair-pop path,.hc .chair-pop circle{fill:var(--hc,#fff);stroke:#000!important}   /* contorno preto separa um boneco do outro */
+.hc .legend i[data-k]{background:var(--hc,#fff)!important}
+/* sala dos alunos: paredes e chão pretos com traço branco (os tons claros escondiam o amarelo) */
+.hc .room-svg .wall-l,.hc .room-svg .wall-r,.hc .room-svg .floor{fill:#000;stroke:#fff;stroke-width:1.5}
+.hc .room-svg polygon[fill="#fff"]{stroke:#fff}
+.hc .room-svg .desk-top,.hc .room-svg .desk-side{fill:#000;stroke:#fff;stroke-width:1}
+.hc .room-svg .seat-part polygon{fill:#000;stroke:#fff;stroke-width:1}
+/* barras */
+.hc .bar-row .bar-fill{--c:#fff!important}      /* < 50%: branco */
+.hc .bar-row.up .bar-fill{--c:#ff0!important}   /* >= 50%: amarelo. As listras são as mesmas do tema normal (densidade pela % via --s) */
+.hc .arrow-care{--c:#ff0;color:#000}
+.hc .arrow-logic{--c:#fff;color:#000}
+/* setas do slider: sem borda a caixa preta sumia no fundo preto */
+.hc .carousel-control-prev-icon,.hc .carousel-control-next-icon{background-color:#000;border:3px solid #ff0;animation:none}
