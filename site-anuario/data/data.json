@@ -122,6 +122,12 @@
      ]
     },
     {
+     "unidade": "FENF",
+     "nota": [
+      "A enfermagem, de modo oposto, tem 85,6% de alunas: 309 de 361 alunos."
+     ]
+    },
+    {
      "unidade": "FEM",
      "nota": [
       "A engenharia mecânica é a segunda com menor presença feminina: somente 17,1%, ou 309 dos 1.807 alunos.",
@@ -129,24 +135,17 @@
      ]
     },
     {
+     "unidade": "FCF",
+     "nota": [
+      "O curso de farmácia também está vinculado a maior presença feminina, com 75,4% de mulheres, equivalente a 301 dos 399 alunos, logo abaixo da enfermagem.",
+      "Pelo padrão identificado, continuam-se reforçando as diferenças por gênero a cada área do conhecimento."
+     ]
+    },
+    {
      "unidade": "FEEC",
      "nota": [
       "Com quase nenhuma diferença percentual para a mecânica, a engenharia elétrica tem 17,2% de mulheres matriculadas: 249 de 1.451.",
-      "Mantém-se o padrão: as engenharias estão entre as áreas com mais presença masculina."
-     ]
-    },
-    {
-     "unidade": "FCA",
-     "nota": [
-      "A FCA é a unidade com minoria de mulheres que mais se aproxima da igualdade: 48,8% (1.509 de 3.091).",
-      "Das 14 unidades com minoria de mulheres, a grande maioria é de exatas, tecnologia e engenharias, áreas vinculadas a profissões tidas como masculinas. As exceções mais claras são a Educação Física (FEF, 40,4%) e a Economia (IE, 36,1%)."
-     ]
-    },
-    {
-     "unidade": "IFCH",
-     "nota": [
-      "Ordenando do menor para o maior percentual, o IFCH é o primeiro em que as mulheres ultrapassam a metade dos matriculados: 52,2% (1.150 de 2.203).",
-      "Acima do IFCH estão, em sua maioria, unidades de humanas, artes e saúde, com poucas exceções, como a Engenharia de Alimentos (FEA), onde 63,1% são mulheres."
+      "Mantém-se o padrão: os cursos de engenharia são os com mais presença masculina."
      ]
     },
     {
@@ -156,16 +155,17 @@
      ]
     },
     {
-     "unidade": "FCF",
+     "unidade": "FCA",
      "nota": [
-      "O curso de farmácia também está vinculado a maior presença feminina, com 75,4% de mulheres, equivalente a 301 dos 399 alunos, logo atrás da enfermagem.",
-      "Pelo padrão identificado, continuam-se reforçando as diferenças por gênero em cada área do conhecimento."
+      "A FCA é a última unidade com minoria de mulheres matriculadas, com 48,8% (1.509 de 3.091), a mais próxima da igualdade.",
+      "Listando as 14 unidades com minoria de mulheres até a FCA, a grande maioria é de exatas, tecnologia e engenharias, áreas vinculadas a profissões tidas como masculinas. As exceções mais claras são a Educação Física (FEF, 40,4%) e a Economia (IE, 36,1%)."
      ]
     },
     {
-     "unidade": "FENF",
+     "unidade": "IFCH",
      "nota": [
-      "No extremo oposto, a enfermagem tem 85,6% de alunas: 309 de 361 alunos.",
+      "O IFCH é o primeiro instituto em que as mulheres ultrapassam a metade dos matriculados: 52,2% (1.150 de 2.203).",
+      "Após o IFCH, as demais unidades com maioria de mulheres são, em sua maioria, de humanas, artes e saúde, com poucas exceções, como a Engenharia de Alimentos (FEA), onde 63,1% são mulheres.",
       "É notável a relação: mulheres concentradas em áreas ligadas ao cuidado (saúde e educação) e homens em áreas de lógica e construção (engenharias e exatas). Os dados mostram essa relação na grande maioria das unidades."
      ]
     }
@@ -223,56 +223,42 @@
     {
      "unidade": "FEEC",
      "nota": [
-      "Com apenas 10,3% do corpo docente composto por mulheres, a FEEC é o instituto com menos professoras: 7 entre 68 docentes.",
-      "FEEC: as mulheres são 17,2% dos alunos e 10,3% dos docentes (6,9 pontos percentuais a menos entre os docentes)."
+      "Com apenas 10,3% do corpo docente composto por mulheres, a FEEC é o instituto com menor quantidade de professoras mulheres: 7 entre 68 docentes."
+     ]
+    },
+    {
+     "unidade": "FENF",
+     "nota": [
+      "No caminho oposto, a enfermagem tem 93,3% de professoras mulheres: 42 entre 45."
      ]
     },
     {
      "unidade": "FEM",
      "nota": [
       "Em segundo lugar de menos mulheres docentes, a engenharia mecânica está com 12,7%, referente a 9 mulheres entre 71 docentes.",
-      "FEM: as mulheres são 17,1% dos alunos e 12,7% dos docentes (4,4 pontos percentuais a menos entre os docentes).",
       "Nota-se, assim como entre os discentes, um padrão: engenharias e exatas ainda são dominadas e entendidas como espaços masculinos."
-     ]
-    },
-    {
-     "unidade": "IC",
-     "nota": [
-      "Em terceiro lugar de menos mulheres docentes, o IC tem 13,6% de professoras: 6 mulheres entre 44 docentes.",
-      "IC: as mulheres são 16,4% dos alunos e 13,6% dos docentes (2,7 pontos percentuais a menos entre os docentes).",
-      "O IC, que já é o instituto com menos alunas, também está entre os três com menor presença feminina na docência: nas áreas de computação, a ausência de mulheres se repete de quem estuda para quem ensina."
-     ]
-    },
-    {
-     "unidade": "FCM",
-     "nota": [
-      "A FCM está no limiar: ainda tem maioria masculina, mas é a que mais se aproxima do equilíbrio, com 47,2% de mulheres no corpo docente (128 de 271).",
-      "FCM: as mulheres são 60,6% dos alunos e 47,2% dos docentes (13,4 pontos percentuais a menos entre os docentes).",
-      "Mesmo com quase equilíbrio entre docentes homens e mulheres, abaixo dela há outros 18 institutos e faculdades com mais homens que mulheres na docência."
-     ]
-    },
-    {
-     "unidade": "IEL",
-     "nota": [
-      "O IEL é o primeiro instituto, do menor para o maior percentual, em que as mulheres passam de 50%: 55,0% de docentes mulheres, 33 dos 60 docentes.",
-      "IEL: as mulheres são 63,5% dos alunos e 55,0% dos docentes (8,5 pontos percentuais a menos entre os docentes).",
-      "Diferente da medicina, que ainda tem outros 18 institutos abaixo com minoria de mulheres docentes, acima do IEL há somente outros 4 (FENF, FE, FCF, FEA) com mais da metade do corpo docente composto por mulheres.",
-      "Entre as docentes fica claro que há a questão de área, mas ela é reforçada por uma questão de poder: a queda do percentual de mulheres da graduação para a docência sugere que a docência ainda dá preferência a homens, mesmo em ambientes entendidos como femininos."
      ]
     },
     {
      "unidade": "FE",
      "nota": [
-      "A educação, entre os docentes, também tem maioria feminina: 64,0% (55 de 86).",
-      "FE: as mulheres são 70,8% dos alunos e 64,0% dos docentes (6,9 pontos percentuais a menos entre os docentes).",
+      "A educação, entre as docentes, também tem maioria feminina: 64,0% (55 de 86).",
       "Seguindo o mesmo padrão, as áreas de saúde, cuidado e educação são vinculadas à atuação feminina, com maior presença de mulheres."
      ]
     },
     {
-     "unidade": "FENF",
+     "unidade": "FCM",
      "nota": [
-      "No caminho oposto, a enfermagem tem 93,3% de professoras mulheres: 42 entre 45.",
-      "FENF: as mulheres são 85,6% dos alunos e 93,3% dos docentes (7,7 pontos percentuais a mais entre os docentes)."
+      "A FCM está no limiar de mudança: é a faculdade que ainda tem maioria masculina, mas está mais perto do equilíbrio, com 47,2% de mulheres no corpo docente (128 de 271).",
+      "Mesmo com quase equilíbrio entre docentes homens e mulheres, abaixo dela há ainda outros 18 institutos e faculdades com mais homens que mulheres na docência."
+     ]
+    },
+    {
+     "unidade": "IEL",
+     "nota": [
+      "O IEL é o primeiro instituto em que as mulheres passam de 50% do corpo docente: 55,0%, equivalente a 33 dos 60 docentes.",
+      "Diferente da medicina, que ainda tem outros 18 institutos após ela com minoria de mulheres docentes, após o IEL há somente outros 4 institutos com mais da metade do corpo docente composto por mulheres.",
+      "Entre as docentes fica claro que há a questão de área, mas ela é reforçada pela questão de poder: a docência ainda dá preferência a homens, mesmo em ambientes entendidos como femininos."
      ]
     }
    ]
