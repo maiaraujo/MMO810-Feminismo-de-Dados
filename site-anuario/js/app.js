@@ -3,8 +3,8 @@ const ROOM_SIZE = 50;
 /* ESPAÇO ENTRE OS BONECOS*/
 const ROOM_SPACING = ROOM_SIZE <= 50 ? 1.45 : 1;
 
-const genderColors = { F: '#7B3294', M: '#F18E04' };
-const chalkC = { F: '#7B3294', M: '#F18E04' }; // verde mais claro para ter contraste na lousa
+const genderColors = { F: '#613294', M: '#F18E04' };
+const chalkC = { F: '#613294', M: '#F18E04' }; // verde mais claro para ter contraste na lousa
 
 /* Mulheres na Unicamp – app.js */
 const $ = (s, r = document) => r.querySelector(s);
