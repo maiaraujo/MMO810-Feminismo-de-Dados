@@ -12,6 +12,11 @@ const $ = (s, r = document) => r.querySelector(s);
 const slug = k => String(k).normalize('NFD').replace(/[^a-zA-Z]/g, '').toLowerCase();
 const fmt = n => n.toLocaleString('pt-BR');
 const pct1 = v => (v * 100).toFixed(1).replace('.', ',') + '%';
+/* setas de rabo curto (progressão): herdam a cor do texto; aria-label mantém o sentido para leitores de tela */
+const ARROW_UP = '<svg class="ico-arrow" viewBox="0 0 12 12" role="img" aria-label="subiu"><path d="M6 10V2.5M2.5 6L6 2.5 9.5 6"/></svg>';
+const ARROW_DOWN = '<svg class="ico-arrow" viewBox="0 0 12 12" role="img" aria-label="caiu"><path d="M6 2v7.5M2.5 6L6 9.5 9.5 6"/></svg>';
+/* raça/cor: ordena as categorias da menor para a maior porcentagem (a menor começa na 1ª fileira, junto da lousa; a maior fica no fundo) */
+const sortAsc = obj => Object.fromEntries(Object.entries(obj).sort((a, b) => a[1] - b[1]));
 let DATA;
 
 /* ---------- utilidades ---------- */
@@ -243,7 +248,7 @@ function buildRaca() {
   slider($('#sliderRaca'), 'carRaca', cfg.slides.map((sl, i) => {
     const d = DATA.dados.alunos_raca_unicamp[sl.ano];
     return { label: sl.rotulo, year: sl.ano, html: `<div class="slide-grid">
-      <div class="room-box has-corner">${legend(cores, {}, true, racaMarks)}${room(toHundred(d), cores, 'cor', 'ra' + i, true, false, racaMarks)}
+      <div class="room-box has-corner">${legend(cores, {}, true, racaMarks)}${room(toHundred(sortAsc(d)), cores, 'cor', 'ra' + i, true, false, racaMarks)}
         <p class="room-cap">Se a Unicamp tivesse ${ROOM_SIZE} alunos em ${sl.ano}</p></div>
       ${note(sl.nota, pct1(d.Preta + d.Parda), 'de pretos e pardos entre os alunos')}</div>` };
   }), true);
@@ -277,7 +282,7 @@ function buildRacaDocentes() {
     return { tab: (sl.rotulo ? `<span class="kick">${sl.rotulo}</span>` : '') + unitTab(sl.unidade), html: `
       <div class="room-box board-wide">
         <div>
-          ${people2d(expand(d), cores, 'rp' + i, racaMarks)}
+          ${people2d(expand(sortAsc(d)), cores, 'rp' + i, racaMarks)}
           <p class="room-cap">${sl.unidade === 'UNICAMP' ? 'Unicamp' : sl.unidade}: ${fmt(tot)} docentes em ${ano}, um boneco para cada</p>
           ${legend(cores, Object.fromEntries(Object.keys(cores).map(c => [c, `${c} (${fmt(d[c] || 0)})`])), false, racaMarks)}
         </div>
@@ -290,7 +295,7 @@ function buildRacaDocentes() {
 /* ---------- evolução: linha da % de mulheres ano a ano (estilo "progressão" do notebook) ----------
    Eixo = variação em pontos percentuais em relação ao 1º ano; o tracejado é o ponto de partida.
    Acima do tracejado (área cheia) = aumentou; abaixo (área hachurada) = diminuiu. Sempre com ▲ ▼ ＝ e número, nunca só cor. */
-const evoKick = { sobe: '▲ Subiu', cai: '▼ Caiu', igual: '＝ Igual' };
+const evoKick = { sobe: ARROW_UP + ' Subiu', cai: ARROW_DOWN + ' Caiu', igual: '＝ Igual' };
 function evoChart(years, vals, half, uid, dir) {
   const W = 360, H = 206, L = 46, R = 346, T = 24, B = 166, mid = (T + B) / 2, n = years.length, p1 = v => v.toFixed(1).replace('.', ',') + '%';
   const X = i => L + 16 + (R - L - 32) * i / (n - 1), Y = v => Math.max(T, Math.min(B, mid - (v - vals[0]) / half * (B - T) / 2)), y0 = mid;
@@ -299,7 +304,7 @@ function evoChart(years, vals, half, uid, dir) {
   const grid = [-1, -.5, 0, .5, 1].map(f => { const y = mid - f * (B - T) / 2, d = f * half, lab = d === 0 ? '0' : (d > 0 ? '+' : '−') + Math.abs(d);
     return `<line class="tl-grid${f === 0 ? ' base' : ''}" x1="${L}" x2="${R}" y1="${y}" y2="${y}"/><text class="tl-t" x="${L - 7}" y="${y + 4}" text-anchor="end">${lab}</text>`; }).join('');
   const [lx, ly] = pts[n - 1], [fx, fy] = pts[0], up = dir === 'sobe', dn = dir === 'cai';
-  const end = dn ? `<polygon class="tl-end" points="${lx},${ly + 10} ${lx + 9},${ly - 6} ${lx - 9},${ly - 6}"/>` : up ? `<polygon class="tl-end" points="${lx},${ly - 10} ${lx + 9},${ly + 6} ${lx - 9},${ly + 6}"/>`
+  const end = dn ? `<path class="tl-end-halo" d="M${lx},${ly - 8}V${ly + 9}M${lx - 8},${ly + 1}L${lx},${ly + 9}L${lx + 8},${ly + 1}"/><path class="tl-end-arrow" d="M${lx},${ly - 8}V${ly + 9}M${lx - 8},${ly + 1}L${lx},${ly + 9}L${lx + 8},${ly + 1}"/>` : up ? `<path class="tl-end-halo" d="M${lx},${ly + 8}V${ly - 9}M${lx - 8},${ly - 1}L${lx},${ly - 9}L${lx + 8},${ly - 1}"/><path class="tl-end-arrow" d="M${lx},${ly + 8}V${ly - 9}M${lx - 8},${ly - 1}L${lx},${ly - 9}L${lx + 8},${ly - 1}"/>`
     : `<rect class="tl-end" x="${lx - 9}" y="${ly - 7}" width="18" height="5"/><rect class="tl-end" x="${lx - 9}" y="${ly + 2}" width="18" height="5"/>`;
   return `<svg class="tl-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Porcentagem de mulheres de ${years[0]} a ${years[n - 1]}: de ${p1(vals[0])} para ${p1(vals[n - 1])}">
    <defs><pattern id="${uid}-h" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="3" height="7" class="tl-hatch"/></pattern>
