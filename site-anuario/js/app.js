@@ -32,12 +32,20 @@ const lum = h => { const [r, g, b] = [1, 3, 5].map(i => { const v = parseInt(h.s
 /* símbolo dentro da cabeça (forma + cor, nunca só cor): 'c' = bolinha, 't' = triângulo, 's' = quadrado.
    Cada gráfico decide se usa: basta passar o mapa `marks` para room()/people2d()/legend(). Hoje só "Alunos - Gênero". */
 const genderMarks = { F: 'c', M: 't' };
+/* raça/cor: uma forma diferente por categoria (quadrado, +, X, círculo, triângulo, traço) */
+const racaMarks = { 'Branca': 's', 'Parda': 'p', 'Preta': 'x', 'Amarela': 'c', 'Indígena': 'u', 'Não Declarado': 'b' };
 const ink = col => /^#[0-9a-f]{6}$/i.test(col) && lum(col) > .25 ? '#2b1a00' : '#fff';   // símbolo claro em cor escura, escuro em cor clara
 const sym = (marks, k, x, y, r, c) => {
   const m = marks && marks[k], p = v => v.toFixed(2);
   if (m === 'c') return `<circle class="sym" cx="${p(x)}" cy="${p(y)}" r="${p(r * .42)}" fill="${c}"/>`;
   if (m === 's') return `<rect class="sym" x="${p(x - r * .39)}" y="${p(y - r * .39)}" width="${p(r * .78)}" height="${p(r * .78)}" fill="${c}"/>`;
-  if (m === 't') { const q = r * .62; return `<polygon class="sym" points="${p(x)},${p(y - q)} ${p(x + q * .866)},${p(y + q * .5)} ${p(x - q * .866)},${p(y + q * .5)}" fill="${c}"/>`; }
+  if (m === 't') { const q = r * .62; return `<polygon class="sym" points="${p(x - q * .866)},${p(y - q * .5)} ${p(x + q * .866)},${p(y - q * .5)} ${p(x)},${p(y + q)}" fill="#fff"/>`; }   // triângulo para baixo, branco
+  if (m === 'd') { const q = r * .62; return `<polygon class="sym" points="${p(x)},${p(y - q)} ${p(x + q)},${p(y)} ${p(x)},${p(y + q)} ${p(x - q)},${p(y)}" fill="${c}"/>`; }
+  if (m === 'u') { const q = r * .66; return `<polygon class="sym" points="${p(x)},${p(y - q)} ${p(x + q * .866)},${p(y + q * .5)} ${p(x - q * .866)},${p(y + q * .5)}" fill="${c}"/>`; }
+  if (m === 'x') { const q = r * .58, t = q * .4, P = [[-q + t, -q], [0, -t], [q - t, -q], [q, -q + t], [t, 0], [q, q - t], [q - t, q], [0, t], [-q + t, q], [-q, q - t], [-t, 0], [-q, -q + t]]; return `<polygon class="sym" points="${P.map(v => p(x + v[0]) + ',' + p(y + v[1])).join(' ')}" fill="${c}"/>`; }
+  if (m === 'r' || m === 'l') { const q = r * .72, h = q * .3, s = m === 'r' ? 1 : -1, P = [[-q, -h], [q * .1, -h], [q * .1, -q * .72], [q, 0], [q * .1, q * .72], [q * .1, h], [-q, h]]; return `<polygon class="sym" points="${P.map(v => p(x + s * v[0]) + ',' + p(y + v[1])).join(' ')}" fill="${c}"/>`; }
+  if (m === 'p') { const q = r * .64, t = q * .36, P = [[-t, -q], [t, -q], [t, -t], [q, -t], [q, t], [t, t], [t, q], [-t, q], [-t, t], [-q, t], [-q, -t], [-t, -t]]; return `<polygon class="sym" points="${P.map(v => p(x + v[0]) + ',' + p(y + v[1])).join(' ')}" fill="${c}"/>`; }
+  if (m === 'b') return `<rect class="sym" x="${p(x - r * .55)}" y="${p(y - r * .17)}" width="${p(r * 1.1)}" height="${p(r * .34)}" fill="${c}"/>`;
   return '';
 };
 function room(items, colors, theme = 'cor', uid = 'r', chairs = true, big = false, marks = null) {
@@ -89,7 +97,8 @@ function room(items, colors, theme = 'cor', uid = 'r', chairs = true, big = fals
   return s + '</svg>';
 }
 
-/* ---------- grade 2D (docentes): UM boneco por docente real, sem escala para 100 ----------
+/* o giz vale só para o corpo; o símbolo (círculo/triângulo) fica fora do filtro, nítido.
+   ---------- grade 2D (docentes): UM boneco por docente real, sem escala para 100 ----------
    A grade se ajusta ao total: poucos docentes = bonecos grandes; muitos = bonecos menores e preenchidos. */
 const expand = obj => Object.entries(obj).flatMap(([k, v]) => Array(v).fill(k));
 // tronco: topo arredondado (rt) e base mais reta (rb; 0 = totalmente reta)
@@ -112,14 +121,14 @@ function people2d(items, colors, uid = 'p', marks = null) {
     <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="7" result="n"/>
     <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  3 0 0 0 -.55" result="grain"/>
     <feComposite in="d" in2="grain" operator="in"/></filter></defs>`;
-  let s = `<svg class="room-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${fmt(N)} docentes, um boneco para cada">${defs}<g filter="url(#${uid}-giz)">`;
+  let s = `<svg class="room-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${fmt(N)} docentes, um boneco para cada">${defs}<g>`;
   items.forEach((cat, i) => {
     const x = ox + (i % cols) * cell + cell / 2, y = oy + Math.floor(i / cols) * cell + cell / 2, col = colors[cat] || '#999';
     const L = /^#[0-9a-f]{6}$/i.test(col) ? lum(col) : 1, lv = L < .1 ? ' lo' : L < .22 ? ' mid' : ''; // cores escuras ganham contorno via CSS
     const st = `fill="${col}" style="stroke:#fff;stroke-width:${sw}px"`; // linha branca em todos
     s += `<g class="chair-pop${lv}" data-k="${slug(cat)}" style="--i:${Math.round(i * 100 / N)};--c:${col}">
-      <circle cx="${x.toFixed(2)}" cy="${(y - 15.8 * k).toFixed(2)}" r="${f(8.8)}" ${st}/>
-      <path d="${torso(x, y, k)}" ${st}/>${sym(marks, cat, x, y - 15.8 * k, 8.8 * k, ink(col))}</g>`;
+      <g filter="url(#${uid}-giz)"><circle cx="${x.toFixed(2)}" cy="${(y - 15.8 * k).toFixed(2)}" r="${f(8.8)}" ${st}/>
+      <path d="${torso(x, y, k)}" ${st}/></g>${sym(marks, cat, x, y - 15.8 * k, 8.8 * k, ink(col))}</g>`;   // giz só no corpo; símbolo geométrico fica nítido
   });
   return s + '</g></svg>';
 }
@@ -234,7 +243,7 @@ function buildRaca() {
   slider($('#sliderRaca'), 'carRaca', cfg.slides.map((sl, i) => {
     const d = DATA.dados.alunos_raca_unicamp[sl.ano];
     return { label: sl.rotulo, year: sl.ano, html: `<div class="slide-grid">
-      <div class="room-box has-corner">${legend(cores, {}, true)}${room(toHundred(d), cores, 'cor', 'ra' + i)}
+      <div class="room-box has-corner">${legend(cores, {}, true, racaMarks)}${room(toHundred(d), cores, 'cor', 'ra' + i, true, false, racaMarks)}
         <p class="room-cap">Se a Unicamp tivesse ${ROOM_SIZE} alunos em ${sl.ano}</p></div>
       ${note(sl.nota, pct1(d.Preta + d.Parda), 'de pretos e pardos entre os alunos')}</div>` };
   }), true);
@@ -248,9 +257,9 @@ function buildLousa() {
     return { tab: unitTab(sl.unidade), html: `
       <div class="room-box board-wide">
         <div>
-          ${people2d(expand({ F: d.F, M: d.M }), chalkC, 'ld' + sl.unidade)}
+          ${people2d(expand({ F: d.F, M: d.M }), chalkC, 'ld' + sl.unidade, genderMarks)}
           <p class="room-cap">${sl.unidade}: ${fmt(d.F + d.M)} docentes, um boneco para cada</p>
-          ${legend(chalkC, { F: `Feminino (${fmt(d.F)})`, M: `Masculino (${fmt(d.M)})` })}
+          ${legend(chalkC, { F: `Feminino (${fmt(d.F)})`, M: `Masculino (${fmt(d.M)})` }, false, genderMarks)}
         </div>
         ${note(sl.nota, pct1(d.F / (d.F + d.M)), 'de mulheres entre os docentes – ' + sl.unidade)}
       </div>` };
@@ -268,12 +277,48 @@ function buildRacaDocentes() {
     return { tab: (sl.rotulo ? `<span class="kick">${sl.rotulo}</span>` : '') + unitTab(sl.unidade), html: `
       <div class="room-box board-wide">
         <div>
-          ${people2d(expand(d), cores, 'rp' + i)}
+          ${people2d(expand(d), cores, 'rp' + i, racaMarks)}
           <p class="room-cap">${sl.unidade === 'UNICAMP' ? 'Unicamp' : sl.unidade}: ${fmt(tot)} docentes em ${ano}, um boneco para cada</p>
-          ${legend(cores, Object.fromEntries(Object.keys(cores).map(c => [c, `${c} (${fmt(d[c] || 0)})`])))}
+          ${legend(cores, Object.fromEntries(Object.keys(cores).map(c => [c, `${c} (${fmt(d[c] || 0)})`])), false, racaMarks)}
         </div>
         ${note(sl.nota, pct1(big), sl.destaque_rotulo || 'de pretos e pardos entre os docentes')}
       </div>` };
+  }));
+}
+
+
+/* ---------- evolução: linha da % de mulheres ano a ano (estilo "progressão" do notebook) ----------
+   Eixo = variação em pontos percentuais em relação ao 1º ano; o tracejado é o ponto de partida.
+   Acima do tracejado (área cheia) = aumentou; abaixo (área hachurada) = diminuiu. Sempre com ▲ ▼ ＝ e número, nunca só cor. */
+const evoKick = { sobe: '▲ Subiu', cai: '▼ Caiu', igual: '＝ Igual' };
+function evoChart(years, vals, half, uid, dir) {
+  const W = 360, H = 206, L = 46, R = 346, T = 24, B = 166, mid = (T + B) / 2, n = years.length, p1 = v => v.toFixed(1).replace('.', ',') + '%';
+  const X = i => L + 16 + (R - L - 32) * i / (n - 1), Y = v => Math.max(T, Math.min(B, mid - (v - vals[0]) / half * (B - T) / 2)), y0 = mid;
+  const pts = vals.map((v, i) => [X(i), Y(v)]), line = pts.map(p => p.map(c => c.toFixed(1)).join(',')).join(' ');
+  const area = line + ` ${X(n - 1).toFixed(1)},${y0} ${X(0).toFixed(1)},${y0}`;
+  const grid = [-1, -.5, 0, .5, 1].map(f => { const y = mid - f * (B - T) / 2, d = f * half, lab = d === 0 ? '0' : (d > 0 ? '+' : '−') + Math.abs(d);
+    return `<line class="tl-grid${f === 0 ? ' base' : ''}" x1="${L}" x2="${R}" y1="${y}" y2="${y}"/><text class="tl-t" x="${L - 7}" y="${y + 4}" text-anchor="end">${lab}</text>`; }).join('');
+  const [lx, ly] = pts[n - 1], [fx, fy] = pts[0], up = dir === 'sobe', dn = dir === 'cai';
+  const end = dn ? `<polygon class="tl-end" points="${lx},${ly + 10} ${lx + 9},${ly - 6} ${lx - 9},${ly - 6}"/>` : up ? `<polygon class="tl-end" points="${lx},${ly - 10} ${lx + 9},${ly + 6} ${lx - 9},${ly + 6}"/>`
+    : `<rect class="tl-end" x="${lx - 9}" y="${ly - 7}" width="18" height="5"/><rect class="tl-end" x="${lx - 9}" y="${ly + 2}" width="18" height="5"/>`;
+  return `<svg class="tl-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Porcentagem de mulheres de ${years[0]} a ${years[n - 1]}: de ${p1(vals[0])} para ${p1(vals[n - 1])}">
+   <defs><pattern id="${uid}-h" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="3" height="7" class="tl-hatch"/></pattern>
+     <clipPath id="${uid}-u"><rect x="${L}" y="${T}" width="${R - L}" height="${mid - T}"/></clipPath><clipPath id="${uid}-d"><rect x="${L}" y="${mid}" width="${R - L}" height="${B - mid}"/></clipPath></defs>
+   ${grid}<text class="tl-t sm" x="${L - 7}" y="${T - 10}" text-anchor="end">pontos</text>
+   <polygon class="tl-up" clip-path="url(#${uid}-u)" points="${area}"/><polygon clip-path="url(#${uid}-d)" fill="url(#${uid}-h)" points="${area}"/>
+   <polyline class="tl-line" points="${line}"/>${pts.map(([x, y], i) => i < n - 1 ? `<circle class="tl-dot" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4"/>` : '').join('')}${end}
+   <text class="tl-lab" x="${fx}" y="${fy + (dn ? -12 : 22)}" text-anchor="start">${p1(vals[0])}</text>
+   <text class="tl-lab" x="${lx}" y="${ly + (dn ? 28 : -16)}" text-anchor="end">${p1(vals[n - 1])}</text>
+   ${years.map((y, i) => `<text class="tl-t" x="${X(i).toFixed(1)}" y="${B + 20}" text-anchor="middle">${y}</text>`).join('')}</svg>`;
+}
+function buildEvolucao(sectionId, cfgKey, key, getF, half, chalk) {
+  const cfg = DATA.paginas[cfgKey], D = DATA.dados[key];
+  slider($('#' + sectionId + ' .slider'), 'car' + sectionId, cfg.slides.map((sl, i) => {
+    const yrs = Object.keys(D[sl.unidade]).sort(), vals = yrs.map(y => { const [f, t] = getF(D[sl.unidade][y]); return f / t * 100; });
+    const chart = `<div class="evo-chart">${evoChart(yrs, vals, half, `tl${sectionId}${i}`, sl.dir)}<p class="evo-cap">Tracejado: % em ${yrs[0]} · Eixo: pontos a mais (+) ou a menos (−) que em ${yrs[0]}</p></div>`;
+    return { tab: `<span class="kick">${evoKick[sl.dir]}</span>${sl.destaque ? 'IC · nosso instituto' : sl.unidade}`, html: chalk
+      ? `<div class="room-box board-wide evo-slide">${chart}${note(sl.nota, sl.big, sl.cap)}</div>`
+      : `<div class="slide-grid evo-slide">${chart}${note(sl.nota, sl.big, sl.cap)}</div>` };
   }));
 }
 
@@ -352,6 +397,6 @@ fetch('data/data.json').then(r => r.json()).then(j => {
   DATA = j;
   document.querySelectorAll('[data-title]').forEach(h => h.textContent = DATA.paginas[h.closest('section').id].titulo);
   document.querySelectorAll('[data-sub]').forEach(p => { const t = DATA.paginas[p.closest('section').id].sub; if (t) { p.textContent = t; p.hidden = false; } });
-  buildBarsAlunos(); buildGenero(); buildRaca(); buildBarsDocentes(); buildLousa(); buildRacaDocentes();
+  buildBarsAlunos(); buildGenero(); buildRaca(); buildBarsDocentes(); buildLousa(); buildRacaDocentes(); buildEvolucao('evolucao', 'evolucao', 'alunos_genero', y => [y.F, y.F + y.M], 6, false); buildEvolucao('evolucao-prof', 'evolucao-prof', 'docentes_genero', y => [y.TOTAL.F, y.TOTAL.F + y.TOTAL.M], 12, true);
   setupScroll(); setupHero();
 }).catch(e => document.querySelector('main').innerHTML = `<div class="alert alert-danger">Não foi possível carregar data/data.json (abra por um servidor, não por file://). ${e}</div>`);
