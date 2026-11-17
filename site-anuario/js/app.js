@@ -53,7 +53,7 @@ const sym = (marks, k, x, y, r, c) => {
   if (m === 'b') return `<rect class="sym" x="${p(x - r * .55)}" y="${p(y - r * .17)}" width="${p(r * 1.1)}" height="${p(r * .34)}" fill="${c}"/>`;
   return '';
 };
-function room(items, colors, theme = 'cor', uid = 'r', chairs = true, big = false, marks = null) {
+function room(items, colors, theme = 'cor', uid = 'r', chairs = true, big = false, marks = null, nb = false) {
   /* Sala isométrica flat: paredes, chão, lousa, um espaço livre diante da lousa (área do professor)
      e 10x10 carteiras. Mesa na MESMA cor das paredes, para não chamar mais atenção que as pessoas. */
   const N = 10, ROWS = Math.ceil(items.length / N), GAP = 2.4, SP = ROOM_SPACING, NR = GAP + ROWS * SP, NC = N * SP;          // GAP = profundidade (em carteiras) livre entre a lousa e a 1ª fileira
@@ -79,8 +79,20 @@ function room(items, colors, theme = 'cor', uid = 'r', chairs = true, big = fals
     `<polygon points="${pts([P(r0, c1, z1), P(r1, c1, z1), P(r1, c1, z0), P(r0, c1, z0)])}" fill="${fill}" stroke="${line}" stroke-width=".8"/>` +
     `<polygon points="${pts([P(r0, c0, z1), P(r0, c1, z1), P(r1, c1, z1), P(r1, c0, z1)])}" fill="${fill}" stroke="${line}" stroke-width=".8"/></g>`;
   // carteiras + pessoas, de trás (perto da lousa) para frente
-  const order = items.map((_, i) => i).sort((a, b) => (Math.floor(a / N) + a % N) - (Math.floor(b / N) + b % N));
+  const key = i => i < 0 ? -1 : Math.floor(i / N) + i % N;                       // i = -1: carteira vazia (não binarizados), na frente (perto da lousa) e no meio
+  const order = items.map((_, i) => i).concat(nb ? [-1] : []).sort((a, b) => key(a) - key(b));
   order.forEach(i => {
+    if (i < 0) {   // carteira tracejada, sem personagem; o "?" ocupa o lugar da cabeça
+      const half = (SP - 1) / 2, r = GAP - SP + half, c = (N - 1) / 2 * SP + half, [x, y] = P(r + .7, c + .5), cy = y - 36 - 7.2 - 1;
+      const dash = 'fill="none" stroke="#7c85ab" stroke-width="1" stroke-dasharray="3 2.4" stroke-linejoin="round"';
+      const poly = a => `<polygon points="${pts(a)}" ${dash}/>`;
+      const face = (r0, r1, c0, c1, z0, z1) => poly([P(r1, c0, z1), P(r1, c1, z1), P(r1, c1, z0), P(r1, c0, z0)]) + poly([P(r0, c1, z1), P(r1, c1, z1), P(r1, c1, z0), P(r0, c1, z0)]) + poly([P(r0, c0, z1), P(r0, c1, z1), P(r1, c1, z1), P(r1, c0, z1)]);
+      s += `<g class="chair-pop nb-slot" data-k="nb" style="--i:${items.length};--c:#fff">${face(r + .05, r + .45, c + .06, c + .94, 18, 23)}${face(r + .5, r + .9, c + .2, c + .8, 12, 16)}`
+        + `<rect class="nb-q" x="${(x - 11).toFixed(2)}" y="${(cy - 11).toFixed(2)}" width="22" height="22" rx="4" fill="#fff" stroke="rgba(0,0,0,.35)" stroke-width=".8"/>`
+        + `<text x="${x.toFixed(2)}" y="${(cy + .6).toFixed(2)}" text-anchor="middle" dominant-baseline="central" font-family="'Source Sans 3',system-ui,sans-serif" font-weight="700" font-size="17" fill="#1d1d2b">?</text>`
+        + poly([P(r + .95, c + .18, 33), P(r + .95, c + .82, 33), P(r + .95, c + .82, 15), P(r + .95, c + .18, 15)]) + '</g>';
+      return;
+    }
     const half = (SP - 1) / 2, r = GAP + Math.floor(i / N) * SP + half, c = (i % N) * SP + half, col = colors[items[i]] || '#999';
     const [x, y] = P(r + .7, c + .5);                // a pessoa senta logo atrás da própria mesa
     const Lm = /^#[0-9a-f]{6}$/i.test(col) ? lum(col) : 1, lv = Lm < .1 ? ' lo' : Lm < .22 ? ' mid' : '';
@@ -114,9 +126,9 @@ const body = (x0, x1, top, bot, rt, rb = 0) => {
     (rb ? `A${p(rb)},${p(rb)} 0 0 1 ${p(x1 - rb)},${p(bot)}` : '') + 'Z';
 };
 const torso = (x, y, k) => body(x - 10.6 * k, x + 10.6 * k, y - 6 * k, y + 8 * k, 6 * k, 0);   // ombros largos
-function people2d(items, colors, uid = 'p', marks = null) {
-  const N = items.length, W = 480, H = 480;
-  const cols = Math.max(1, Math.ceil(Math.sqrt(N * W / H))), rows = Math.ceil(N / cols);
+function people2d(items, colors, uid = 'p', marks = null, nb = false) {
+  const N0 = items.length, N = N0 + (nb ? 1 : 0), W = 480, H = 480;
+  const cols = Math.max(1, Math.ceil(Math.sqrt(N0 * W / H))), rows = Math.ceil(N / cols);
   const cell = Math.min(W / cols, H / rows, 62), k = cell / 50, ox = (W - cols * cell) / 2, oy = (H - rows * cell) / 2;
   const sw = Math.max(.7, 1.8 * k).toFixed(2), f = v => (v * k).toFixed(2);
   // textura de giz: bordas levemente irregulares (displacement) + falhas de pigmento (ruído como máscara de alfa)
@@ -126,7 +138,7 @@ function people2d(items, colors, uid = 'p', marks = null) {
     <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="7" result="n"/>
     <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  3 0 0 0 -.55" result="grain"/>
     <feComposite in="d" in2="grain" operator="in"/></filter></defs>`;
-  let s = `<svg class="room-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${fmt(N)} docentes, um boneco para cada">${defs}<g>`;
+  let s = `<svg class="room-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${fmt(N0)} docentes, um boneco para cada">${defs}<g>`;
   items.forEach((cat, i) => {
     const x = ox + (i % cols) * cell + cell / 2, y = oy + Math.floor(i / cols) * cell + cell / 2, col = colors[cat] || '#999';
     const L = /^#[0-9a-f]{6}$/i.test(col) ? lum(col) : 1, lv = L < .1 ? ' lo' : L < .22 ? ' mid' : ''; // cores escuras ganham contorno via CSS
@@ -135,11 +147,17 @@ function people2d(items, colors, uid = 'p', marks = null) {
       <g filter="url(#${uid}-giz)"><circle cx="${x.toFixed(2)}" cy="${(y - 15.8 * k).toFixed(2)}" r="${f(8.8)}" ${st}/>
       <path d="${torso(x, y, k)}" ${st}/></g>${sym(marks, cat, x, y - 15.8 * k, 8.8 * k, ink(col))}</g>`;   // giz só no corpo; símbolo geométrico fica nítido
   });
+  if (nb) {   // célula tracejada (sem personagem) com "?" no lugar da cabeça, ao lado do último docente
+    const x = ox + (N0 % cols) * cell + cell / 2, y = oy + Math.floor(N0 / cols) * cell + cell / 2, hy = y - 15.8 * k, h = 12.5 * k;
+    s += `<g class="chair-pop nb-slot" data-k="nb" style="--i:${Math.round(N0 * 100 / N)};--c:#fff"><path d="${torso(x, y, k)}" fill="none" style="stroke:var(--chalk,#fff);stroke-width:${sw}px" stroke-dasharray="${(4 * k + 1.5).toFixed(1)} ${(3 * k + 1).toFixed(1)}" stroke-linejoin="round"/>`
+      + `<rect class="nb-q" x="${(x - h).toFixed(2)}" y="${(hy - h).toFixed(2)}" width="${(2 * h).toFixed(2)}" height="${(2 * h).toFixed(2)}" rx="${(4.5 * k).toFixed(2)}" fill="#fff" stroke="rgba(0,0,0,.35)" stroke-width=".8"/>`
+      + `<text x="${x.toFixed(2)}" y="${(hy + .6 * k).toFixed(2)}" text-anchor="middle" dominant-baseline="central" font-family="'Source Sans 3',system-ui,sans-serif" font-weight="700" font-size="${(19 * k).toFixed(2)}" fill="#1d1d2b">?</text></g>`;
+  }
   return s + '</g></svg>';
 }
 
-const legend = (colors, extra = {}, corner = false, marks = null) => `<div class="legend${corner ? ' legend-corner' + (Object.keys(colors).length > 3 ? ' many' : '') : ''}">${Object.entries(colors).map(([k, c]) =>
-  `<span><i data-k="${slug(k)}" style="background:${c};--ink:${ink(c)}">${marks && marks[k] ? `<b class="${marks[k]}"></b>` : ''}</i>${extra[k] ?? k}</span>`).join('')}</div>`;
+const legend = (colors, extra = {}, corner = false, marks = null, nb = false) => `<div class="legend${corner ? ' legend-corner' + (Object.keys(colors).length > 3 ? ' many' : '') : ''}">${Object.entries(colors).map(([k, c]) =>
+  `<span><i data-k="${slug(k)}" style="background:${c};--ink:${ink(c)}">${marks && marks[k] ? `<b class="${marks[k]}"></b>` : ''}</i>${extra[k] ?? k}</span>`).join('')}${nb ? '<span class="nb-leg"><i class="nb-i" aria-hidden="true">?</i>Não binarizados</span>' : ''}</div>`;
 
 const chev = d => `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${d}"/></svg>`;
 /* ---------- slider genérico (Bootstrap carousel + abas com título) ---------- */
@@ -236,7 +254,7 @@ function buildGenero() {
   slider($('#sliderGenero'), 'carGenero', cfg.slides.map(sl => {
     const a = DATA.dados.alunos_genero[sl.unidade][ano], tot = a.F + a.M;
     return { tab: unitTab(sl.unidade), html: `<div class="slide-grid">
-      <div class="room-box has-corner">${legend(genderColors, genderLegend, true, genderMarks)}${room(toHundred({ F: a.F, M: a.M }), genderColors, 'cor', 'g' + sl.unidade, true, false, genderMarks)}
+      <div class="room-box has-corner">${legend(genderColors, genderLegend, true, genderMarks, true)}${room(toHundred({ F: a.F, M: a.M }), genderColors, 'cor', 'g' + sl.unidade, true, false, genderMarks, true)}
         <p class="room-cap">Se o ${sl.unidade} tivesse ${ROOM_SIZE} alunos (${fmt(a.F)} F | ${fmt(a.M)} M)</p></div>
       ${note(sl.nota, pct1(a.F / tot), 'de mulheres entre os alunos')}</div>` };
   }));
@@ -262,9 +280,9 @@ function buildLousa() {
     return { tab: unitTab(sl.unidade), html: `
       <div class="room-box board-wide">
         <div>
-          ${people2d(expand({ F: d.F, M: d.M }), chalkC, 'ld' + sl.unidade, genderMarks)}
+          ${people2d(expand({ F: d.F, M: d.M }), chalkC, 'ld' + sl.unidade, genderMarks, true)}
           <p class="room-cap">${sl.unidade}: ${fmt(d.F + d.M)} docentes, um boneco para cada</p>
-          ${legend(chalkC, { F: `Feminino (${fmt(d.F)})`, M: `Masculino (${fmt(d.M)})` }, false, genderMarks)}
+          ${legend(chalkC, { F: `Feminino (${fmt(d.F)})`, M: `Masculino (${fmt(d.M)})` }, false, genderMarks, true)}
         </div>
         ${note(sl.nota, pct1(d.F / (d.F + d.M)), 'de mulheres entre os docentes – ' + sl.unidade)}
       </div>` };

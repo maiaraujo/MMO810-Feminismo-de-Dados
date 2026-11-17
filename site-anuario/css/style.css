@@ -522,3 +522,12 @@ html.hc .chalk .evo-chart{--halo:#000}
 .evo-more{margin:.8rem 0 0;font-size:.95rem}.evo-more summary{cursor:pointer;font-weight:700}.evo-more p{margin:.4rem 0 0;line-height:1.45}
 .ico-arrow{width:1em;height:1em;vertical-align:-.12em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .tl-end-halo,.tl-end-arrow{fill:none;stroke-linecap:round;stroke-linejoin:round}.tl-end-halo{stroke:var(--halo);stroke-width:8}.tl-end-arrow{stroke:var(--tl);stroke-width:4}
+
+/* ---------- não binarizados (sem dados): legenda + carteira tracejada ---------- */
+.legend i.nb-i{display:inline-flex;align-items:center;justify-content:center;border-radius:3px;background:#fff;color:#1d1d2b;
+    width:16px;height:16px;font:700 13px/1 'Source Sans 3',system-ui,sans-serif}
+.legend-corner i.nb-i{width:1.15em;height:1.15em;font-size:.95em}
+.nb-leg{display:flex;align-items:center}
+.chalk .legend .nb-leg{flex-basis:100%;justify-content:center}
+.hc .legend i.nb-i{background:#fff!important;color:#000}
+.hc .room-svg .nb-slot polygon{stroke:#fff}
