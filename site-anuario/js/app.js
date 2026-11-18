@@ -17,6 +17,7 @@ const ARROW_UP = '<svg class="ico-arrow" viewBox="0 0 12 12" role="img" aria-lab
 const ARROW_DOWN = '<svg class="ico-arrow" viewBox="0 0 12 12" role="img" aria-label="caiu"><path d="M6 2v7.5M2.5 6L6 9.5 9.5 6"/></svg>';
 /* raça/cor: ordena as categorias da menor para a maior porcentagem (a menor começa na 1ª fileira, junto da lousa; a maior fica no fundo) */
 const sortAsc = obj => Object.fromEntries(Object.entries(obj).sort((a, b) => a[1] - b[1]));
+const sortDesc = obj => Object.fromEntries(Object.entries(obj).sort((a, b) => b[1] - a[1]));
 let DATA;
 
 /* ---------- utilidades ---------- */
@@ -79,11 +80,11 @@ function room(items, colors, theme = 'cor', uid = 'r', chairs = true, big = fals
     `<polygon points="${pts([P(r0, c1, z1), P(r1, c1, z1), P(r1, c1, z0), P(r0, c1, z0)])}" fill="${fill}" stroke="${line}" stroke-width=".8"/>` +
     `<polygon points="${pts([P(r0, c0, z1), P(r0, c1, z1), P(r1, c1, z1), P(r1, c0, z1)])}" fill="${fill}" stroke="${line}" stroke-width=".8"/></g>`;
   // carteiras + pessoas, de trás (perto da lousa) para frente
-  const key = i => i < 0 ? -1 : Math.floor(i / N) + i % N;                       // i = -1: carteira vazia (não binarizados), na frente (perto da lousa) e no meio
+  const key = i => i < 0 ? -1 : Math.floor(i / N) + i % N;                       // i = -1: carteira vazia (não binarizados), na frente (perto da lousa) e no canto direito
   const order = items.map((_, i) => i).concat(nb ? [-1] : []).sort((a, b) => key(a) - key(b));
   order.forEach(i => {
     if (i < 0) {   // carteira tracejada, sem personagem; o "?" ocupa o lugar da cabeça
-      const half = (SP - 1) / 2, r = GAP - SP + half, c = (N - 1) / 2 * SP + half, [x, y] = P(r + .7, c + .5), cy = y - 36 - 7.2 - 1;
+      const half = (SP - 1) / 2, r = GAP - SP + half, c = (N - 1) * SP + half, [x, y] = P(r + .7, c + .5), cy = y - 36 - 7.2 - 1;
       const dash = 'fill="none" stroke="#7c85ab" stroke-width="1" stroke-dasharray="3 2.4" stroke-linejoin="round"';
       const poly = a => `<polygon points="${pts(a)}" ${dash}/>`;
       const face = (r0, r1, c0, c1, z0, z1) => poly([P(r1, c0, z1), P(r1, c1, z1), P(r1, c1, z0), P(r1, c0, z0)]) + poly([P(r0, c1, z1), P(r1, c1, z1), P(r1, c1, z0), P(r0, c1, z0)]) + poly([P(r0, c0, z1), P(r0, c1, z1), P(r1, c1, z1), P(r1, c0, z1)]);
@@ -148,16 +149,16 @@ function people2d(items, colors, uid = 'p', marks = null, nb = false) {
       <path d="${torso(x, y, k)}" ${st}/></g>${sym(marks, cat, x, y - 15.8 * k, 8.8 * k, ink(col))}</g>`;   // giz só no corpo; símbolo geométrico fica nítido
   });
   if (nb) {   // célula tracejada (sem personagem) com "?" no lugar da cabeça, ao lado do último docente
-    const x = ox + (N0 % cols) * cell + cell / 2, y = oy + Math.floor(N0 / cols) * cell + cell / 2, hy = y - 15.8 * k, h = 12.5 * k;
+    const x = ox + (N0 % cols) * cell + cell / 2, y = oy + Math.floor(N0 / cols) * cell + cell / 2, hy = y - 15.8 * k;
     s += `<g class="chair-pop nb-slot" data-k="nb" style="--i:${Math.round(N0 * 100 / N)};--c:#fff"><path d="${torso(x, y, k)}" fill="none" style="stroke:var(--chalk,#fff);stroke-width:${sw}px" stroke-dasharray="${(4 * k + 1.5).toFixed(1)} ${(3 * k + 1).toFixed(1)}" stroke-linejoin="round"/>`
-      + `<rect class="nb-q" x="${(x - h).toFixed(2)}" y="${(hy - h).toFixed(2)}" width="${(2 * h).toFixed(2)}" height="${(2 * h).toFixed(2)}" rx="${(4.5 * k).toFixed(2)}" fill="#fff" stroke="rgba(0,0,0,.35)" stroke-width=".8"/>`
-      + `<text x="${x.toFixed(2)}" y="${(hy + .6 * k).toFixed(2)}" text-anchor="middle" dominant-baseline="central" font-family="'Source Sans 3',system-ui,sans-serif" font-weight="700" font-size="${(19 * k).toFixed(2)}" fill="#1d1d2b">?</text></g>`;
+      + `<circle cx="${x.toFixed(2)}" cy="${hy.toFixed(2)}" r="${f(8.8)}" fill="none" style="stroke:var(--chalk,#fff);stroke-width:${sw}px" stroke-dasharray="${(4 * k + 1.5).toFixed(1)} ${(3 * k + 1).toFixed(1)}"/>`
+      + `<text x="${x.toFixed(2)}" y="${(hy + .6 * k).toFixed(2)}" text-anchor="middle" dominant-baseline="central" font-family="'Source Sans 3',system-ui,sans-serif" font-weight="700" font-size="${(14 * k).toFixed(2)}" style="fill:var(--chalk,#fff)">?</text></g>`;
   }
   return s + '</g></svg>';
 }
 
 const legend = (colors, extra = {}, corner = false, marks = null, nb = false) => `<div class="legend${corner ? ' legend-corner' + (Object.keys(colors).length > 3 ? ' many' : '') : ''}">${Object.entries(colors).map(([k, c]) =>
-  `<span><i data-k="${slug(k)}" style="background:${c};--ink:${ink(c)}">${marks && marks[k] ? `<b class="${marks[k]}"></b>` : ''}</i>${extra[k] ?? k}</span>`).join('')}${nb ? '<span class="nb-leg"><i class="nb-i" aria-hidden="true">?</i>Não binarizados</span>' : ''}</div>`;
+  `<span><i data-k="${slug(k)}" style="background:${c};--ink:${ink(c)}">${marks && marks[k] ? `<b class="${marks[k]}"></b>` : ''}</i>${extra[k] ?? k}</span>`).join('')}${nb ? '<span class="nb-leg"><i class="nb-i" aria-hidden="true">?</i>Pessoas não binárias</span>' : ''}</div>`;
 
 const chev = d => `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${d}"/></svg>`;
 /* ---------- slider genérico (Bootstrap carousel + abas com título) ---------- */
@@ -227,7 +228,7 @@ function buildBars(sectionId, cfg, rows, split = 'unidade') {
       <div class="bar-label">${r.s} (${r.nome})</div>
       <div class="bar-track"><span class="mid"></span>
         <div class="bar-fill" style="--w:${r.p * 100 / 1.2}%;--c:${col(r.p)};--s:${gap(r.p)}px;transition-delay:${i * 70}ms"></div>
-        <span class="bar-val" style="left:calc(${r.p * 100 / 1.2}% + 8px);--d:${i * 70}ms">${r.p >= .5 ? '▲' : '▼'} ${pct1(r.p)} (${fmt(r.F)} de ${fmt(r.tot)})</span>
+        <span class="bar-val" style="left:calc(${r.p * 100 / 1.2}% + 8px);--d:${i * 70}ms">${r.p >= .5 ? '▲' : '▼'} <b>${pct1(r.p)}</b> (${fmt(r.F)} de ${fmt(r.tot)})</span>
       </div></div>`).join('');
 }
 
@@ -266,7 +267,7 @@ function buildRaca() {
   slider($('#sliderRaca'), 'carRaca', cfg.slides.map((sl, i) => {
     const d = DATA.dados.alunos_raca_unicamp[sl.ano];
     return { label: sl.rotulo, year: sl.ano, html: `<div class="slide-grid">
-      <div class="room-box has-corner">${legend(cores, {}, true, racaMarks)}${room(toHundred(sortAsc(d)), cores, 'cor', 'ra' + i, true, false, racaMarks)}
+      <div class="room-box has-corner">${legend(cores, {}, true, racaMarks)}${room(toHundred(sortDesc(d)), cores, 'cor', 'ra' + i, true, false, racaMarks)}
         <p class="room-cap">Se a Unicamp tivesse ${ROOM_SIZE} alunos em ${sl.ano}</p></div>
       ${note(sl.nota, pct1(d.Preta + d.Parda), 'de pretos e pardos entre os alunos')}</div>` };
   }), true);
@@ -300,7 +301,7 @@ function buildRacaDocentes() {
     return { tab: (sl.rotulo ? `<span class="kick">${sl.rotulo}</span>` : '') + unitTab(sl.unidade), html: `
       <div class="room-box board-wide">
         <div>
-          ${people2d(expand(sortAsc(d)), cores, 'rp' + i, racaMarks)}
+          ${people2d(expand(sortDesc(d)), cores, 'rp' + i, racaMarks)}
           <p class="room-cap">${sl.unidade === 'UNICAMP' ? 'Unicamp' : sl.unidade}: ${fmt(tot)} docentes em ${ano}, um boneco para cada</p>
           ${legend(cores, Object.fromEntries(Object.keys(cores).map(c => [c, `${c} (${fmt(d[c] || 0)})`])), false, racaMarks)}
         </div>

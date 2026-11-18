@@ -293,40 +293,30 @@
     },
     {
      "unidade": "FCM",
-     "rotulo": "Mais amarelos",
+     "rotulo": "Amarelos e indígenas",
      "nota": [
-      "A FCM é a unidade com mais docentes amarelos em número de pessoas: 9 de 273."
-     ],
-     "destaque": [
-      "Amarela"
-     ],
-     "destaque_rotulo": "de amarelos entre os docentes"
-    },
-    {
-     "unidade": "FCM",
-     "rotulo": "Indígenas",
-     "nota": [
-      "A FCM é a que mais tem em número absoluto: 2 de 273 docentes.",
+      "A FCM é a unidade com mais docentes amarelos e indígenas em número de pessoas: 9 amarelos e 2 indígenas, 11 de 273 docentes.",
       "Segundo os relatórios, apenas 4 dos 1.796 docentes ativos se declaram indígenas: 2 na FCM, 1 na FCA e 1 no IFCH."
      ],
      "destaque": [
+      "Amarela",
       "Indígena"
      ],
-     "destaque_rotulo": "de indígenas entre os docentes"
+     "destaque_rotulo": "de amarelos e indígenas entre os docentes"
     }
    ]
   },
   "evolucao": {
    "titulo": "Alunos – Como mudou a presença de mulheres (2022–2025)",
    "ano": 2025,
-   "sub": "A linha mostra a % de mulheres entre os alunos, ano a ano. Acima do tracejado (ponto de partida), aumentou; abaixo, diminuiu. Exemplo: de 50% para 53% é um aumento de 3 pontos.",
+   "sub": "A linha mostra a % de mulheres entre os alunos, ano a ano. Acima do tracejado (ponto de partida), aumentou; abaixo, diminuiu. Exemplo: de 50% para 53% é um aumento de 3 pontos percentuais.",
    "slides": [
     {
      "unidade": "IC",
      "destaque": true,
      "dir": "sobe",
-     "big": "Subiu 1,5 pontos",
-     "cap": "pontos percentuais: a diferença entre 14,8% e 16,4%",
+     "big": "Subiu 1,5 pontos percentuais",
+     "cap": "Era 14,8% e agora é 16,4%",
      "nota": [
       "Em 2022, 14,8% dos alunos do IC eram mulheres (182 de 1.226). Em 2025, 16,4% (211 de 1.289). Subiu, mas as mulheres ainda não são maioria.",
       "Em 2025, o IC é o instituto com menor porcentagem de alunas da Unicamp."
@@ -335,8 +325,8 @@
     {
      "unidade": "FCA",
      "dir": "sobe",
-     "big": "Subiu 3,6 pontos",
-     "cap": "pontos percentuais: a diferença entre 45,2% e 48,8%",
+     "big": "Subiu 3,6 pontos percentuais",
+     "cap": "Era 45,2% e agora é 48,8%",
      "nota": [
       "Em 2022, 45,2% dos alunos do FCA eram mulheres (1.396 de 3.090). Em 2025, 48,8% (1.509 de 3.091). Subiu, mas as mulheres ainda não são maioria."
      ]
@@ -344,8 +334,8 @@
     {
      "unidade": "IA",
      "dir": "sobe",
-     "big": "Subiu 3,3 pontos",
-     "cap": "pontos percentuais: a diferença entre 53,8% e 57,1%",
+     "big": "Subiu 3,3 pontos percentuais",
+     "cap": "Era 53,8% e agora é 57,1%",
      "nota": [
       "Em 2022, 53,8% dos alunos do IA eram mulheres (867 de 1.611). Em 2025, 57,1% (894 de 1.566). Subiu, e as mulheres já eram maioria."
      ]
@@ -353,8 +343,8 @@
     {
      "unidade": "FECFAU",
      "dir": "sobe",
-     "big": "Subiu 3,0 pontos",
-     "cap": "pontos percentuais: a diferença entre 43,9% e 46,9%",
+     "big": "Subiu 3,0 pontos percentuais",
+     "cap": "Era 43,9% e agora é 46,9%",
      "nota": [
       "Em 2022, 43,9% dos alunos do FECFAU eram mulheres (508 de 1.157). Em 2025, 46,9% (506 de 1.079). Subiu, mas as mulheres ainda não são maioria."
      ]
@@ -362,8 +352,8 @@
     {
      "unidade": "IEL",
      "dir": "cai",
-     "big": "Diminuiu 3,3 pontos",
-     "cap": "pontos percentuais: a diferença entre 66,9% e 63,5%",
+     "big": "Diminuiu 3,3 pontos percentuais",
+     "cap": "Era 66,9% e agora é 63,5%",
      "nota": [
       "Em 2022, 66,9% dos alunos do IEL eram mulheres (906 de 1.355). Em 2025, 63,5% (787 de 1.239). Diminuiu, mas as mulheres continuam sendo maioria."
      ]
@@ -371,8 +361,8 @@
     {
      "unidade": "FEQ",
      "dir": "cai",
-     "big": "Diminuiu 2,9 pontos",
-     "cap": "pontos percentuais: a diferença entre 43,8% e 41,0%",
+     "big": "Diminuiu 2,9 pontos percentuais",
+     "cap": "Era 43,8% e agora é 41,0%",
      "nota": [
       "Em 2022, 43,8% dos alunos do FEQ eram mulheres (471 de 1.075). Em 2025, 41,0% (401 de 979). Diminuiu, e as mulheres já eram minoria."
      ]
@@ -380,8 +370,8 @@
     {
      "unidade": "IB",
      "dir": "cai",
-     "big": "Diminuiu 2,7 pontos",
-     "cap": "pontos percentuais: a diferença entre 62,3% e 59,6%",
+     "big": "Diminuiu 2,7 pontos percentuais",
+     "cap": "Era 62,3% e agora é 59,6%",
      "nota": [
       "Em 2022, 62,3% dos alunos do IB eram mulheres (944 de 1.516). Em 2025, 59,6% (813 de 1.365). Diminuiu, mas as mulheres continuam sendo maioria."
      ]
@@ -389,8 +379,8 @@
     {
      "unidade": "IFCH",
      "dir": "igual",
-     "big": "Quase igual (+0,2 ponto)",
-     "cap": "pontos percentuais: a diferença entre 52,0% e 52,2%",
+     "big": "Quase igual (+0,2 ponto percentual)",
+     "cap": "Era 52,0% e agora é 52,2%",
      "nota": [
       "Em 2022, 52,0% dos alunos do IFCH eram mulheres (1.158 de 2.225). Em 2025, 52,2% (1.150 de 2.203). Quase não mudou: a variação foi menor que 1 ponto."
      ]
@@ -398,8 +388,8 @@
     {
      "unidade": "FCF",
      "dir": "igual",
-     "big": "Quase igual (+0,6 ponto)",
-     "cap": "pontos percentuais: a diferença entre 74,9% e 75,4%",
+     "big": "Quase igual (+0,6 ponto percentual)",
+     "cap": "Era 74,9% e agora é 75,4%",
      "nota": [
       "Em 2022, 74,9% dos alunos do FCF eram mulheres (289 de 386). Em 2025, 75,4% (301 de 399). Quase não mudou: a variação foi menor que 1 ponto."
      ]
@@ -409,14 +399,14 @@
   "evolucao-prof": {
    "titulo": "Docentes – Como mudou a presença de mulheres (2020–2025)",
    "ano": 2025,
-   "sub": "A linha mostra a % de mulheres entre os docentes, ano a ano. Acima do tracejado (ponto de partida), aumentou; abaixo, diminuiu. Exemplo: de 50% para 53% é um aumento de 3 pontos.",
+   "sub": "A linha mostra a % de mulheres entre os docentes, ano a ano. Acima do tracejado (ponto de partida), aumentou; abaixo, diminuiu. Exemplo: de 50% para 53% é um aumento de 3 pontos percentuais.",
    "slides": [
     {
      "unidade": "IC",
      "destaque": true,
      "dir": "cai",
-     "big": "Diminuiu 3,0 pontos",
-     "cap": "pontos percentuais: a diferença entre 16,7% e 13,6%",
+     "big": "Diminuiu 3,0 pontos percentuais",
+     "cap": "Era 16,7% e agora é 13,6%",
      "nota": [
       "Em 2020, 16,7% dos docentes do IC eram mulheres (8 de 48). Em 2025, 13,6% (6 de 44). Diminuiu, e as mulheres já eram minoria. Atenção: são só 44 docentes, então 2 ou 3 contratações já mudam bastante a porcentagem.",
       "Em 2025, o IC está entre os três institutos com menor porcentagem de docentes mulheres."
@@ -425,8 +415,8 @@
     {
      "unidade": "IE",
      "dir": "sobe",
-     "big": "Subiu 9,7 pontos",
-     "cap": "pontos percentuais: a diferença entre 16,1% e 25,8%",
+     "big": "Subiu 9,7 pontos percentuais",
+     "cap": "Era 16,1% e agora é 25,8%",
      "nota": [
       "Em 2020, 16,1% dos docentes do IE eram mulheres (9 de 56). Em 2025, 25,8% (16 de 62). Subiu, mas as mulheres ainda não são maioria."
      ]
@@ -434,8 +424,8 @@
     {
      "unidade": "FEF",
      "dir": "sobe",
-     "big": "Subiu 8,3 pontos",
-     "cap": "pontos percentuais: a diferença entre 38,7% e 47,1%",
+     "big": "Subiu 8,3 pontos percentuais",
+     "cap": "Era 38,7% e agora é 47,1%",
      "nota": [
       "Em 2020, 38,7% dos docentes do FEF eram mulheres (12 de 31). Em 2025, 47,1% (16 de 34). Subiu, mas as mulheres ainda não são maioria. Atenção: são só 34 docentes, então 2 ou 3 contratações já mudam bastante a porcentagem."
      ]
@@ -443,8 +433,8 @@
     {
      "unidade": "FOP",
      "dir": "sobe",
-     "big": "Subiu 5,8 pontos",
-     "cap": "pontos percentuais: a diferença entre 36,4% e 42,2%",
+     "big": "Subiu 5,8 pontos percentuais",
+     "cap": "Era 36,4% e agora é 42,2%",
      "nota": [
       "Em 2020, 36,4% dos docentes do FOP eram mulheres (28 de 77). Em 2025, 42,2% (35 de 83). Subiu, mas as mulheres ainda não são maioria."
      ]
@@ -452,8 +442,8 @@
     {
      "unidade": "IQ",
      "dir": "cai",
-     "big": "Diminuiu 7,9 pontos",
-     "cap": "pontos percentuais: a diferença entre 32,9% e 25,0%",
+     "big": "Diminuiu 7,9 pontos percentuais",
+     "cap": "Era 32,9% e agora é 25,0%",
      "nota": [
       "Em 2020, 32,9% dos docentes do IQ eram mulheres (24 de 73). Em 2025, 25,0% (16 de 64). Diminuiu, e as mulheres já eram minoria."
      ]
@@ -461,8 +451,8 @@
     {
      "unidade": "FENF",
      "dir": "cai",
-     "big": "Diminuiu 6,7 pontos",
-     "cap": "pontos percentuais: a diferença entre 100,0% e 93,3%",
+     "big": "Diminuiu 6,7 pontos percentuais",
+     "cap": "Era 100,0% e agora é 93,3%",
      "nota": [
       "Em 2020, 100,0% dos docentes do FENF eram mulheres (34 de 34). Em 2025, 93,3% (42 de 45). Diminuiu, mas as mulheres continuam sendo maioria. Atenção: são só 45 docentes, então 2 ou 3 contratações já mudam bastante a porcentagem."
      ]
@@ -470,8 +460,8 @@
     {
      "unidade": "IA",
      "dir": "cai",
-     "big": "Diminuiu 5,7 pontos",
-     "cap": "pontos percentuais: a diferença entre 45,7% e 40,0%",
+     "big": "Diminuiu 5,7 pontos percentuais",
+     "cap": "Era 45,7% e agora é 40,0%",
      "nota": [
       "Em 2020, 45,7% dos docentes do IA eram mulheres (37 de 81). Em 2025, 40,0% (32 de 80). Diminuiu, e as mulheres já eram minoria."
      ]
@@ -479,8 +469,8 @@
     {
      "unidade": "IB",
      "dir": "igual",
-     "big": "Quase igual (+0,1 ponto)",
-     "cap": "pontos percentuais: a diferença entre 41,1% e 41,2%",
+     "big": "Quase igual (+0,1 ponto percentual)",
+     "cap": "Era 41,1% e agora é 41,2%",
      "nota": [
       "Em 2020, 41,1% dos docentes do IB eram mulheres (44 de 107). Em 2025, 41,2% (42 de 102). Quase não mudou: a variação foi menor que 1 ponto."
      ]
@@ -488,8 +478,8 @@
     {
      "unidade": "FEA",
      "dir": "igual",
-     "big": "Quase igual (−0,4 ponto)",
-     "cap": "pontos percentuais: a diferença entre 60,8% e 60,4%",
+     "big": "Quase igual (−0,4 ponto percentual)",
+     "cap": "Era 60,8% e agora é 60,4%",
      "nota": [
       "Em 2020, 60,8% dos docentes do FEA eram mulheres (31 de 51). Em 2025, 60,4% (32 de 53). Quase não mudou: a variação foi menor que 1 ponto."
      ]
