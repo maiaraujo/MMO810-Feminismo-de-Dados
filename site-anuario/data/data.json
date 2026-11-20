@@ -105,39 +105,53 @@
  },
  "paginas": {
   "barras": {
-   "titulo": "% de alunas em 2025 por gênero",
+   "titulo": "Alunes mulheres em 2025 por instituto",
    "ano": 2025,
    "caixa_cuidado": "Áreas de cuidado",
-   "caixa_logica": "Áreas de lógica"
+   "caixa_logica": "Áreas de lógica",
+   "info": {
+    "cuidado": {
+     "pergunta": "O que são áreas do cuidado?",
+     "titulo": "Áreas do cuidado",
+     "sub": "Cuidar, acolher e ensinar",
+     "texto": "Áreas ligadas a cuidar de pessoas: <span class=\"destaque\">saúde, educação e humanas</span>, como enfermagem, farmácia e pedagogia. Socialmente, foram vistas como \"trabalho de mulher\"."
+    },
+    "logica": {
+     "pergunta": "O que são áreas de lógica?",
+     "titulo": "Áreas de lógica",
+     "sub": "Calcular, programar e construir",
+     "texto": "Áreas ligadas a raciocínio lógico, cálculo e construção: <span class=\"destaque\">exatas, tecnologia e engenharias</span>, como computação, mecânica e elétrica. Socialmente, foram vistas como espaços masculinos."
+    }
+   }
   },
   "genero": {
-   "titulo": "Alunos por instituto – Gênero – 2025 (Se fosse uma sala de 50 pessoas)",
+   "titulo": "Alunes por instituto, por Gênero em 2025 (Se fosse uma sala de 50 pessoas)",
    "ano": 2025,
    "slides": [
     {
      "unidade": "IC",
      "nota": [
-      "O IC é o instituto com menor número de alunas matriculadas: somente 16,4%, equivalente a 211 de 1.289 estudantes.",
-      "Vale ressaltar que, em 2025, na primeira chamada de aprovados no vestibular pela Convest, dos 103 alunos listados havia a mesma quantidade de mulheres, Gabrieis e Joãos: exatamente 6 de cada."
+      "O IC é o instituto com menor número de alunes matriculades: somente 16,4%, equivalente a 211 de 1.289 estudantes.",
+      "Vale ressaltar que, em 2025, na primeira chamada de aprovados no vestibular pela Convest, dos 103 alunes listades havia a mesma quantidade de mulheres, Gabrieis e Joãos: exatamente 6 de cada."
      ]
     },
     {
      "unidade": "FENF",
      "nota": [
-      "A enfermagem, de modo oposto, tem 85,6% de alunas: 309 de 361 alunos."
+      "A enfermagem, de modo oposto, tem 85,6% de alunes: 309 de 361 alunes."
      ]
     },
     {
      "unidade": "FEM",
      "nota": [
-      "A engenharia mecânica é a segunda com menor presença feminina: somente 17,1%, ou 309 dos 1.807 alunos.",
+      "A engenharia mecânica é a segunda com menor presença feminina: somente 17,1%, ou 309 dos 1.807 alunes.",
       "Aqui começa-se a notar um padrão: áreas de exatas são vinculadas a maior presença masculina, enquanto áreas de saúde e humanas têm maior presença feminina."
      ]
     },
     {
      "unidade": "FCF",
      "nota": [
-      "O curso de farmácia também está vinculado a maior presença feminina, com 75,4% de mulheres, equivalente a 301 dos 399 alunos, logo abaixo da enfermagem.",
+      "O curso de farmácia também está vinculado a maior presença feminina, com 75,4% de mulheres, equivalente a 301 dos 399 alunes, logo abaixo da enfermagem.",
       "Pelo padrão identificado, continuam-se reforçando as diferenças por gênero a cada área do conhecimento."
      ]
     },
@@ -172,13 +186,13 @@
    ]
   },
   "raca": {
-   "titulo": "Alunos por raça/cor (Se a Unicamp fosse uma sala de 50 pessoas)",
+   "titulo": "Alunes por raça/cor (Se a Unicamp fosse uma sala de 50 pessoas)",
    "slides": [
     {
      "rotulo": "Antes da greve",
      "ano": 2013,
      "nota": [
-      "Em 2013, três anos antes da greve de 2016 (de junho a agosto), que resultou na conquista de cotas étnico-raciais e de escola pública nos cursos da Unicamp, pretos e pardos eram 8,1% dos alunos e 46,0% não tinham raça/cor declarada.",
+      "Em 2013, três anos antes da greve de 2016 (de junho a agosto), que resultou na conquista de cotas étnico-raciais e de escola pública nos cursos da Unicamp, pretos e pardos eram 8,1% dos alunes e 46,0% não tinham raça/cor declarada.",
       "Não há dados da Unicamp sobre a divisão étnico-racial por instituto, somente para a universidade como um todo."
      ]
     },
@@ -186,7 +200,7 @@
      "rotulo": "Cotas aprovadas",
      "ano": 2017,
      "nota": [
-      "Ano seguinte à greve. Só em novembro os órgãos deliberativos da Unicamp aprovaram a implementação das cotas, a valer a partir do vestibular do ano seguinte. Pretos e pardos eram 14,3% dos alunos.",
+      "Ano seguinte à greve. Só em novembro os órgãos deliberativos da Unicamp aprovaram a implementação das cotas, a valer a partir do vestibular do ano seguinte. Pretos e pardos eram 14,3% dos alunes.",
       "Foi também o ano em que se aprovou o vestibular indígena, processo próprio de ingresso na universidade."
      ]
     },
@@ -194,8 +208,8 @@
      "rotulo": "1ª turma com cotas",
      "ano": 2019,
      "nota": [
-      "Primeiro ano com ingressantes pelo vestibular indígena e também com cotas de escola pública e étnico-raciais. Pretos e pardos chegam a 19,2% dos alunos; indígenas, a 0,4%.",
-      "Não há informação sobre a porcentagem de alunos de escola pública que ingressaram na universidade."
+      "Primeiro ano com ingressantes pelo vestibular indígena e também com cotas de escola pública e étnico-raciais. Pretos e pardos chegam a 19,2% dos alunes; indígenas, a 0,4%.",
+      "Não há informação sobre a porcentagem de alunes de escola pública que ingressaram na universidade."
      ]
     },
     {
@@ -203,33 +217,33 @@
      "ano": 2025,
      "nota": [
       "Com o último dado disponível, 9 anos após a greve e 6 após a primeira turma com cotas, o perfil da sala de aula é outro: pretos e pardos somam 27,0%, indígenas 1,3%, e os não declarados caíram para 9,2% (eram 46,0% em 2013).",
-      "Em setembro de 2024 foram aprovadas as cotas PCD, implementadas a partir de 2025. Nos institutos, o número de alunos com deficiência matriculados passou de 84 em 2024 para 299 em 2025.",
+      "Em setembro de 2024 foram aprovadas as cotas PCD, implementadas a partir de 2025. Nos institutos, o número de alunes com deficiência matriculados passou de 84 em 2024 para 299 em 2025.",
       "Em abril de 2025 também foram aprovadas as cotas trans, com alunes entrando por esse meio a partir de 2026, mas nenhum dado da Unicamp trata de pessoas trans. Espera-se que os dados de 2026, ainda não disponíveis, tragam essa representação."
      ]
     }
    ]
   },
   "barras-prof": {
-   "titulo": "% de docentes mulheres em 2025 por instituto",
+   "titulo": "Docentes mulheres em 2025 por instituto",
    "ano": 2025,
    "caixa_cuidado": "Áreas de cuidado",
    "caixa_logica": "Áreas de lógica",
-   "sub": "Docentes ativos da carreira MS, todos os regimes de trabalho, ordenados da maior para a menor % de mulheres."
+   "sub": "Docentes ativos da carreira MS, todos os regimes de trabalho, ordenados da maior para a menor porcentagem de mulheres."
   },
   "lousa": {
-   "titulo": "Docentes por instituto – Gênero – 2025",
+   "titulo": "Docentes por instituto, por Gênero em 2025",
    "ano": 2025,
    "slides": [
     {
      "unidade": "FEEC",
      "nota": [
-      "Com apenas 10,3% do corpo docente composto por mulheres, a FEEC é o instituto com menor quantidade de professoras mulheres: 7 entre 68 docentes."
+      "Com apenas 10,3% do corpo docente composto por mulheres, a FEEC é o instituto com menor quantidade de docentes mulheres: 7 entre 68 docentes."
      ]
     },
     {
      "unidade": "FENF",
      "nota": [
-      "No caminho oposto, a enfermagem tem 93,3% de professoras mulheres: 42 entre 45."
+      "No caminho oposto, a enfermagem tem 93,3% de docentes mulheres: 42 entre 45."
      ]
     },
     {
@@ -264,7 +278,7 @@
    ]
   },
   "raca-prof": {
-   "titulo": "Docentes por instituto – Raça/cor – 2025",
+   "titulo": "Docentes por instituto por Raça/cor em 2025",
    "ano": 2025,
    "sub": "Docentes ativos.",
    "slides": [
@@ -307,9 +321,9 @@
    ]
   },
   "evolucao": {
-   "titulo": "Alunos – Como mudou a presença de mulheres (2022–2025)",
+   "titulo": "Como mudou a presença de mulheres alunes (2022–2025)",
    "ano": 2025,
-   "sub": "A linha mostra a % de mulheres entre os alunos, ano a ano. Acima do tracejado (ponto de partida), aumentou; abaixo, diminuiu. Exemplo: de 50% para 53% é um aumento de 3 pontos percentuais.",
+   "sub": "A linha mostra a porcentagem de mulheres entre os alunes, ano a ano. Acima do tracejado (ponto de partida), aumentou; abaixo, diminuiu. Exemplo: de 50% para 53% é um aumento de 3 pontos percentuais.",
    "slides": [
     {
      "unidade": "IC",
@@ -318,8 +332,8 @@
      "big": "Subiu 1,5 pontos percentuais",
      "cap": "Era 14,8% e agora é 16,4%",
      "nota": [
-      "Em 2022, 14,8% dos alunos do IC eram mulheres (182 de 1.226). Em 2025, 16,4% (211 de 1.289). Subiu, mas as mulheres ainda não são maioria.",
-      "Em 2025, o IC é o instituto com menor porcentagem de alunas da Unicamp."
+      "Em 2022, 14,8% dos alunes do IC eram mulheres (182 de 1.226). Em 2025, 16,4% (211 de 1.289). Subiu, mas as mulheres ainda não são maioria.",
+      "Em 2025, o IC é o instituto com menor porcentagem de alunes mulheres da Unicamp."
      ]
     },
     {
@@ -328,7 +342,7 @@
      "big": "Subiu 3,6 pontos percentuais",
      "cap": "Era 45,2% e agora é 48,8%",
      "nota": [
-      "Em 2022, 45,2% dos alunos do FCA eram mulheres (1.396 de 3.090). Em 2025, 48,8% (1.509 de 3.091). Subiu, mas as mulheres ainda não são maioria."
+      "Em 2022, 45,2% dos alunes do FCA eram mulheres (1.396 de 3.090). Em 2025, 48,8% (1.509 de 3.091). Subiu, mas as mulheres ainda não são maioria."
      ]
     },
     {
@@ -337,7 +351,7 @@
      "big": "Subiu 3,3 pontos percentuais",
      "cap": "Era 53,8% e agora é 57,1%",
      "nota": [
-      "Em 2022, 53,8% dos alunos do IA eram mulheres (867 de 1.611). Em 2025, 57,1% (894 de 1.566). Subiu, e as mulheres já eram maioria."
+      "Em 2022, 53,8% dos alunes do IA eram mulheres (867 de 1.611). Em 2025, 57,1% (894 de 1.566). Subiu, e as mulheres já eram maioria."
      ]
     },
     {
@@ -346,7 +360,7 @@
      "big": "Subiu 3,0 pontos percentuais",
      "cap": "Era 43,9% e agora é 46,9%",
      "nota": [
-      "Em 2022, 43,9% dos alunos do FECFAU eram mulheres (508 de 1.157). Em 2025, 46,9% (506 de 1.079). Subiu, mas as mulheres ainda não são maioria."
+      "Em 2022, 43,9% dos alunes do FECFAU eram mulheres (508 de 1.157). Em 2025, 46,9% (506 de 1.079). Subiu, mas as mulheres ainda não são maioria."
      ]
     },
     {
@@ -355,7 +369,7 @@
      "big": "Diminuiu 3,3 pontos percentuais",
      "cap": "Era 66,9% e agora é 63,5%",
      "nota": [
-      "Em 2022, 66,9% dos alunos do IEL eram mulheres (906 de 1.355). Em 2025, 63,5% (787 de 1.239). Diminuiu, mas as mulheres continuam sendo maioria."
+      "Em 2022, 66,9% dos alunes do IEL eram mulheres (906 de 1.355). Em 2025, 63,5% (787 de 1.239). Diminuiu, mas as mulheres continuam sendo maioria."
      ]
     },
     {
@@ -364,7 +378,7 @@
      "big": "Diminuiu 2,9 pontos percentuais",
      "cap": "Era 43,8% e agora é 41,0%",
      "nota": [
-      "Em 2022, 43,8% dos alunos do FEQ eram mulheres (471 de 1.075). Em 2025, 41,0% (401 de 979). Diminuiu, e as mulheres já eram minoria."
+      "Em 2022, 43,8% dos alunes do FEQ eram mulheres (471 de 1.075). Em 2025, 41,0% (401 de 979). Diminuiu, e as mulheres já eram minoria."
      ]
     },
     {
@@ -373,7 +387,7 @@
      "big": "Diminuiu 2,7 pontos percentuais",
      "cap": "Era 62,3% e agora é 59,6%",
      "nota": [
-      "Em 2022, 62,3% dos alunos do IB eram mulheres (944 de 1.516). Em 2025, 59,6% (813 de 1.365). Diminuiu, mas as mulheres continuam sendo maioria."
+      "Em 2022, 62,3% dos alunes do IB eram mulheres (944 de 1.516). Em 2025, 59,6% (813 de 1.365). Diminuiu, mas as mulheres continuam sendo maioria."
      ]
     },
     {
@@ -382,7 +396,7 @@
      "big": "Quase igual (+0,2 ponto percentual)",
      "cap": "Era 52,0% e agora é 52,2%",
      "nota": [
-      "Em 2022, 52,0% dos alunos do IFCH eram mulheres (1.158 de 2.225). Em 2025, 52,2% (1.150 de 2.203). Quase não mudou: a variação foi menor que 1 ponto."
+      "Em 2022, 52,0% dos alunes do IFCH eram mulheres (1.158 de 2.225). Em 2025, 52,2% (1.150 de 2.203). Quase não mudou: a variação foi menor que 1 ponto."
      ]
     },
     {
@@ -391,15 +405,15 @@
      "big": "Quase igual (+0,6 ponto percentual)",
      "cap": "Era 74,9% e agora é 75,4%",
      "nota": [
-      "Em 2022, 74,9% dos alunos do FCF eram mulheres (289 de 386). Em 2025, 75,4% (301 de 399). Quase não mudou: a variação foi menor que 1 ponto."
+      "Em 2022, 74,9% dos alunes do FCF eram mulheres (289 de 386). Em 2025, 75,4% (301 de 399). Quase não mudou: a variação foi menor que 1 ponto."
      ]
     }
    ]
   },
   "evolucao-prof": {
-   "titulo": "Docentes – Como mudou a presença de mulheres (2020–2025)",
+   "titulo": "Como mudou a presença de mulheres docentes (2020–2025)",
    "ano": 2025,
-   "sub": "A linha mostra a % de mulheres entre os docentes, ano a ano. Acima do tracejado (ponto de partida), aumentou; abaixo, diminuiu. Exemplo: de 50% para 53% é um aumento de 3 pontos percentuais.",
+   "sub": "A linha mostra a porcentagem de mulheres entre os docentes, ano a ano. Acima do tracejado (ponto de partida), aumentou; abaixo, diminuiu. Exemplo: de 50% para 53% é um aumento de 3 pontos percentuais.",
    "slides": [
     {
      "unidade": "IC",

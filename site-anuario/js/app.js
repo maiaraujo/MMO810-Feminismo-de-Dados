@@ -67,7 +67,7 @@ function room(items, colors, theme = 'cor', uid = 'r', chairs = true, big = fals
   const chairC = '#cdd2e8';                           // mesa e cadeira: MESMA cor
   const deskTop = chairC, deskSide = chairC;
   const T = P(0, 0), L = P(NR, 0), R = P(0, NC), B = P(NR, NC);   // N = colunas; NR = profundidade (espaço do professor + fileiras)
-  let s = `<svg class="room-svg" viewBox="0 0 ${VW} ${VH}" role="img" aria-label="Sala com ${items.length} alunos">`;
+  let s = `<svg class="room-svg" viewBox="0 0 ${VW} ${VH}" role="img" aria-label="Sala com ${items.length} alunes">`;
   s += `<polygon class="wall-l" points="${pts([T, L, P(NR, 0, H), P(0, 0, H)])}" fill="${wallL}" stroke="${line}" stroke-width="${sw}"/>`;
   s += `<polygon class="wall-r" points="${pts([T, R, P(0, NC, H), P(0, 0, H)])}" fill="${wallR}" stroke="${line}" stroke-width="${sw}"/>`;
   s += `<polygon class="floor" points="${pts([L, B, R, T])}" fill="${floor}" stroke="${line}" stroke-width="${sw}"/>`;
@@ -196,7 +196,7 @@ const note = (txt, big, cap) => `<div class="notes" role="group" aria-label="Inf
 const unitTab = u => u === 'UNICAMP' ? 'Unicamp' : `${DATA.unidades[u].nome} (${u})`;
 const genderLegend = { F: 'Feminino', M: 'Masculino' };
 
-/* ---------- barras (alunos e docentes) ----------
+/* ---------- barras (alunes e docentes) ----------
    rows: [{s, nome, F, tot, p}] ; o grupo (cuidado/lógica) vem de DATA.unidades */
 const hex = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
 function buildBars(sectionId, cfg, rows, split = 'unidade') {
@@ -217,11 +217,19 @@ function buildBars(sectionId, cfg, rows, split = 'unidade') {
   } else {
     const nC = rows.filter(r => gOrder(r) === 0).length, nL = rows.length - nC;
     const care = $('.arrow-care', root), logic = $('.arrow-logic', root);
-    care.querySelector('span').textContent = cfg.caixa_cuidado;
-    logic.querySelector('span').textContent = cfg.caixa_logica;
+    // ícone (mão = acolhimento, cérebro = lógica) + texto + botão [?] que abre o popup (só onde há cfg.info, ou seja, alunes)
+    const ICO = { cuidado: 'fa-hand-holding-heart', logica: 'fa-brain' };
+    const lab = (k, txt) => `<i class="fa-solid ${ICO[k]} arrow-ico" aria-hidden="true"></i><b class="arrow-txt">${txt}</b>` +
+      (cfg.info ? `<button type="button" class="info-btn" data-info="${k}" aria-label="${cfg.info[k].pergunta}" title="${cfg.info[k].pergunta}" alt="${cfg.info[k].pergunta}">?</button>` : '');
+    care.querySelector('span').innerHTML = lab('cuidado', cfg.caixa_cuidado);
+    logic.querySelector('span').innerHTML = lab('logica', cfg.caixa_logica);
     Object.assign(care.style, { top: '0px', height: nC * RH - 6 + 'px' });
     Object.assign(logic.style, { top: nC * RH + 6 + 'px', height: nL * RH - 6 + 'px' });
   }
+  // linha horizontal que separa o grupo >= 50% (▲ / cuidado) do grupo < 50% (▼ / lógica); fica bem entre as duas setas
+  const grid = $('.bars-grid', root); grid.querySelector('.bars-split')?.remove();
+  const k = rows.findIndex(r => split === 'nenhum' ? r.p < .5 : gOrder(r) === 1);
+  if (k > 0) { const ln = document.createElement('div'); ln.className = 'bars-split'; ln.setAttribute('aria-hidden', 'true'); ln.style.top = k * RH + 'px'; grid.appendChild(ln); }
   $('.ticks', root).innerHTML = [0, 20, 40, 60, 80, 100].map(t => `<span style="left:${t / 1.2}%">${t}</span>`).join('');
   $('.bars-rows', root).innerHTML = rows.map((r, i) => `
     <div class="bar-row${r.p >= .5 ? ' up' : ''}" style="--d:${i * 70}ms">
@@ -249,15 +257,15 @@ function buildBarsDocentes() {
     return { s, nome: DATA.unidades[s].nome, F: d.F, tot, p: d.F / tot };
   }), 'nenhum');
 }
-/* ---------- pág. 2: gênero por instituto (alunos) ---------- */
+/* ---------- pág. 2: gênero por instituto (alunes) ---------- */
 function buildGenero() {
   const cfg = DATA.paginas.genero, ano = String(cfg.ano);
   slider($('#sliderGenero'), 'carGenero', cfg.slides.map(sl => {
     const a = DATA.dados.alunos_genero[sl.unidade][ano], tot = a.F + a.M;
     return { tab: unitTab(sl.unidade), html: `<div class="slide-grid">
       <div class="room-box has-corner">${legend(genderColors, genderLegend, true, genderMarks, true)}${room(toHundred({ F: a.F, M: a.M }), genderColors, 'cor', 'g' + sl.unidade, true, false, genderMarks, true)}
-        <p class="room-cap">Se o ${sl.unidade} tivesse ${ROOM_SIZE} alunos (${fmt(a.F)} F | ${fmt(a.M)} M)</p></div>
-      ${note(sl.nota, pct1(a.F / tot), 'de mulheres entre os alunos')}</div>` };
+        <p class="room-cap">Se o ${sl.unidade} tivesse ${ROOM_SIZE} alunes (${fmt(a.F)} F | ${fmt(a.M)} M)</p></div>
+      ${note(sl.nota, pct1(a.F / tot), 'de mulheres entre os alunes')}</div>` };
   }));
 }
 
@@ -268,8 +276,8 @@ function buildRaca() {
     const d = DATA.dados.alunos_raca_unicamp[sl.ano];
     return { label: sl.rotulo, year: sl.ano, html: `<div class="slide-grid">
       <div class="room-box has-corner">${legend(cores, {}, true, racaMarks)}${room(toHundred(sortDesc(d)), cores, 'cor', 'ra' + i, true, false, racaMarks)}
-        <p class="room-cap">Se a Unicamp tivesse ${ROOM_SIZE} alunos em ${sl.ano}</p></div>
-      ${note(sl.nota, pct1(d.Preta + d.Parda), 'de pretos e pardos entre os alunos')}</div>` };
+        <p class="room-cap">Se a Unicamp tivesse ${ROOM_SIZE} alunes em ${sl.ano}</p></div>
+      ${note(sl.nota, pct1(d.Preta + d.Parda), 'de pretos e pardos entre os alunes')}</div>` };
   }), true);
 }
 
@@ -339,7 +347,7 @@ function buildEvolucao(sectionId, cfgKey, key, getF, half, chalk) {
   const cfg = DATA.paginas[cfgKey], D = DATA.dados[key];
   slider($('#' + sectionId + ' .slider'), 'car' + sectionId, cfg.slides.map((sl, i) => {
     const yrs = Object.keys(D[sl.unidade]).sort(), vals = yrs.map(y => { const [f, t] = getF(D[sl.unidade][y]); return f / t * 100; });
-    const chart = `<div class="evo-chart">${evoChart(yrs, vals, half, `tl${sectionId}${i}`, sl.dir)}<p class="evo-cap">Tracejado: % em ${yrs[0]} · Eixo: pontos a mais (+) ou a menos (−) que em ${yrs[0]}</p></div>`;
+    const chart = `<div class="evo-chart">${evoChart(yrs, vals, half, `tl${sectionId}${i}`, sl.dir)}<p class="evo-cap">Tracejado: porcentagem em ${yrs[0]} · Eixo: pontos a mais (+) ou a menos (−) que em ${yrs[0]}</p></div>`;
     return { tab: `<span class="kick">${evoKick[sl.dir]}</span>${sl.destaque ? 'IC · nosso instituto' : sl.unidade}`, html: chalk
       ? `<div class="room-box board-wide evo-slide">${chart}${note(sl.nota, sl.big, sl.cap)}</div>`
       : `<div class="slide-grid evo-slide">${chart}${note(sl.nota, sl.big, sl.cap)}</div>` };
@@ -419,8 +427,21 @@ setupTheme();
 
 fetch('data/data.json').then(r => r.json()).then(j => {
   DATA = j;
-  document.querySelectorAll('[data-title]').forEach(h => h.textContent = DATA.paginas[h.closest('section').id].titulo);
+  // "Título (Se fosse uma sala de 50 pessoas)": quebra a linha e o trecho entre parênteses vira subtítulo menor
+  document.querySelectorAll('[data-title]').forEach(h => {
+    const t = DATA.paginas[h.closest('section').id].titulo, m = t.match(/^(.*?)\s*\((Se .+)\)\s*$/);
+    h.textContent = m ? m[1] : t;
+    if (m) { const s = document.createElement('small'); s.className = 'title-sub'; s.textContent = m[2]; h.appendChild(s); }
+  });
   document.querySelectorAll('[data-sub]').forEach(p => { const t = DATA.paginas[p.closest('section').id].sub; if (t) { p.textContent = t; p.hidden = false; } });
   buildBarsAlunos(); buildGenero(); buildRaca(); buildBarsDocentes(); buildLousa(); buildRacaDocentes(); buildEvolucao('evolucao', 'evolucao', 'alunos_genero', y => [y.F, y.F + y.M], 6, false); buildEvolucao('evolucao-prof', 'evolucao-prof', 'docentes_genero', y => [y.TOTAL.F, y.TOTAL.F + y.TOTAL.M], 12, true);
   setupScroll(); setupHero();
+  // popup dos botões [?]
+  const modalEl = document.getElementById('infoModal');
+  document.addEventListener('click', e => {
+    const b = e.target.closest('.info-btn'); if (!b) return;
+    const i = DATA.paginas.barras.info[b.dataset.info];
+    $('.info-title', modalEl).textContent = i.titulo; $('.info-sub', modalEl).textContent = i.sub; $('.info-text', modalEl).innerHTML = i.texto;
+    bootstrap.Modal.getOrCreateInstance(modalEl).show();
+  });
 }).catch(e => document.querySelector('main').innerHTML = `<div class="alert alert-danger">Não foi possível carregar data/data.json (abra por um servidor, não por file://). ${e}</div>`);

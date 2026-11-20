@@ -42,7 +42,9 @@ h1,h2,h3,.navbar-brand{font-family:'Bricolage Grotesque',sans-serif}
     width:100%;
     margin:-.5rem 0 1.25rem;
     font-size:.95rem;
-    opacity:.85}
+    opacity:.85;
+    text-align: center;
+}
 .app-nav .nav-link{padding:.9rem .75rem;font-size:.95rem}
 html{scroll-behavior:smooth}
 .page{scroll-margin-top:64px;padding:2.5rem 0 3rem;border-bottom:1px solid var(--line)}
@@ -69,7 +71,17 @@ html{scroll-behavior:smooth}
 .ticks span{position:absolute;transform:translateX(-50%)}
 .arrow-col{position:relative}
 .arrow{position:absolute;left:0;right:0;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;font-family:'Bricolage Grotesque';font-weight:700;font-size:1.25rem;line-height:1.15;padding:0 .5rem;animation:floaty 6s ease-in-out infinite;filter:drop-shadow(0 8px 14px rgba(42,53,86,.25))}
-.arrow span{position:relative;z-index:1;max-width:50%}
+.arrow span{position:relative;z-index:1;max-width:60%;display:flex;flex-direction:column;align-items:center;gap:.2rem}
+.arrow-ico{font-size:1.7rem}
+.arrow-txt{font-weight:inherit}
+.info-btn{display:inline-grid;place-items:center;width:1.7rem;height:1.7rem;padding:0;margin-top:.2rem;border-radius:50%;border:2px solid #fff;background:#fff;color:#111;
+  font:800 .95rem/1 'Bricolage Grotesque',sans-serif;cursor:pointer;transition:transform .2s}
+.info-btn:hover,.info-btn:focus-visible{transform:scale(1.18)}
+.hc .info-btn{background:#000;color:#fff;border-color:#000;outline:2px solid #fff}
+@media(max-width:767px){.arrow-ico{font-size:1.1rem}.info-btn{width:1.4rem;height:1.4rem;font-size:.8rem}}
+/* linha horizontal entre os dois grupos (>= 50% em cima, < 50% embaixo) */
+.bars-grid{position:relative}
+.bars-split{position:absolute;left:0;right:0;top:0;height:0;border-top:2px dashed var(--ink);transform:translateY(-1px);z-index:3;pointer-events:none}
 .arrow::before{content:"";position:absolute;inset:0;background:var(--c)}
 .arrow-care{--c:var(--f);--h:56px}
 .arrow-care::before{clip-path:polygon(50% 0,100% var(--h),78% var(--h),78% 100%,22% 100%,22% var(--h),0 var(--h))}
@@ -558,3 +570,28 @@ html.hc .chalk .evo-chart{--halo:#000}
   radial-gradient(ellipse at 15% 85%,rgba(255,255,255,.38),transparent 55%),
   radial-gradient(ellipse at 85% 15%,rgba(255,255,255,.32),transparent 55%),
   linear-gradient(180deg,rgba(0,0,0,.70) 0%,rgba(0,0,0,.40) 45%,rgba(0,0,0,.75) 100%)}
+
+/* ---------- subtítulo do título ("Se fosse uma sala de 50 pessoas") ---------- */
+.page-title .title-sub{display:block;margin-top:.35rem;font-family:'Source Sans 3',system-ui,sans-serif;font-size:.5em;font-weight:600;opacity:.8}
+.hc .page-title .title-sub{opacity:1}
+
+/* ---------- popup [?] (mesma pegada dos avisos de dados) ---------- */
+.info-modal{position:relative;background:#0D0D0D;color:#E5E5E5;border:2px solid #3a3a3a;border-radius:2px;padding:1.3rem 1.5rem;box-shadow:0 14px 30px rgba(0,0,0,.5)}
+.info-modal .btn-close{position:absolute;top:.9rem;right:.9rem}
+.info-title{font-size:clamp(1.8rem,5vw,2.4rem);font-weight:700;line-height:1;color:#B2B2B2;margin:0 2rem .4rem 0}
+.info-sub{font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:1.05rem;color:#fff;margin:0 0 1rem}
+.info-text{font-size:1.1rem;line-height:1.6}
+.info-modal .destaque{font-weight:bolder;text-transform:uppercase;color:var(--m)}
+.hc .info-sub{color:#fff}
+.hc .info-modal{background:#000;color:#fff;border-color:#fff}
+.hc .info-title{color:#ff0}
+/* ---------- avisos de dados (data-warning): mesma pegada das caixinhas .notes ---------- */
+.data-warning{background:#0D0D0D;color:#E5E5E5;border:0;border-radius:2px;padding:1.3rem 1.5rem;box-shadow:0 14px 30px rgba(42,53,86,.35);font-size:1.1rem;line-height:1.6}
+.dark .data-warning{border:1px solid var(--line);box-shadow:0 14px 30px rgba(0,0,0,.5)}
+.hc .data-warning{background:#000;color:#fff;border:2px solid #fff;box-shadow:none}
+.hc .data-warning .destaque{color:#ff0}
+.hc .info-modal .destaque{color:#ff0}
+
+/* ---------- botões [?]: cor clara de cada seta (roxo claro = cuidado, mostarda claro = lógica) ---------- */
+html:not(.hc) .arrow-care .info-btn{background:#d9c2f5;border-color:#d9c2f5;color:#2a1245}
+html:not(.hc) .arrow-logic .info-btn{background:#f7dd9a;border-color:#f7dd9a;color:#3a2a00}
