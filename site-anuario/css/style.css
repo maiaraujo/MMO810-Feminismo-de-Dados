@@ -595,3 +595,7 @@ html.hc .chalk .evo-chart{--halo:#000}
 /* ---------- botões [?]: cor clara de cada seta (roxo claro = cuidado, mostarda claro = lógica) ---------- */
 html:not(.hc) .arrow-care .info-btn{background:#d9c2f5;border-color:#d9c2f5;color:#2a1245}
 html:not(.hc) .arrow-logic .info-btn{background:#f7dd9a;border-color:#f7dd9a;color:#3a2a00}
+/* ---------- avisos de dados: destaque + micro título, igual às .notes ---------- */
+.data-warning .big{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.8rem,4.5vw,2.4rem);font-weight:700;line-height:1;color:#B2B2B2;margin-bottom:.8rem}
+.data-warning .big-cap{display:block;font-family:'Source Sans 3',sans-serif;font-size:1rem;font-weight:600;line-height:1.25;margin-top:.45rem;color:#fff}
+.hc .data-warning .big{color:#ff0}
