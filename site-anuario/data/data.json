@@ -114,13 +114,13 @@
      "pergunta": "O que são áreas do cuidado?",
      "titulo": "Áreas do cuidado",
      "sub": "Cuidar, acolher e ensinar",
-     "texto": "Áreas ligadas a cuidar de pessoas: <span class=\"destaque\">saúde, educação e humanas</span>, como enfermagem, farmácia e pedagogia. Socialmente, foram vistas como \"trabalho de mulher\"."
+     "texto": "Áreas ligadas a <span class=\"destaque\">ciências humanas e biológicas,</span> que são vinculadas a trabalhos de cuidado e ensino como <span class=\"destaque\">enfermagem, farmácia e pedagogia</span> são as que têm maior presença feminina. O \"trabalho de mulher\", vinculando gênero à função social com arquétipos de mãe e cuidadora, aparece de forma forte nesses dados."
     },
     "logica": {
      "pergunta": "O que são áreas de lógica?",
      "titulo": "Áreas de lógica",
      "sub": "Calcular, programar e construir",
-     "texto": "Áreas ligadas a raciocínio lógico, cálculo e construção: <span class=\"destaque\">exatas, tecnologia e engenharias</span>, como computação, mecânica e elétrica. Socialmente, foram vistas como espaços masculinos."
+     "texto": "Áreas das <span class=\"destaque\">ciências exatas</span> tem a maioria masculina. Com áreas vinculadas a <span class=\"destaque\">lógica, cálculo e construção, em cursos como computação, mecânica e elétrica</span>, a vinculação de gênero a função social se mostra novamente no arquétipos do \"homem como ser racional\", responsável pela construção e trabalho lógico."
     }
    }
   },
@@ -201,7 +201,8 @@
      "ano": 2017,
      "nota": [
       "Ano seguinte à greve. Só em novembro os órgãos deliberativos da Unicamp aprovaram a implementação das cotas, a valer a partir do vestibular do ano seguinte. Pretos e pardos eram 14,3% dos alunes.",
-      "Foi também o ano em que se aprovou o vestibular indígena, processo próprio de ingresso na universidade."
+      "Foi também o ano em que se aprovou o vestibular indígena, processo próprio de ingresso na universidade.",
+      "Considerando-se que Campinas foi a última cidade a abolir a escravidão no Brasil, essa atitude é de extrema importancia histórica."
      ]
     },
     {
@@ -302,7 +303,8 @@
      "unidade": "FEF",
      "rotulo": "Menos pretos e pardos",
      "nota": [
-      "A FEF é a única unidade sem nenhum docente preto ou pardo, tanto em número quanto em proporção: os 34 docentes são todos brancos, sem amarelos nem indígenas."
+      "A FEF é a única unidade sem nenhum docente preto ou pardo, tanto em número quanto em proporção: os 34 docentes são todos brancos, sem amarelos nem indígenas.",
+      "Diferente dos discentes  que possuem alguns tipos de cotas, os docentes não possuíam aprovação até 2024 e implementação em 2025. Como concursos e contratações não são tão frequentes, nesses dados de 2025 ainda não há evidência de melhora após a implementação."
      ]
     },
     {
