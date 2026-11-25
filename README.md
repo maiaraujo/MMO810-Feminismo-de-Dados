@@ -1,5 +1,5 @@
 # Presença Interseccional na Unicamp
-### Uma análise feminista de dados sobre gênero, raça/cor e deficiência na universidade
+### Uma análise feminista de dados sobre gênero e raça/cor na universidade
 
 **Autoras:** Larissa Kilian Pacheco, Luppi Campos e Maiara Araujo Damião.
 
@@ -9,7 +9,7 @@ O trabalho integra a disciplina MMO810 – Feminismo de Dados.
 
 ## Sobre o projeto
 
-Este projeto investiga como a presença feminina na Universidade Estadual de Campinas (Unicamp) se modificou ao longo dos últimos anos, considerando as dimensões de gênero, raça/cor e deficiência entre discentes e docentes.
+Este projeto investiga como a presença feminina na Universidade Estadual de Campinas (Unicamp) se modificou ao longo dos últimos anos, considerando as dimensões de gênero e raça/cor entre alunes e docentes.
 
 A pesquisa adota uma perspectiva feminista interseccional, buscando compreender como diferentes marcadores sociais se relacionam com a ocupação dos espaços universitários, além de identificar quais grupos são representados, sub-representados ou invisibilizados nas estatísticas institucionais.
 
@@ -21,7 +21,7 @@ A principal fonte utilizada são os **Anuários Estatísticos da Unicamp**, disp
 
 Os arquivos PDF utilizados na pesquisa estão disponíveis na pasta `anuarios/`.
 
-**Fonte:** [Anuários Estatísticos da Unicamp](https://www.aeplan.unicamp.br/anuario.php).
+**Fonte:** [Anuários Estatísticos da Unicamp](https://econtents.sbu.unicamp.br/boletins/index.php/aeu/issue/archive).
 
 ## Visualização dos resultados
 
@@ -44,7 +44,7 @@ MMO810-Feminismo-de-Dados/
 │   └── Anuario_2026.pdf
 │
 ├── site-anuario/
-│   └── Arquivos da página web
+│   └── Arquivos da página web (html, css, js, imagens e json)
 │
 ├── Dados dos Relatórios - Preencher.xlsx
 │

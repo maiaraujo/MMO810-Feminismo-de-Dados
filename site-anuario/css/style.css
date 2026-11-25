@@ -64,7 +64,7 @@ html{scroll-behavior:smooth}
 .bar-val{position:absolute;top:50%;transform:translateY(-50%);font-size:.95rem;white-space:nowrap;opacity:0;transition:opacity .4s}
 .play .bar-fill{width:var(--w)}
 .play .bar-val{opacity:1;transition-delay:calc(var(--d) + .9s)}
-.bar-track .mid{position:absolute;left:calc(50%/1.2);top:-4px;bottom:-4px;border-left:2px dashed #aab;pointer-events:none}
+/*.bar-track .mid{position:absolute;left:calc(50%/1.2);top:-4px;bottom:-4px;border-left:2px dashed #aab;pointer-events:none}*/
 .bars-grid{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:1rem}
 .bars-axis{display:grid;grid-template-columns:minmax(120px,300px) 1fr;gap:.75rem;margin-top:.5rem}
 .ticks{position:relative;height:1.2rem;font-size:.8rem;opacity:.7}
@@ -463,7 +463,7 @@ html{scroll-behavior:smooth}
 .hc .timeline button.active .tl-year{color:#ff0}
 .hc .site-footer a,.hc .nav-link:hover{color:#ff0}
 .hc .bar-fill{outline:2px solid #fff}
-.hc .bar-track .mid{border-left-color:#fff}
+/*.hc .bar-track .mid{border-left-color:#fff}*/
 .hc .arrow{filter:none;}
 .hc .navbar-toggler{filter:invert(1)}
 .hc .note-box .big{color:#ff0}

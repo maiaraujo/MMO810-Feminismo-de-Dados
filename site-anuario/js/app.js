@@ -425,7 +425,7 @@ function setupTheme() {
 }
 setupTheme();
 
-fetch('data/data.json').then(r => r.json()).then(j => {
+fetch('data/data.json?v1').then(r => r.json()).then(j => {
   DATA = j;
   // "Título (Se fosse uma sala de 50 pessoas)": quebra a linha e o trecho entre parênteses vira subtítulo menor
   document.querySelectorAll('[data-title]').forEach(h => {
