@@ -434,13 +434,16 @@ fetch('data/data.json?v1').then(r => r.json()).then(j => {
     if (m) { const s = document.createElement('small'); s.className = 'title-sub'; s.textContent = m[2]; h.appendChild(s); }
   });
   document.querySelectorAll('[data-sub]').forEach(p => { const t = DATA.paginas[p.closest('section').id].sub; if (t) { p.textContent = t; p.hidden = false; } });
+  // botão [?] do popup "Docência e poder" (docentes não têm setas, então ele vai no subtítulo)
+  const infoPoder = DATA.paginas['barras-prof'].info?.poder, subProf = document.querySelector('#barras-prof [data-sub]');
+  if (infoPoder && subProf) subProf.insertAdjacentHTML('beforeend', ` <button type="button" class="info-btn" data-info="poder" data-page="barras-prof" aria-label="${infoPoder.pergunta}" title="${infoPoder.pergunta}">?</button>`);
   buildBarsAlunos(); buildGenero(); buildRaca(); buildBarsDocentes(); buildLousa(); buildRacaDocentes(); buildEvolucao('evolucao', 'evolucao', 'alunos_genero', y => [y.F, y.F + y.M], 6, false); buildEvolucao('evolucao-prof', 'evolucao-prof', 'docentes_genero', y => [y.TOTAL.F, y.TOTAL.F + y.TOTAL.M], 12, true);
   setupScroll(); setupHero();
   // popup dos botões [?]
   const modalEl = document.getElementById('infoModal');
   document.addEventListener('click', e => {
     const b = e.target.closest('.info-btn'); if (!b) return;
-    const i = DATA.paginas.barras.info[b.dataset.info];
+    const i = DATA.paginas[b.dataset.page || 'barras'].info[b.dataset.info];
     $('.info-title', modalEl).textContent = i.titulo; $('.info-sub', modalEl).textContent = i.sub; $('.info-text', modalEl).innerHTML = i.texto;
     bootstrap.Modal.getOrCreateInstance(modalEl).show();
   });

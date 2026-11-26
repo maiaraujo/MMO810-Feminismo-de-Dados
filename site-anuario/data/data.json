@@ -105,7 +105,7 @@
  },
  "paginas": {
   "barras": {
-   "titulo": "Alunes mulheres em 2025 por instituto",
+   "titulo": "Alunas mulheres em 2025 por instituto",
    "ano": 2025,
    "caixa_cuidado": "Áreas de cuidado",
    "caixa_logica": "Áreas de lógica",
@@ -120,7 +120,7 @@
      "pergunta": "O que são áreas de lógica?",
      "titulo": "Áreas de lógica",
      "sub": "Calcular, programar e construir",
-     "texto": "Áreas das <span class=\"destaque\">ciências exatas</span> tem a maioria masculina. Com áreas vinculadas a <span class=\"destaque\">lógica, cálculo e construção, em cursos como computação, mecânica e elétrica</span>, a vinculação de gênero a função social se mostra novamente no arquétipos do \"homem como ser racional\", responsável pela construção e trabalho lógico."
+     "texto": "Áreas das <span class=\"destaque\">ciências exatas</span> tem a maioria masculina. Com áreas vinculadas a <span class=\"destaque\">lógica, cálculo e construção,</span> em cursos como <span class=\"destaque\">computação, mecânica e elétrica</span>, a vinculação de gênero a função social se mostra novamente no arquétipos do \"homem como ser racional\", responsável pela construção e trabalho lógico."
     }
    }
   },
@@ -144,14 +144,14 @@
     {
      "unidade": "FEM",
      "nota": [
-      "A engenharia mecânica é a segunda com menor presença feminina: somente 17,1%, ou 309 dos 1.807 alunes.",
+      "A engenharia mecânica é a segunda com menor presença feminina: somente 17,1%, ou 309 de 1.807 alunes.",
       "Aqui começa-se a notar um padrão: áreas de exatas são vinculadas a maior presença masculina, enquanto áreas de saúde e humanas têm maior presença feminina."
      ]
     },
     {
      "unidade": "FCF",
      "nota": [
-      "O curso de farmácia também está vinculado a maior presença feminina, com 75,4% de mulheres, equivalente a 301 dos 399 alunes, logo abaixo da enfermagem.",
+      "O curso de farmácia também está vinculado a maior presença feminina, com 75,4% de mulheres, equivalente a 301 de 399 alunes, logo abaixo da enfermagem.",
       "Pelo padrão identificado, continuam-se reforçando as diferenças por gênero a cada área do conhecimento."
      ]
     },
@@ -178,7 +178,7 @@
     {
      "unidade": "IFCH",
      "nota": [
-      "O IFCH é o primeiro instituto em que as mulheres ultrapassam a metade dos matriculados: 52,2% (1.150 de 2.203).",
+      "O IFCH é o primeiro instituto em que as mulheres ultrapassam a metade dos matriculades: 52,2% (1.150 de 2.203).",
       "Após o IFCH, as demais unidades com maioria de mulheres são, em sua maioria, de humanas, artes e saúde, com poucas exceções, como a Engenharia de Alimentos (FEA), onde 63,1% são mulheres.",
       "É notável a relação: mulheres concentradas em áreas ligadas ao cuidado (saúde e educação) e homens em áreas de lógica e construção (engenharias e exatas). Os dados mostram essa relação na grande maioria das unidades."
      ]
@@ -229,7 +229,15 @@
    "ano": 2025,
    "caixa_cuidado": "Áreas de cuidado",
    "caixa_logica": "Áreas de lógica",
-   "sub": "Docentes ativos da carreira MS, todos os regimes de trabalho, ordenados da maior para a menor porcentagem de mulheres."
+   "sub": "Docentes ativos da carreira MS, todos os regimes de trabalho, ordenados da maior para a menor porcentagem de mulheres.",
+   "info": {
+    "poder": {
+     "pergunta": "Por que a docência tem menos mulheres?",
+     "titulo": "Docência e poder",
+     "sub": "Da sala de aula à cátedra",
+     "texto": "Mesmo em áreas de <span class=\"destaque\">cuidado e humanas</span>, onde as mulheres são maioria entre os alunos, a presença feminina costuma <span class=\"destaque\">cair na docência</span>. Ser docente é uma posição de <span class=\"destaque\">prestígio, decisão e poder</span>, e os dados sugerem que esse espaço ainda favorece homens, mesmo onde as mulheres estudam em maior número."
+    }
+   }
   },
   "lousa": {
    "titulo": "Docentes por instituto, por Gênero em 2025",
@@ -325,7 +333,7 @@
   "evolucao": {
    "titulo": "Como mudou a presença de mulheres alunes (2022–2025)",
    "ano": 2025,
-   "sub": "A linha mostra a porcentagem de mulheres entre os alunes, ano a ano. Acima do tracejado (ponto de partida), aumentou; abaixo, diminuiu. Exemplo: de 50% para 53% é um aumento de 3 pontos percentuais.",
+   "sub": "A linha mostra a porcentagem de mulheres entre alunes, ano a ano. Acima do tracejado (ponto de partida), aumentou; abaixo, diminuiu. Exemplo: de 50% para 53% é um aumento de 3 pontos percentuais.",
    "slides": [
     {
      "unidade": "IC",
