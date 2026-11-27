@@ -277,7 +277,7 @@ function buildRaca() {
     return { label: sl.rotulo, year: sl.ano, html: `<div class="slide-grid">
       <div class="room-box has-corner">${legend(cores, {}, true, racaMarks)}${room(toHundred(sortDesc(d)), cores, 'cor', 'ra' + i, true, false, racaMarks)}
         <p class="room-cap">Se a Unicamp tivesse ${ROOM_SIZE} alunes em ${sl.ano}</p></div>
-      ${note(sl.nota, pct1(d.Preta + d.Parda), 'de pretos e pardos entre os alunes')}</div>` };
+      ${note(sl.nota, pct1(d.Preta + d.Parda), 'de pessoas pretas e pardas entre alunes')}</div>` };
   }), true);
 }
 
@@ -293,7 +293,7 @@ function buildLousa() {
           <p class="room-cap">${sl.unidade}: ${fmt(d.F + d.M)} docentes, um boneco para cada</p>
           ${legend(chalkC, { F: `Feminino (${fmt(d.F)})`, M: `Masculino (${fmt(d.M)})` }, false, genderMarks, true)}
         </div>
-        ${note(sl.nota, pct1(d.F / (d.F + d.M)), 'de mulheres entre os docentes – ' + sl.unidade)}
+        ${note(sl.nota, pct1(d.F / (d.F + d.M)), 'de mulheres entre docentes – ' + sl.unidade)}
       </div>` };
   }));
 }
@@ -304,7 +304,7 @@ function buildRacaDocentes() {
   slider($('#sliderRacaProf'), 'carRacaProf', cfg.slides.map((sl, i) => {
     const d = DATA.dados.docentes_raca[sl.unidade][ano], tot = Object.values(d).reduce((a, b) => a + b, 0);
     const quem = sl.unidade === 'UNICAMP' ? 'a Unicamp' : 'o ' + sl.unidade;
-    // destaque: categoria(s) do número grande (padrão: pretos e pardos). rotulo: linha pequena acima do nome na aba
+    // destaque: categoria(s) do número grande (padrão: pessoas pretas e pardas). rotulo: linha pequena acima do nome na aba
     const grp = sl.destaque || ['Preta', 'Parda'], big = grp.reduce((a, k) => a + (d[k] || 0), 0) / tot;
     return { tab: (sl.rotulo ? `<span class="kick">${sl.rotulo}</span>` : '') + unitTab(sl.unidade), html: `
       <div class="room-box board-wide">
@@ -313,7 +313,7 @@ function buildRacaDocentes() {
           <p class="room-cap">${sl.unidade === 'UNICAMP' ? 'Unicamp' : sl.unidade}: ${fmt(tot)} docentes em ${ano}, um boneco para cada</p>
           ${legend(cores, Object.fromEntries(Object.keys(cores).map(c => [c, `${c} (${fmt(d[c] || 0)})`])), false, racaMarks)}
         </div>
-        ${note(sl.nota, pct1(big), sl.destaque_rotulo || 'de pretos e pardos entre os docentes')}
+        ${note(sl.nota, pct1(big), sl.destaque_rotulo || 'de pessoas pretas e pardas entre docentes')}
       </div>` };
   }));
 }
