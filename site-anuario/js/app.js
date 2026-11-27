@@ -265,7 +265,7 @@ function buildGenero() {
     return { tab: unitTab(sl.unidade), html: `<div class="slide-grid">
       <div class="room-box has-corner">${legend(genderColors, genderLegend, true, genderMarks, true)}${room(toHundred({ F: a.F, M: a.M }), genderColors, 'cor', 'g' + sl.unidade, true, false, genderMarks, true)}
         <p class="room-cap">Se o ${sl.unidade} tivesse ${ROOM_SIZE} alunes (${fmt(a.F)} F | ${fmt(a.M)} M)</p></div>
-      ${note(sl.nota, pct1(a.F / tot), 'de mulheres entre os alunes')}</div>` };
+      ${note(sl.nota, pct1(a.F / tot), 'de mulheres entre alunes')}</div>` };
   }));
 }
 

@@ -3,7 +3,7 @@
   "titulo": "Mulheres na Unicamp",
   "ano_base": 2025,
   "fonte": "Dados_dos_Relatórios - Preencher.xlsx",
-  "obs": "Gênero de alunos: 2022-2025. Docentes: 2020-2025 (carreira MS). Raça/cor de alunos: 2013-2025 (só UNICAMP geral, sem recorte por instituto). Raça/cor de docentes: 2023-2025, por instituto (todos os docentes ativos)."
+  "obs": "Gênero de alunos: 2022-2025. Docentes: 2020-2025 (carreira MS). Raça/cor de alunos: 2013-2025 (só UNICAMP geral, sem recorte por instituto). Raça/cor de docentes: 2023-2025, por instituto (docentes atives)."
  },
  "unidades": {
   "FCA": {
@@ -132,7 +132,7 @@
      "unidade": "IC",
      "nota": [
       "O IC é o instituto com menor número de alunes matriculades: somente 16,4%, equivalente a 211 de 1.289 estudantes.",
-      "Vale ressaltar que, em 2025, na primeira chamada de aprovados no vestibular pela Convest, dos 103 alunes listades havia a mesma quantidade de mulheres, Gabrieis e Joãos: exatamente 6 de cada."
+      "Vale ressaltar que, em 2025, na primeira chamada de aprovados no vestibular pela Convest, de 103 alunes listades havia a mesma quantidade de mulheres, Gabrieis e Joãos: exatamente 6 de cada."
      ]
     },
     {
@@ -178,7 +178,7 @@
     {
      "unidade": "IFCH",
      "nota": [
-      "O IFCH é o primeiro instituto em que as mulheres ultrapassam a metade dos matriculades: 52,2% (1.150 de 2.203).",
+      "O IFCH é o primeiro instituto em que as mulheres ultrapassam a metade de matriculades: 52,2% (1.150 de 2.203).",
       "Após o IFCH, as demais unidades com maioria de mulheres são, em sua maioria, de humanas, artes e saúde, com poucas exceções, como a Engenharia de Alimentos (FEA), onde 63,1% são mulheres.",
       "É notável a relação: mulheres concentradas em áreas ligadas ao cuidado (saúde e educação) e homens em áreas de lógica e construção (engenharias e exatas). Os dados mostram essa relação na grande maioria das unidades."
      ]
@@ -235,7 +235,7 @@
      "pergunta": "Por que a docência tem menos mulheres?",
      "titulo": "Docência e poder",
      "sub": "De estudante à professora",
-     "texto": "Mesmo em áreas de <span class=\"destaque\">cuidado e humanas</span>, onde as mulheres são maioria entre os alunos, a presença feminina costuma <span class=\"destaque\">cair na docência</span>. Ser docente é uma posição de <span class=\"destaque\">prestígio, decisão e poder</span>, e os dados sugerem que esse espaço ainda favorece homens, mesmo onde as mulheres estudam em maior número."
+     "texto": "Mesmo em áreas de <span class=\"destaque\">cuidado e humanas</span>, onde as mulheres são maioria entre alunes, a presença feminina costuma <span class=\"destaque\">cair na docência</span>. Ser docente é uma posição de <span class=\"destaque\">prestígio, decisão e poder</span>, e os dados sugerem que esse espaço ainda favorece homens, mesmo onde as mulheres estudam em maior número."
     }
    }
   },
@@ -295,13 +295,13 @@
      "unidade": "IC",
      "rotulo": "Instituto de computação",
      "nota": [
-      "IC: entre os 44 docentes, 3 são pessoas pretas ou pardas (6,8%); na Unicamp como um todo, são 6,8%. 36 de 44 (81,8%) são pessoas brancas.",
+      "IC: entre 44 docentes, 3 são pessoas pretas ou pardas (6,8%); na Unicamp como um todo, são 6,8%. 36 de 44 (81,8%) são pessoas brancas.",
       "Não há nenhuma pessoa amarela ou indígena na docência do IC."
      ]
     },
     {
      "unidade": "IMECC",
-     "rotulo": "Mais pretes e pardes",
+     "rotulo": "Mais pessoas pretas e pardas",
      "nota": [
       "O IMECC é a unidade com mais pessoas pretas e pardas na docência em número de pessoas: 11 de 96 (11,5%). FCA e IFCH vêm logo atrás, com 10 cada, quase empatados.",
       "Mesmo no IMECC, pessoas pretas e pardas são pouco mais de 1 em cada 10 docentes. Já a FCM, a maior unidade (273 docentes), tem só 8 pessoas pretas e pardas (2,9%)."
@@ -309,7 +309,7 @@
     },
     {
      "unidade": "FEF",
-     "rotulo": "Menos pretes e pardes",
+     "rotulo": "Menos pessoas pretas e pardas",
      "nota": [
       "A FEF é a única unidade sem nenhuma pessoa preta ou parda na docência. Apesar do corpo docente 47,1% feminino, todas as 34 pessoas nessa posição de poder são brancas, sem amarelas nem indígenas.",
       "Diferente de alunes, docentes tiveram cotas para pessoas pretas, pardas e PCD apenas em 2025, ainda excluindo indígenas e trans. Como concursos e contratações não são frequentes, nesses dados de 2025 ainda não há evidência de melhora após a implementação."
@@ -352,7 +352,7 @@
      "big": "Subiu 3,6 pontos percentuais",
      "cap": "Era 45,2% e agora é 48,8%",
      "nota": [
-      "Em 2022, 45,2% des alunes do FCA eram mulheres (1.396 de 3.090). Em 2025, subiu para 48,8% (1.509 de 3.091). Apesar do aumento, as mulheres ainda não são maioria."
+      "Em 2022, 45,2% des alunes do FCA eram mulheres (1.396 de 3.090). Em 2025, subiu para 48,8% (1.509 de 3.091). Apesar do aumento, as mulheres ainda são minoria."
      ]
     },
     {
@@ -361,7 +361,7 @@
      "big": "Subiu 3,3 pontos percentuais",
      "cap": "Era 53,8% e agora é 57,1%",
      "nota": [
-      "Em 2022, 53,8% des alunes do IA eram mulheres (867 de 1.611). Em 2025, subiu para 57,1% (894 de 1.566). Além do aumento, as mulheres são maioria desde 2022."
+      "Em 2022, 53,8% des alunes do IA eram mulheres (867 de 1.611). Em 2025, subiu para 57,1% (894 de 1.566). Além do aumento, as mulheres já eram maioria antes."
      ]
     },
     {
@@ -370,7 +370,7 @@
      "big": "Subiu 3,0 pontos percentuais",
      "cap": "Era 43,9% e agora é 46,9%",
      "nota": [
-      "Em 2022, 43,9% des alunes do FECFAU eram mulheres (508 de 1.157). Em 2025, subiu para 46,9% (506 de 1.079). Apesar do aumento, as mulheres ainda não são maioria."
+      "Em 2022, 43,9% des alunes do FECFAU eram mulheres (508 de 1.157). Em 2025, subiu para 46,9% (506 de 1.079). Apesar do aumento, as mulheres ainda são minoria."
      ]
     },
     {
@@ -442,7 +442,7 @@
      "big": "Subiu 9,7 pontos percentuais",
      "cap": "Era 16,1% e agora é 25,8%",
      "nota": [
-      "Em 2020, 16,1% de docentes do IE eram mulheres (9 de 56). Em 2025, subiu para 25,8% (16 de 62). Apesar do aumento, as mulheres ainda não são maioria."
+      "Em 2020, 16,1% de docentes do IE eram mulheres (9 de 56). Em 2025, subiu para 25,8% (16 de 62). Apesar do aumento, as mulheres ainda são minoria."
      ]
     },
     {
@@ -451,7 +451,7 @@
      "big": "Subiu 8,3 pontos percentuais",
      "cap": "Era 38,7% e agora é 47,1%",
      "nota": [
-      "Em 2020, 38,7% de docentes do FEF eram mulheres (12 de 31). Em 2025, subiu para 47,1% (16 de 34). Apesar do aumento, as mulheres ainda não são maioria. Atenção: são só 34 docentes, então 2 ou 3 contratações já mudam bastante a porcentagem."
+      "Em 2020, 38,7% de docentes do FEF eram mulheres (12 de 31). Em 2025, subiu para 47,1% (16 de 34). Apesar do aumento, as mulheres ainda são minoria. Atenção: são só 34 docentes, então 2 ou 3 contratações já mudam bastante a porcentagem."
      ]
     },
     {
@@ -460,7 +460,7 @@
      "big": "Subiu 5,8 pontos percentuais",
      "cap": "Era 36,4% e agora é 42,2%",
      "nota": [
-      "Em 2020, 36,4% de docentes do FOP eram mulheres (28 de 77). Em 2025, subiu para 42,2% (35 de 83). Apesar do aumento, as mulheres ainda não são maioria."
+      "Em 2020, 36,4% de docentes do FOP eram mulheres (28 de 77). Em 2025, subiu para 42,2% (35 de 83). Apesar do aumento, as mulheres ainda são minoria."
      ]
     },
     {
