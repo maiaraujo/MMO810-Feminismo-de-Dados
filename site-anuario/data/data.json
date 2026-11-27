@@ -192,7 +192,7 @@
      "rotulo": "Antes da greve",
      "ano": 2013,
      "nota": [
-      "Em 2013, três anos antes da greve de 2016 (de junho a agosto), que resultou na conquista de cotas étnico-raciais e de escola pública nos cursos da Unicamp, pretos e pardos eram 8,1% dos alunes e 46,0% não tinham raça/cor declarada.",
+      "Em 2013, três anos antes da greve de 2016 (de junho a agosto), que resultou na conquista de cotas étnico-raciais e de escola pública nos cursos da Unicamp, pretos e pardos eram 8,1% des alunes e 46,0% não tinham raça/cor declarada.",
       "Não há dados da Unicamp sobre a divisão étnico-racial por instituto, somente para a universidade como um todo."
      ]
     },
@@ -200,7 +200,7 @@
      "rotulo": "Cotas aprovadas",
      "ano": 2017,
      "nota": [
-      "Ano seguinte à greve. Só em novembro os órgãos deliberativos da Unicamp aprovaram a implementação das cotas, a valer a partir do vestibular do ano seguinte. Pretos e pardos eram 14,3% dos alunes.",
+      "Ano seguinte à greve. Só em novembro os órgãos deliberativos da Unicamp aprovaram a implementação das cotas, a valer a partir do vestibular do ano seguinte. Pretos e pardos eram 14,3% des alunes.",
       "Foi também o ano em que se aprovou o vestibular indígena, processo próprio de ingresso na universidade.",
       "Considerando-se que Campinas foi a última cidade a abolir a escravidão no Brasil, essa atitude é de extrema importancia histórica."
      ]
@@ -209,7 +209,7 @@
      "rotulo": "1ª turma com cotas",
      "ano": 2019,
      "nota": [
-      "Primeiro ano com ingressantes pelo vestibular indígena e também com cotas de escola pública e étnico-raciais. Pretos e pardos chegam a 19,2% dos alunes; indígenas, a 0,4%.",
+      "Primeiro ano com ingressantes pelo vestibular indígena e também com cotas de escola pública e étnico-raciais. Pretos e pardos chegam a 19,2% des alunes; indígenas, a 0,4%.",
       "Não há informação sobre a porcentagem de alunes de escola pública que ingressaram na universidade."
      ]
     },
@@ -229,7 +229,7 @@
    "ano": 2025,
    "caixa_cuidado": "Áreas de cuidado",
    "caixa_logica": "Áreas de lógica",
-   "sub": "Docentes ativos da carreira MS, todos os regimes de trabalho, ordenados da maior para a menor porcentagem de mulheres.",
+   "sub": "docentes atives da carreira MS, todos os regimes de trabalho, ordenados da maior para a menor porcentagem de mulheres.",
    "info": {
     "poder": {
      "pergunta": "Por que a docência tem menos mulheres?",
@@ -331,7 +331,7 @@
    ]
   },
   "evolucao": {
-   "titulo": "Como mudou a presença de mulheres alunes (2022–2025)",
+   "titulo": "Como mudou a presença de mulheres alunas (2022–2025)",
    "ano": 2025,
    "sub": "A linha mostra a porcentagem de mulheres entre alunes, ano a ano. Acima do tracejado (ponto de partida), aumentou; abaixo, diminuiu. Exemplo: de 50% para 53% é um aumento de 3 pontos percentuais.",
    "slides": [
@@ -342,8 +342,8 @@
      "big": "Subiu 1,5 pontos percentuais",
      "cap": "Era 14,8% e agora é 16,4%",
      "nota": [
-      "Em 2022, 14,8% dos alunes do IC eram mulheres (182 de 1.226). Em 2025, 16,4% (211 de 1.289). Subiu, mas as mulheres ainda não são maioria.",
-      "Em 2025, o IC é o instituto com menor porcentagem de alunes mulheres da Unicamp."
+      "Em 2022, 14,8% des alunes do IC eram mulheres (182 de 1.226). Em 2025, subiu para 16,4% (211 de 1.289). Apesar do aumento, as mulheres ainda são uma pequena minoria.",
+      "Em 2025, o IC é o instituto com menor porcentagem de alunas mulheres da Unicamp."
      ]
     },
     {
@@ -352,7 +352,7 @@
      "big": "Subiu 3,6 pontos percentuais",
      "cap": "Era 45,2% e agora é 48,8%",
      "nota": [
-      "Em 2022, 45,2% dos alunes do FCA eram mulheres (1.396 de 3.090). Em 2025, 48,8% (1.509 de 3.091). Subiu, mas as mulheres ainda não são maioria."
+      "Em 2022, 45,2% des alunes do FCA eram mulheres (1.396 de 3.090). Em 2025, 48,8% (1.509 de 3.091). Subiu, mas as mulheres ainda não são maioria."
      ]
     },
     {
@@ -361,7 +361,7 @@
      "big": "Subiu 3,3 pontos percentuais",
      "cap": "Era 53,8% e agora é 57,1%",
      "nota": [
-      "Em 2022, 53,8% dos alunes do IA eram mulheres (867 de 1.611). Em 2025, 57,1% (894 de 1.566). Subiu, e as mulheres já eram maioria."
+      "Em 2022, 53,8% des alunes do IA eram mulheres (867 de 1.611). Em 2025, 57,1% (894 de 1.566). Subiu, e as mulheres já eram maioria."
      ]
     },
     {
@@ -370,7 +370,7 @@
      "big": "Subiu 3,0 pontos percentuais",
      "cap": "Era 43,9% e agora é 46,9%",
      "nota": [
-      "Em 2022, 43,9% dos alunes do FECFAU eram mulheres (508 de 1.157). Em 2025, 46,9% (506 de 1.079). Subiu, mas as mulheres ainda não são maioria."
+      "Em 2022, 43,9% des alunes do FECFAU eram mulheres (508 de 1.157). Em 2025, 46,9% (506 de 1.079). Subiu, mas as mulheres ainda não são maioria."
      ]
     },
     {
@@ -379,7 +379,7 @@
      "big": "Diminuiu 3,3 pontos percentuais",
      "cap": "Era 66,9% e agora é 63,5%",
      "nota": [
-      "Em 2022, 66,9% dos alunes do IEL eram mulheres (906 de 1.355). Em 2025, 63,5% (787 de 1.239). Diminuiu, mas as mulheres continuam sendo maioria."
+      "Em 2022, 66,9% des alunes do IEL eram mulheres (906 de 1.355). Em 2025, 63,5% (787 de 1.239). Diminuiu, mas as mulheres continuam sendo maioria."
      ]
     },
     {
@@ -388,7 +388,7 @@
      "big": "Diminuiu 2,9 pontos percentuais",
      "cap": "Era 43,8% e agora é 41,0%",
      "nota": [
-      "Em 2022, 43,8% dos alunes do FEQ eram mulheres (471 de 1.075). Em 2025, 41,0% (401 de 979). Diminuiu, e as mulheres já eram minoria."
+      "Em 2022, 43,8% des alunes do FEQ eram mulheres (471 de 1.075). Em 2025, 41,0% (401 de 979). Diminuiu, e as mulheres já eram minoria."
      ]
     },
     {
@@ -397,7 +397,7 @@
      "big": "Diminuiu 2,7 pontos percentuais",
      "cap": "Era 62,3% e agora é 59,6%",
      "nota": [
-      "Em 2022, 62,3% dos alunes do IB eram mulheres (944 de 1.516). Em 2025, 59,6% (813 de 1.365). Diminuiu, mas as mulheres continuam sendo maioria."
+      "Em 2022, 62,3% des alunes do IB eram mulheres (944 de 1.516). Em 2025, 59,6% (813 de 1.365). Diminuiu, mas as mulheres continuam sendo maioria."
      ]
     },
     {
@@ -406,7 +406,7 @@
      "big": "Quase igual (+0,2 ponto percentual)",
      "cap": "Era 52,0% e agora é 52,2%",
      "nota": [
-      "Em 2022, 52,0% dos alunes do IFCH eram mulheres (1.158 de 2.225). Em 2025, 52,2% (1.150 de 2.203). Quase não mudou: a variação foi menor que 1 ponto."
+      "Em 2022, 52,0% des alunes do IFCH eram mulheres (1.158 de 2.225). Em 2025, 52,2% (1.150 de 2.203). Quase não mudou: a variação foi menor que 1 ponto."
      ]
     },
     {
@@ -415,7 +415,7 @@
      "big": "Quase igual (+0,6 ponto percentual)",
      "cap": "Era 74,9% e agora é 75,4%",
      "nota": [
-      "Em 2022, 74,9% dos alunes do FCF eram mulheres (289 de 386). Em 2025, 75,4% (301 de 399). Quase não mudou: a variação foi menor que 1 ponto."
+      "Em 2022, 74,9% des alunes do FCF eram mulheres (289 de 386). Em 2025, 75,4% (301 de 399). Quase não mudou: a variação foi menor que 1 ponto."
      ]
     }
    ]

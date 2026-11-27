@@ -34,7 +34,7 @@ html.hc{
 body{background:var(--bg);color:var(--ink);font-family:'Source Sans 3',system-ui,sans-serif}
 h1,h2,h3,.navbar-brand{font-family:'Bricolage Grotesque',sans-serif}
 .app-nav{background:var(--surface);border-bottom:1px solid var(--line)}
-.app-nav .navbar-brand{color:var(--ink);font-weight:700}
+.app-nav .navbar-brand{color:var(--ink); font-weight:700; font-size: 100%;}
 .app-nav .nav-link{color:var(--ink);font-weight:600;padding:.9rem 1rem}
 .app-nav .nav-link.active{color:var(--nav-active);}
 .page-title{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;margin-bottom:1.25rem; text-align: center;}
